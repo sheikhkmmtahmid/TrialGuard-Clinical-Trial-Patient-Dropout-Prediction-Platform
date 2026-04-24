@@ -1,3 +1,13 @@
+---
+title: TrialGuard
+emoji: 🏥
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+pinned: false
+short_description: Clinical Trial Patient Dropout Prediction — 60-Day Early Warning
+---
+
 # TrialGuard — 60-Day Early Warning for Clinical Trial Retention
 
 > **Predict patient dropout before it happens. Protect your trial. Save $40K per dropout.**

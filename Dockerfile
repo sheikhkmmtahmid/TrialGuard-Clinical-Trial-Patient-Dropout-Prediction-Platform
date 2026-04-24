@@ -21,4 +21,4 @@ RUN python manage.py collectstatic --noinput
 
 EXPOSE 7860
 
-CMD ["gunicorn", "trialguard.wsgi:application", "--bind", "0.0.0.0:7860", "--workers", "1", "--timeout", "120"]
+CMD ["sh", "-c", "python manage.py migrate --noinput && gunicorn trialguard.wsgi:application --bind 0.0.0.0:7860 --workers 1 --timeout 120"]
