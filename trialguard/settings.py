@@ -54,6 +54,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'trialguard.wsgi.application'
 ASGI_APPLICATION = 'trialguard.asgi.application'
 
+_DB_SSL = config('DB_SSL', default=False, cast=bool)
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -65,6 +67,7 @@ DATABASES = {
         'OPTIONS': {
             'charset': 'utf8mb4',
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            **({'ssl': {'ca': '/etc/ssl/certs/ca-certificates.crt'}} if _DB_SSL else {}),
         },
     }
 }
