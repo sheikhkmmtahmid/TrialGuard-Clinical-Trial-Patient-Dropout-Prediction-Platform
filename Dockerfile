@@ -21,4 +21,4 @@ RUN python manage.py collectstatic --noinput
 
 EXPOSE 7860
 
-CMD ["sh", "-c", "python manage.py migrate --noinput --fake-initial && gunicorn trialguard.wsgi:application --bind 0.0.0.0:7860 --workers 1 --timeout 120"]
+CMD ["sh", "-c", "python manage.py migrate --noinput --fake-initial && python manage.py createsuperuser --noinput 2>/dev/null || true && gunicorn trialguard.wsgi:application --bind 0.0.0.0:7860 --workers 1 --timeout 120"]
