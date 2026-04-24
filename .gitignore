@@ -29,8 +29,8 @@ db.sqlite3
 .env
 !.env.example
 
-# ML model artifacts — large binary files, re-train from source
-ml_models/*.pkl
+# ML model artifacts — committed for deployment (4MB, re-train via train_models command)
+!ml_models/*.pkl
 !ml_models/.gitkeep
 
 # Generated evaluation results (committed after training)
