@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Django
+*.pyc
+db.sqlite3
+/staticfiles/
+/media/
+!media/.gitkeep
+!media/reports/.gitkeep
+
+# Environment variables — NEVER commit real secrets
+.env
+!.env.example
+
+# ML model artifacts — large binary files, re-train from source
+ml_models/*.pkl
+!ml_models/.gitkeep
+
+# Generated evaluation results (committed after training)
+# evaluation_results.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Node (if frontend tooling added later)
+node_modules/

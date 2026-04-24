@@ -1,0 +1,243 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Cohort Forecast — {{ trial.name }} — TrialGuard{% endblock %}
+{% block nav_cohort %}active{% endblock %}
+
+{% block content %}
+<div class="page-header fade-in">
+  <div class="container">
+    <div class="page-header-inner">
+      <div>
+        <div class="breadcrumb">
+          <a href="{% url 'dashboard' %}">Dashboard</a>
+          <span class="breadcrumb-sep">›</span>
+          <span>{{ trial.name }} — Cohort</span>
+        </div>
+        <h1 class="page-title">Cohort Dropout Forecast</h1>
+        <p class="page-sub">{{ trial.name }} · {{ trial.phase }} · {{ trial.therapeutic_area }}</p>
+      </div>
+      <div class="page-header-actions">
+        <a href="{% url 'dashboard' %}?trial={{ trial.pk }}" class="btn btn-outline btn-sm">← Dashboard</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container cohort-body">
+
+  <!-- ═══════ FORECAST CARDS ═══════ -->
+  {% if latest_forecast %}
+  <div class="forecast-kpi-grid fade-in-up">
+
+    <a href="{% url 'dashboard' %}?trial={{ trial.pk }}&filter=horizon_30"
+       class="forecast-kpi-card kpi-30 forecast-kpi-link"
+       title="View patients at risk within 30 days">
+      <div class="forecast-kpi-label">30-Day Forecast</div>
+      <div class="forecast-kpi-value">{{ latest_forecast.predicted_dropouts_30d }}</div>
+      <div class="forecast-kpi-sub">predicted dropouts</div>
+      <div class="forecast-kpi-cta">View at-risk patients →</div>
+    </a>
+
+    <a href="{% url 'dashboard' %}?trial={{ trial.pk }}&filter=horizon_60"
+       class="forecast-kpi-card kpi-60 forecast-kpi-link"
+       title="View patients at risk within 60 days">
+      <div class="forecast-kpi-label">60-Day Forecast</div>
+      <div class="forecast-kpi-value">{{ latest_forecast.predicted_dropouts_60d }}</div>
+      <div class="forecast-kpi-sub">predicted dropouts</div>
+      <div class="forecast-kpi-cta">View at-risk patients →</div>
+    </a>
+
+    <a href="{% url 'dashboard' %}?trial={{ trial.pk }}&filter=horizon_90"
+       class="forecast-kpi-card kpi-90 forecast-kpi-link"
+       title="View patients at risk within 90 days">
+      <div class="forecast-kpi-label">90-Day Forecast</div>
+      <div class="forecast-kpi-value">{{ latest_forecast.predicted_dropouts_90d }}</div>
+      <div class="forecast-kpi-sub">predicted dropouts</div>
+      <div class="forecast-kpi-cta">View at-risk patients →</div>
+    </a>
+
+    <a href="{% url 'dashboard' %}?trial={{ trial.pk }}&filter=horizon_60"
+       class="forecast-kpi-card kpi-ci forecast-kpi-link"
+       title="View 60-day at-risk patient list">
+      <div class="forecast-kpi-label">Confidence Interval (60d)</div>
+      <div class="forecast-kpi-value">
+        {{ latest_forecast.confidence_interval_lower|floatformat:0 }}
+        –
+        {{ latest_forecast.confidence_interval_upper|floatformat:0 }}
+      </div>
+      <div class="forecast-kpi-sub">95% CI range</div>
+      <div class="forecast-kpi-cta">View 60-day list →</div>
+    </a>
+
+  </div>
+  {% endif %}
+
+  <!-- ═══════ RISK TIER DISTRIBUTION ═══════ -->
+  <div class="charts-row fade-in-up">
+    <div class="chart-card card">
+      <div class="card-header">
+        <h3 class="card-title">Current Risk Tier Distribution</h3>
+        <span class="card-badge">{{ trial.name }}</span>
+      </div>
+      <div class="card-body">
+        <canvas id="tierBarChart" height="220"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-card card">
+      <div class="card-header">
+        <h3 class="card-title">30 / 60 / 90-Day Forecast Trend</h3>
+        <span class="card-badge">Historical</span>
+      </div>
+      <div class="card-body">
+        <canvas id="forecastMultiChart" height="220"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════ KAPLAN-MEIER ═══════ -->
+  {% if km_b64 %}
+  <div class="chart-card card full-width fade-in-up">
+    <div class="card-header">
+      <h3 class="card-title">Kaplan-Meier Survival Curves by Risk Tier</h3>
+      <span class="card-badge">Lifelines KaplanMeierFitter</span>
+    </div>
+    <div class="card-body">
+      <img src="data:image/png;base64,{{ km_b64 }}" alt="Kaplan-Meier Curves" class="chart-img chart-img-wide">
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- ═══════ DOWNLOAD SECTION ═══════ -->
+  <div class="download-section card fade-in-up">
+    <div class="download-inner">
+      <div>
+        <h3 class="download-title">Cohort Report</h3>
+        <p class="download-sub">
+          Download a full cohort-level PDF report with forecast data, KM curves,
+          and risk tier distribution for {{ trial.name }}.
+        </p>
+      </div>
+      <div class="download-actions">
+        <a href="/api/cohort/{{ trial.pk }}/forecast/" class="btn btn-outline btn-sm" target="_blank">
+          View JSON Forecast
+        </a>
+        <button class="btn btn-gold btn-sm" onclick="window.print()">
+          ⬇ Print / Save Report
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+const TIER_COUNTS = {
+  low:      {{ tier_counts.low }},
+  medium:   {{ tier_counts.medium }},
+  high:     {{ tier_counts.high }},
+  critical: {{ tier_counts.critical }},
+};
+const FORECAST_DATA = {{ forecasts|safe }};
+
+document.addEventListener('DOMContentLoaded', () => {
+  // ── Risk tier bar chart ──
+  const barCtx = document.getElementById('tierBarChart');
+  if (barCtx) {
+    new Chart(barCtx.getContext('2d'), {
+      type: 'bar',
+      data: {
+        labels: ['Low', 'Medium', 'High', 'Critical'],
+        datasets: [{
+          label: 'Patients',
+          data: [TIER_COUNTS.low, TIER_COUNTS.medium, TIER_COUNTS.high, TIER_COUNTS.critical],
+          backgroundColor: ['#009639', '#FFB81C', '#E65C00', '#CC0000'],
+          borderRadius: 6,
+          borderSkipped: false,
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: '#003087',
+            borderColor: '#0072CE',
+            borderWidth: 1,
+            titleColor: '#ffffff',
+            bodyColor: '#ffffff',
+          }
+        },
+        scales: {
+          x: { ticks: { color: '#425563' }, grid: { color: 'rgba(0,43,135,0.06)' } },
+          y: { ticks: { color: '#425563' }, grid: { color: 'rgba(0,43,135,0.06)' }, beginAtZero: true }
+        }
+      }
+    });
+  }
+
+  // ── Multi-horizon forecast ──
+  const mCtx = document.getElementById('forecastMultiChart');
+  if (mCtx && FORECAST_DATA.length > 0) {
+    new Chart(mCtx.getContext('2d'), {
+      type: 'line',
+      data: {
+        labels: FORECAST_DATA.map(d => d.date),
+        datasets: [
+          {
+            label: '30-Day',
+            data: FORECAST_DATA.map(d => d['30d']),
+            borderColor: '#009639',
+            backgroundColor: 'rgba(0,150,57,0.08)',
+            borderWidth: 2,
+            pointRadius: 3,
+            tension: 0.3,
+          },
+          {
+            label: '60-Day',
+            data: FORECAST_DATA.map(d => d['60d']),
+            borderColor: '#003087',
+            backgroundColor: 'rgba(0,43,135,0.08)',
+            borderWidth: 2.5,
+            pointRadius: 3,
+            tension: 0.3,
+          },
+          {
+            label: '90-Day',
+            data: FORECAST_DATA.map(d => d['90d']),
+            borderColor: '#E65C00',
+            backgroundColor: 'rgba(230,92,0,0.08)',
+            borderWidth: 2,
+            pointRadius: 3,
+            tension: 0.3,
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: { labels: { color: '#212B32' } },
+          tooltip: {
+            backgroundColor: '#003087',
+            borderColor: '#0072CE',
+            borderWidth: 1,
+            titleColor: '#ffffff',
+            bodyColor: '#ffffff',
+          }
+        },
+        scales: {
+          x: { ticks: { color: '#425563', maxRotation: 45 }, grid: { color: 'rgba(0,43,135,0.06)' } },
+          y: { ticks: { color: '#425563' }, grid: { color: 'rgba(0,43,135,0.06)' }, beginAtZero: true }
+        }
+      }
+    });
+  }
+});
+</script>
+{% endblock %}

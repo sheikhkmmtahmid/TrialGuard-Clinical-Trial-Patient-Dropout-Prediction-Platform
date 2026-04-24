@@ -1,0 +1,253 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}TrialGuard — 60-Day Early Warning for Clinical Trial Retention{% endblock %}
+
+{% block content %}
+
+<!-- ════════════════════ HERO ════════════════════ -->
+<section class="hero fade-in" id="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-inner container">
+    <div class="hero-badge">Clinical AI Platform</div>
+    <h1 class="hero-title">
+      <span class="hero-title-main">Trial<span class="text-gold">Guard</span></span>
+    </h1>
+    <p class="hero-tagline">60-Day Early Warning for Clinical Trial Retention</p>
+    <p class="hero-sub">
+      Predict patient dropout before it happens. Empower coordinators with AI-driven insights
+      powered by XGBoost and Cox Proportional Hazards survival analysis.
+    </p>
+    <div class="hero-cta">
+      {% if user.is_authenticated %}
+      <a href="{% url 'dashboard' %}" class="btn btn-gold btn-lg">Access Dashboard</a>
+      {% else %}
+      <a href="{% url 'login' %}" class="btn btn-gold btn-lg">Access Dashboard</a>
+      {% endif %}
+      <a href="#features" class="btn btn-outline btn-lg">See Features</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat animate-count">
+        <span class="stat-value" data-target="{{ stats.trials }}">0</span>
+        <span class="stat-label">Active Trials</span>
+      </div>
+      <div class="hero-stat animate-count">
+        <span class="stat-value" data-target="{{ stats.patients }}">0</span>
+        <span class="stat-label">Patients Monitored</span>
+      </div>
+      <div class="hero-stat animate-count">
+        <span class="stat-value" data-target="{{ stats.high_risk }}">0</span>
+        <span class="stat-label">High-Risk Flagged</span>
+      </div>
+      <div class="hero-stat">
+        <span class="stat-value">$40K</span>
+        <span class="stat-label">Avg Cost per Dropout</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ FEATURES ════════════════════ -->
+<section class="section features-section" id="features">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <div class="section-badge">Technology</div>
+      <h2 class="section-title">Powered by Cutting-Edge Clinical AI</h2>
+      <p class="section-sub">
+        Three-layer intelligence stack combining statistical survival models,
+        gradient-boosted classifiers, and explainable AI.
+      </p>
+    </div>
+    <div class="features-grid">
+
+      <div class="feature-card fade-in-up" style="--delay: 0ms">
+        <div class="feature-icon-wrap">
+          <svg class="feature-icon" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="22" stroke="#0072CE" stroke-width="2"/>
+            <path d="M8 24 Q16 10 24 24 Q32 38 40 24" stroke="#0072CE" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <circle cx="24" cy="24" r="3" fill="#41B6E6"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Survival Analysis</h3>
+        <p class="feature-desc">
+          Cox Proportional Hazards model estimates each patient's dropout timeline,
+          hazard ratio, and survival probability at 30, 60, and 90 days.
+          Kaplan-Meier curves stratified by risk tier.
+        </p>
+        <div class="feature-metric">
+          <span class="metric-num">≥ 0.70</span>
+          <span class="metric-label">Concordance Index Target</span>
+        </div>
+      </div>
+
+      <div class="feature-card fade-in-up" style="--delay: 100ms">
+        <div class="feature-icon-wrap">
+          <svg class="feature-icon" viewBox="0 0 48 48" fill="none">
+            <rect x="4" y="28" width="8" height="16" rx="2" fill="#41B6E6" opacity="0.7"/>
+            <rect x="16" y="18" width="8" height="26" rx="2" fill="#0072CE" opacity="0.8"/>
+            <rect x="28" y="10" width="8" height="34" rx="2" fill="#003087"/>
+            <rect x="40" y="20" width="4" height="24" rx="2" fill="#00A9CE"/>
+            <path d="M4 6 L44 6" stroke="#D8DDE0" stroke-width="1.5" stroke-dasharray="3,2"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">XGBoost Prediction</h3>
+        <p class="feature-desc">
+          Gradient-boosted classifier trained on demographics, visit patterns,
+          and adverse event trends. Optuna hyperparameter tuning across 50 trials
+          maximises ROC-AUC on held-out validation data.
+        </p>
+        <div class="feature-metric">
+          <span class="metric-num">≥ 0.80</span>
+          <span class="metric-label">ROC-AUC Target</span>
+        </div>
+      </div>
+
+      <div class="feature-card fade-in-up" style="--delay: 200ms">
+        <div class="feature-icon-wrap">
+          <svg class="feature-icon" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="6" fill="#0072CE"/>
+            <path d="M24 4 L24 12 M24 36 L24 44 M4 24 L12 24 M36 24 L44 24" stroke="#0072CE" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M8.7 8.7 L14.5 14.5 M33.5 33.5 L39.3 39.3 M39.3 8.7 L33.5 14.5 M14.5 33.5 L8.7 39.3" stroke="#41B6E6" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">SHAP Explainability</h3>
+        <p class="feature-desc">
+          TreeSHAP generates exact feature attributions for every prediction.
+          Waterfall charts, beeswarm plots, and plain-English explanations
+          give coordinators clear, actionable reasons behind each risk score.
+        </p>
+        <div class="feature-metric">
+          <span class="metric-num">Top 5</span>
+          <span class="metric-label">Drivers Per Patient</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ HOW IT WORKS ════════════════════ -->
+<section class="section how-section" id="how">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <div class="section-badge">Workflow</div>
+      <h2 class="section-title">How TrialGuard Works</h2>
+    </div>
+    <div class="steps-flow">
+      <div class="step fade-in-up" style="--delay: 0ms">
+        <div class="step-number">01</div>
+        <div class="step-content">
+          <h3 class="step-title">Ingest &amp; Engineer</h3>
+          <p class="step-desc">
+            Upload patient demographics and visit data via CSV or REST API.
+            The pipeline engineers 25+ predictive features: visit frequency trends,
+            adverse event rates, adherence trajectories, and distance risk flags.
+          </p>
+        </div>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step fade-in-up" style="--delay: 150ms">
+        <div class="step-number">02</div>
+        <div class="step-content">
+          <h3 class="step-title">Score &amp; Stratify</h3>
+          <p class="step-desc">
+            XGBoost assigns a dropout probability (0–1) at every visit.
+            Cox PH estimates the individual dropout timeline.
+            Patients are stratified into Low / Medium / High / Critical tiers
+            with colour-coded alerts.
+          </p>
+        </div>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step fade-in-up" style="--delay: 300ms">
+        <div class="step-number">03</div>
+        <div class="step-content">
+          <h3 class="step-title">Intervene &amp; Retain</h3>
+          <p class="step-desc">
+            Coordinators receive a 60-day dashboard with SHAP-driven explanations
+            and plain-English risk summaries. Log interventions, download PDF reports,
+            and track retention outcomes — before the patient is lost.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ RISK TIER LEGEND ════════════════════ -->
+<section class="section tier-section fade-in-up">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Risk Stratification</div>
+      <h2 class="section-title">Four-Tier Early Warning System</h2>
+    </div>
+    <div class="tier-grid">
+      <div class="tier-card tier-low">
+        <div class="tier-range">0 – 30%</div>
+        <div class="tier-label">LOW</div>
+        <div class="tier-action">Routine monitoring</div>
+      </div>
+      <div class="tier-card tier-medium">
+        <div class="tier-range">31 – 55%</div>
+        <div class="tier-label">MEDIUM</div>
+        <div class="tier-action">Check-in recommended</div>
+      </div>
+      <div class="tier-card tier-high">
+        <div class="tier-range">56 – 75%</div>
+        <div class="tier-label">HIGH</div>
+        <div class="tier-action">Immediate outreach</div>
+      </div>
+      <div class="tier-card tier-critical">
+        <div class="tier-range">76 – 100%</div>
+        <div class="tier-label">CRITICAL</div>
+        <div class="tier-action">Emergency intervention</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ CTA ════════════════════ -->
+<section class="section cta-section fade-in-up">
+  <div class="container">
+    <div class="cta-card">
+      <h2 class="cta-title">Start Protecting Your Trial Today</h2>
+      <p class="cta-sub">
+        Every dropout costs an average of $40,000 and delays trial completion.
+        TrialGuard gives your coordinators a 60-day head start.
+      </p>
+      {% if user.is_authenticated %}
+      <a href="{% url 'dashboard' %}" class="btn btn-gold btn-lg">Go to Dashboard</a>
+      {% else %}
+      <a href="{% url 'login' %}" class="btn btn-gold btn-lg">Access TrialGuard</a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Animated stat counters
+document.addEventListener('DOMContentLoaded', () => {
+  const counters = document.querySelectorAll('.animate-count .stat-value');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.target || '0', 10);
+        let current = 0;
+        const step = Math.ceil(target / 60);
+        const timer = setInterval(() => {
+          current = Math.min(current + step, target);
+          el.textContent = current.toLocaleString();
+          if (current >= target) clearInterval(timer);
+        }, 25);
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.3 });
+  counters.forEach(c => observer.observe(c));
+});
+</script>
+{% endblock %}

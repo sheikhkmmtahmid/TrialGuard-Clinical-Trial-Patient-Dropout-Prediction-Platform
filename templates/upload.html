@@ -1,0 +1,373 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Upload Data — TrialGuard{% endblock %}
+{% block nav_upload %}active{% endblock %}
+
+{% block content %}
+<div class="page-header fade-in">
+  <div class="container">
+    <div class="page-header-inner">
+      <div>
+        <h1 class="page-title">Upload Clinical Data</h1>
+        <p class="page-sub">Import patient or visit CSV data, or add patients individually.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container upload-body">
+  <div class="upload-grid fade-in-up">
+
+    <!-- ═══════ LEFT PANEL — TABBED ═══════ -->
+    <div class="upload-form-card card">
+
+      <!-- Tab bar -->
+      <div class="upload-tabs">
+        <button class="upload-tab {% if active_tab != 'add' %}tab-active{% endif %}"
+                onclick="switchTab('csv')" id="tab-csv">
+          CSV Import
+        </button>
+        <button class="upload-tab {% if active_tab == 'add' %}tab-active{% endif %}"
+                onclick="switchTab('add')" id="tab-add">
+          Add Patient
+        </button>
+      </div>
+
+      <!-- ── CSV tab ── -->
+      <div id="panel-csv" class="tab-panel {% if active_tab == 'add' %}hidden{% endif %}">
+        <div class="card-body">
+          <form method="post" action="{% url 'upload' %}" enctype="multipart/form-data" class="upload-form" novalidate>
+            {% csrf_token %}
+
+            <div class="form-group">
+              <label class="form-label">Upload Type</label>
+              {{ form.upload_type }}
+              {% if form.upload_type.errors %}
+              <span class="form-error">{{ form.upload_type.errors.0 }}</span>
+              {% endif %}
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Trial</label>
+              {{ form.trial }}
+              {% if form.trial.errors %}
+              <span class="form-error">{{ form.trial.errors.0 }}</span>
+              {% endif %}
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">CSV File</label>
+              <div class="file-drop-zone" id="dropZone">
+                {{ form.csv_file }}
+                <div class="file-drop-inner" id="dropInner">
+                  <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#0072CE" stroke-width="1.5">
+                    <polyline points="16 16 12 12 8 16"/>
+                    <line x1="12" y1="12" x2="12" y2="21"/>
+                    <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/>
+                  </svg>
+                  <p class="drop-text">Drag &amp; drop or click to browse</p>
+                  <p class="drop-hint">CSV only · Max 10 MB</p>
+                  <span class="file-name-display" id="fileNameDisplay"></span>
+                </div>
+              </div>
+              {% if form.csv_file.errors %}
+              <span class="form-error">{{ form.csv_file.errors.0 }}</span>
+              {% endif %}
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Upload &amp; Process</button>
+          </form>
+
+          {% if upload_result %}
+          <div class="upload-result">
+            <div class="result-stat result-created">
+              <span class="result-num">{{ upload_result.created }}</span>
+              <span class="result-label">Created</span>
+            </div>
+            <div class="result-stat result-skipped">
+              <span class="result-num">{{ upload_result.skipped }}</span>
+              <span class="result-label">Skipped</span>
+            </div>
+            <div class="result-stat result-errors">
+              <span class="result-num">{{ upload_result.errors }}</span>
+              <span class="result-label">Errors</span>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- ── Add Patient tab ── -->
+      <div id="panel-add" class="tab-panel {% if active_tab != 'add' %}hidden{% endif %}">
+        <div class="card-body">
+
+          <div id="addPatientSuccess" class="upload-success-banner" style="display:none"></div>
+
+          <form method="post" action="{% url 'add_patient' %}" class="upload-form" novalidate id="addPatientForm">
+            {% csrf_token %}
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label">Trial</label>
+                {{ add_form.trial }}
+                {% if add_form.trial.errors %}<span class="form-error">{{ add_form.trial.errors.0 }}</span>{% endif %}
+              </div>
+              <div class="form-group">
+                <label class="form-label">Enrollment Date</label>
+                {{ add_form.enrollment_date }}
+                {% if add_form.enrollment_date.errors %}<span class="form-error">{{ add_form.enrollment_date.errors.0 }}</span>{% endif %}
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label">Age</label>
+                {{ add_form.age }}
+                {% if add_form.age.errors %}<span class="form-error">{{ add_form.age.errors.0 }}</span>{% endif %}
+              </div>
+              <div class="form-group">
+                <label class="form-label">Gender</label>
+                {{ add_form.gender }}
+                {% if add_form.gender.errors %}<span class="form-error">{{ add_form.gender.errors.0 }}</span>{% endif %}
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label">Ethnicity</label>
+                {{ add_form.ethnicity }}
+              </div>
+              <div class="form-group">
+                <label class="form-label">Condition Severity</label>
+                {{ add_form.condition_severity }}
+                {% if add_form.condition_severity.errors %}<span class="form-error">{{ add_form.condition_severity.errors.0 }}</span>{% endif %}
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label">Distance to Site (km)</label>
+                {{ add_form.distance_to_site_km }}
+                {% if add_form.distance_to_site_km.errors %}<span class="form-error">{{ add_form.distance_to_site_km.errors.0 }}</span>{% endif %}
+              </div>
+              <div class="form-group">
+                <label class="form-label">Employment Status</label>
+                {{ add_form.employment_status }}
+              </div>
+            </div>
+
+            <div class="form-group form-group-inline">
+              {{ add_form.prior_dropout_history }}
+              <label class="form-label-inline">Prior dropout history</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Add Patient</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ═══════ RIGHT PANEL — GUIDE ═══════ -->
+    <div class="field-guide-card card">
+      <div class="card-header">
+        <h3 class="card-title">Required CSV Columns</h3>
+      </div>
+      <div class="card-body">
+        <div class="guide-section">
+          <h4 class="guide-type">Patient Data CSV</h4>
+          <table class="guide-table">
+            <thead><tr><th>Column</th><th>Type</th><th>Required</th></tr></thead>
+            <tbody>
+              <tr><td>age</td><td>integer</td><td>✓</td></tr>
+              <tr><td>gender</td><td>M / F / O / U</td><td>✓</td></tr>
+              <tr><td>condition_severity</td><td>mild / moderate / severe</td><td>✓</td></tr>
+              <tr><td>distance_to_site_km</td><td>float</td><td>✓</td></tr>
+              <tr><td>enrollment_date</td><td>YYYY-MM-DD</td><td>✓</td></tr>
+              <tr><td>ethnicity</td><td>white/black/hispanic/asian/other</td><td>—</td></tr>
+              <tr><td>employment_status</td><td>employed/unemployed/retired/student</td><td>—</td></tr>
+              <tr><td>prior_dropout_history</td><td>0 / 1</td><td>—</td></tr>
+              <tr><td>dropout_status</td><td>0 / 1</td><td>—</td></tr>
+              <tr><td>dropout_date</td><td>YYYY-MM-DD</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="guide-section">
+          <h4 class="guide-type">Visit Data CSV</h4>
+          <table class="guide-table">
+            <thead><tr><th>Column</th><th>Type</th><th>Required</th></tr></thead>
+            <tbody>
+              <tr><td>patient_id</td><td>integer</td><td>✓</td></tr>
+              <tr><td>visit_number</td><td>integer</td><td>✓</td></tr>
+              <tr><td>visit_date</td><td>YYYY-MM-DD</td><td>✓</td></tr>
+              <tr><td>medication_adherence_score</td><td>float (0-100)</td><td>✓</td></tr>
+              <tr><td>quality_of_life_score</td><td>float (0-100)</td><td>✓</td></tr>
+              <tr><td>adverse_events_count</td><td>integer</td><td>—</td></tr>
+              <tr><td>missed_visits_to_date</td><td>integer</td><td>—</td></tr>
+              <tr><td>days_since_last_visit</td><td>integer</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="guide-note">
+          <strong>Note:</strong> After upload, TrialGuard will automatically score
+          new visit records using the trained models.
+          {% if user.is_staff %}
+          If models have not been trained yet, use the panel below.
+          {% else %}
+          Contact your administrator to initialise or retrain models.
+          {% endif %}
+        </div>
+
+        {% if user.is_staff %}
+        <div class="train-panel card" id="trainPanel">
+          <div class="train-panel-inner">
+            <div>
+              <h4 class="train-panel-title">Model Training</h4>
+              <p class="train-panel-sub">
+                Trains Cox PH + XGBoost on all patient data and runs batch inference.
+                Takes ~5–15 minutes. Page remains usable during training.
+              </p>
+            </div>
+            <div class="train-panel-actions">
+              <div id="trainStatus" class="train-status-badge" style="display:none"></div>
+              <button class="btn btn-primary btn-sm" id="trainBtn" onclick="startTraining()">
+                Train / Retrain Models
+              </button>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// ── Tab switching ──
+function switchTab(name) {
+  document.getElementById('panel-csv').classList.toggle('hidden', name !== 'csv');
+  document.getElementById('panel-add').classList.toggle('hidden', name !== 'add');
+  document.getElementById('tab-csv').classList.toggle('tab-active', name === 'csv');
+  document.getElementById('tab-add').classList.toggle('tab-active', name === 'add');
+}
+
+// ── CSV drop zone ──
+const dropZone  = document.getElementById('dropZone');
+const fileInput = dropZone?.querySelector('input[type="file"]');
+const fileDisplay = document.getElementById('fileNameDisplay');
+
+if (fileInput) {
+  fileInput.style.opacity  = '0';
+  fileInput.style.position = 'absolute';
+  fileInput.style.inset    = '0';
+  fileInput.style.cursor   = 'pointer';
+  fileInput.addEventListener('change', () => {
+    if (fileInput.files[0] && fileDisplay) {
+      fileDisplay.textContent = fileInput.files[0].name;
+      dropZone.classList.add('has-file');
+    }
+  });
+}
+if (dropZone) {
+  dropZone.addEventListener('dragover',  e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+  dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-over'));
+  dropZone.addEventListener('drop', e => {
+    e.preventDefault();
+    dropZone.classList.remove('drag-over');
+    if (fileInput && e.dataTransfer.files[0]) {
+      const dt = new DataTransfer();
+      dt.items.add(e.dataTransfer.files[0]);
+      fileInput.files = dt.files;
+      if (fileDisplay) fileDisplay.textContent = e.dataTransfer.files[0].name;
+      dropZone.classList.add('has-file');
+    }
+  });
+}
+
+// ── Add Patient form — AJAX submit ──
+const addForm = document.getElementById('addPatientForm');
+if (addForm) {
+  addForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = addForm.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Saving…';
+    const resp = await fetch(addForm.action, {
+      method: 'POST',
+      headers: {'X-Requested-With': 'XMLHttpRequest'},
+      body: new FormData(addForm),
+    });
+    const data = await resp.json();
+    btn.disabled = false;
+    btn.textContent = 'Add Patient';
+    if (data.ok) {
+      const banner = document.getElementById('addPatientSuccess');
+      banner.textContent = data.message + ' View in dashboard.';
+      banner.style.display = 'block';
+      addForm.reset();
+      setTimeout(() => { banner.style.display = 'none'; }, 6000);
+    } else {
+      // Show first error
+      const firstErr = Object.values(data.errors || {})[0]?.[0] || 'Validation error.';
+      alert(firstErr);
+    }
+  });
+}
+
+{% if user.is_staff %}
+const TRAIN_URL = "{% url 'train_models' %}";
+let trainingPoller = null;
+
+function setTrainStatus(text, cls) {
+  const el = document.getElementById('trainStatus');
+  if (!el) return;
+  el.textContent = text;
+  el.className = 'train-status-badge ' + cls;
+  el.style.display = text ? 'inline-flex' : 'none';
+}
+
+function pollTrainingStatus() {
+  fetch(TRAIN_URL).then(r => r.json()).then(data => {
+    if (data.running) {
+      setTrainStatus('Training in progress…', 'status-running');
+    } else {
+      clearInterval(trainingPoller);
+      trainingPoller = null;
+      document.getElementById('trainBtn').disabled = false;
+      if (data.last_result === 'success')
+        setTrainStatus('Training complete', 'status-ok');
+      else if (data.last_result === 'error')
+        setTrainStatus('Training failed — check server logs', 'status-error');
+    }
+  });
+}
+function startTraining() {
+  const btn = document.getElementById('trainBtn');
+  btn.disabled = true;
+  setTrainStatus('Starting…', 'status-running');
+  const csrf = document.querySelector('[name=csrfmiddlewaretoken]')?.value
+             || document.cookie.match(/csrftoken=([^;]+)/)?.[1] || '';
+  fetch(TRAIN_URL, {
+    method: 'POST',
+    headers: {'X-CSRFToken': csrf, 'Content-Type': 'application/x-www-form-urlencoded'},
+    body: 'optuna_trials=20',
+  }).then(r => r.json()).then(data => {
+    if (data.status === 'started') {
+      setTrainStatus('Training in progress…', 'status-running');
+      trainingPoller = setInterval(pollTrainingStatus, 8000);
+    } else {
+      btn.disabled = false;
+      setTrainStatus(data.error || 'Could not start training', 'status-error');
+    }
+  });
+}
+pollTrainingStatus();
+{% endif %}
+</script>
+{% endblock %}

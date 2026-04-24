@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 76" role="img" aria-label="TrialGuard — 60-Day Early Warning">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0072CE"/>
+      <stop offset="100%" stop-color="#005EB8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Shield body: NHS Bright Blue fill, white border -->
+  <path d="M6,5 L58,5 L58,42 Q58,64 32,70 Q6,64 6,42 Z"
+        fill="url(#shieldGrad)" stroke="#ffffff" stroke-width="2.2"/>
+
+  <!-- Inner highlight rim -->
+  <path d="M12,11 L52,11 L52,41 Q52,60 32,65 Q12,60 12,41 Z"
+        fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+
+  <!-- DNA Strand 1 — white upper S-curve -->
+  <path d="M11,26 C15,19 20,19 25,26 C30,33 35,33 40,26 C45,19 50,19 55,26"
+        fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2.3" stroke-linecap="round"/>
+
+  <!-- DNA Strand 2 — white lower S-curve -->
+  <path d="M11,44 C15,37 20,37 25,44 C30,51 35,51 40,44 C45,37 50,37 55,44"
+        fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2.3" stroke-linecap="round"/>
+
+  <!-- Base-pair rungs -->
+  <line x1="17" y1="23" x2="17" y2="41" stroke="rgba(255,255,255,0.55)" stroke-width="1.3" stroke-dasharray="2,2.5"/>
+  <line x1="25" y1="26" x2="25" y2="44" stroke="rgba(255,255,255,0.55)" stroke-width="1.3" stroke-dasharray="2,2.5"/>
+  <line x1="33" y1="28" x2="33" y2="46" stroke="rgba(255,255,255,0.55)" stroke-width="1.3" stroke-dasharray="2,2.5"/>
+  <line x1="41" y1="26" x2="41" y2="44" stroke="rgba(255,255,255,0.55)" stroke-width="1.3" stroke-dasharray="2,2.5"/>
+  <line x1="49" y1="23" x2="49" y2="41" stroke="rgba(255,255,255,0.55)" stroke-width="1.3" stroke-dasharray="2,2.5"/>
+
+  <!-- NHS Aqua accent dot at top of shield -->
+  <circle cx="32" cy="8.5" r="2.8" fill="#41B6E6"/>
+
+  <!-- Wordmark: "Trial" white · "Guard" NHS Light Blue -->
+  <text x="70" y="46"
+        font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+        font-size="30"
+        font-weight="800"
+        letter-spacing="0.5">
+    <tspan fill="#ffffff">Trial</tspan><tspan fill="#41B6E6">Guard</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text x="72" y="61"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="8"
+        font-weight="400"
+        fill="rgba(255,255,255,0.58)"
+        letter-spacing="2.8">60-DAY EARLY WARNING</text>
+</svg>

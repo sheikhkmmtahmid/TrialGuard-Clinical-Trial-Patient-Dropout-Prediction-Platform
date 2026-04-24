@@ -1,0 +1,463 @@
+{% extends "base.html" %}
+{% load static tg_filters %}
+
+{% block title %}Dashboard — TrialGuard{% endblock %}
+{% block nav_dashboard %}active{% endblock %}
+
+{% block content %}
+<div class="page-header fade-in">
+  <div class="container">
+    <div class="page-header-inner">
+      <div>
+        <h1 class="page-title">Coordinator Dashboard</h1>
+        <p class="page-sub">60-Day Early Warning — Real-Time Patient Risk Overview</p>
+      </div>
+      <div class="page-header-actions">
+        <!-- Trial selector -->
+        <form method="get" id="trialSelectorForm" class="trial-selector-form">
+          <label class="sr-only" for="trialSelect">Select Trial</label>
+          <select name="trial" id="trialSelect" class="form-select" onchange="this.form.submit()">
+            {% for t in trials %}
+            <option value="{{ t.pk }}" {% if selected_trial and t.pk == selected_trial.pk %}selected{% endif %}>
+              {{ t.name }}
+            </option>
+            {% endfor %}
+          </select>
+        </form>
+        {% if not models_trained %}
+        <div class="badge badge-warning">Models not trained</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container dashboard-body">
+
+  {% if selected_trial %}
+
+  <!-- ═══════════════ KPI CARDS ═══════════════ -->
+  <div class="kpi-grid fade-in-up">
+
+    <a href="?trial={{ selected_trial.pk }}&filter=all"
+       class="kpi-card kpi-card-link {% if filter_by == 'all' %}kpi-card-active{% endif %}"
+       title="Show all patients">
+      <div class="kpi-icon kpi-icon-blue">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+      </div>
+      <div class="kpi-body">
+        <div class="kpi-value">{{ kpis.total|default:"—" }}</div>
+        <div class="kpi-label">Total Patients</div>
+      </div>
+      <span class="kpi-cta">View all →</span>
+    </a>
+
+    <a href="?trial={{ selected_trial.pk }}&filter=active"
+       class="kpi-card kpi-card-link {% if filter_by == 'active' %}kpi-card-active{% endif %}"
+       title="Filter to active patients">
+      <div class="kpi-icon kpi-icon-green">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+        </svg>
+      </div>
+      <div class="kpi-body">
+        <div class="kpi-value">{{ kpis.active|default:"—" }}</div>
+        <div class="kpi-label">Active Patients</div>
+      </div>
+      <span class="kpi-cta">Filter →</span>
+    </a>
+
+    <a href="?trial={{ selected_trial.pk }}&filter=high_risk"
+       class="kpi-card kpi-card-link {% if filter_by == 'high_risk' %}kpi-card-active kpi-card-active-amber{% endif %}"
+       title="Filter to high and critical risk patients">
+      <div class="kpi-icon kpi-icon-amber">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+          <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+      </div>
+      <div class="kpi-body">
+        <div class="kpi-value text-amber">{{ kpis.high_risk|default:"—" }}</div>
+        <div class="kpi-label">High / Critical Risk</div>
+      </div>
+      <span class="kpi-cta">Filter →</span>
+    </a>
+
+    <a href="?trial={{ selected_trial.pk }}&filter=critical"
+       class="kpi-card kpi-card-link {% if filter_by == 'critical' %}kpi-card-active kpi-card-active-red{% endif %}"
+       title="Filter to critical risk patients only">
+      <div class="kpi-icon kpi-icon-red">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/>
+          <line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+      </div>
+      <div class="kpi-body">
+        <div class="kpi-value text-critical">{{ kpis.critical|default:"—" }}</div>
+        <div class="kpi-label">Critical Risk</div>
+      </div>
+      <span class="kpi-cta">Filter →</span>
+    </a>
+
+    <a href="{% url 'cohort' selected_trial.pk %}"
+       class="kpi-card kpi-card-link"
+       title="View cohort dropout forecast">
+      <div class="kpi-icon kpi-icon-gold">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        </svg>
+      </div>
+      <div class="kpi-body">
+        <div class="kpi-value text-gold">{{ kpis.predicted_60d|default:"—" }}</div>
+        <div class="kpi-label">Predicted 60d Dropouts</div>
+      </div>
+      <span class="kpi-cta">Cohort view →</span>
+    </a>
+
+    <a href="{% url 'cohort' selected_trial.pk %}"
+       class="kpi-card kpi-card-link"
+       title="View retention and survival forecast">
+      <div class="kpi-icon kpi-icon-green">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+          <polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+      </div>
+      <div class="kpi-body">
+        <div class="kpi-value text-green">{{ kpis.retention_rate|default:"—" }}%</div>
+        <div class="kpi-label">Retention Rate</div>
+      </div>
+      <span class="kpi-cta">Cohort view →</span>
+    </a>
+
+  </div>
+
+  <!-- ═══════════════ CHARTS ROW ═══════════════ -->
+  <div class="charts-row fade-in-up">
+
+    <div class="chart-card chart-card-sm">
+      <div class="chart-header">
+        <h3 class="chart-title">Risk Distribution</h3>
+        <span class="chart-badge">Current</span>
+      </div>
+      <div class="chart-body">
+        <canvas id="riskDonutChart" height="220"></canvas>
+      </div>
+      <div class="donut-legend">
+        <span class="legend-item"><span class="legend-dot" style="background:#4CAF50"></span> Low</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#FFC107"></span> Medium</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#FF5722"></span> High</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#740001"></span> Critical</span>
+      </div>
+    </div>
+
+    <div class="chart-card chart-card-lg">
+      <div class="chart-header">
+        <h3 class="chart-title">60-Day Dropout Forecast</h3>
+        <span class="chart-badge">With Confidence Interval</span>
+      </div>
+      <div class="chart-body">
+        <canvas id="forecastLineChart" height="220"></canvas>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════ PATIENT TABLE ═══════════════ -->
+  <div class="table-card fade-in-up">
+    <div class="table-header">
+      <h3 class="table-title">
+        Patient Risk Table
+        {% if filter_by != 'all' %}
+        <span class="filter-active-badge">{{ filter_label }}
+          <a href="?trial={{ selected_trial.pk }}&filter=all" class="filter-clear-btn" title="Clear filter">✕</a>
+        </span>
+        {% endif %}
+      </h3>
+      <div class="table-controls">
+        <input type="search" id="patientSearch" class="search-input" placeholder="Search patient ID…" aria-label="Search patients">
+        <a href="{% url 'cohort' selected_trial.pk %}" class="btn btn-outline btn-sm">Cohort View →</a>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="data-table" id="patientTable">
+        <thead>
+          <tr>
+            <th data-sort="id" class="sortable">ID <span class="sort-icon">⇅</span></th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Severity</th>
+            <th data-sort="risk" class="sortable">Risk Tier <span class="sort-icon">⇅</span></th>
+            <th data-sort="prob" class="sortable">Dropout Prob <span class="sort-icon">⇅</span></th>
+            {% if is_horizon %}
+            <th data-sort="days" class="sortable">Est. Days Left <span class="sort-icon">⇅</span></th>
+            {% else %}
+            <th>Enrolled</th>
+            {% endif %}
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for patient in patients %}
+          {% with pred=patient.latest_prediction %}
+          <tr class="table-row {% if pred %}risk-row-{{ pred.risk_tier }}{% endif %}"
+              data-patient-id="{{ patient.pk }}">
+            <td class="cell-id">#{{ patient.pk }}</td>
+            <td>{{ patient.age }}</td>
+            <td>{{ patient.get_gender_display }}</td>
+            <td>{{ patient.get_condition_severity_display }}</td>
+            <td>
+              {% if pred %}
+              <span class="risk-badge risk-{{ pred.risk_tier }}">{{ pred.risk_tier|upper }}</span>
+              {% else %}
+              <span class="risk-badge risk-none">—</span>
+              {% endif %}
+            </td>
+            <td>
+              {% if pred %}
+              <div class="prob-bar-wrap">
+                <div class="prob-bar" style="width: {{ pred.dropout_probability|as_pct }}%"></div>
+                <span class="prob-text">{{ pred.dropout_probability|as_pct }}%</span>
+              </div>
+              {% else %}—{% endif %}
+            </td>
+            {% if is_horizon %}
+            <td>
+              {% if pred and pred.survival_time_estimate %}
+              <span class="days-badge {% if pred.survival_time_estimate <= 30 %}days-critical{% elif pred.survival_time_estimate <= 60 %}days-warn{% else %}days-ok{% endif %}">
+                ~{{ pred.survival_time_estimate|floatformat:0 }}d
+              </span>
+              {% else %}<span class="days-badge days-unknown">—</span>{% endif %}
+            </td>
+            {% else %}
+            <td>{{ patient.enrollment_date|date:"d M Y" }}</td>
+            {% endif %}
+            <td>
+              {% if patient.dropout_status %}
+              <span class="status-badge status-dropped">Dropped</span>
+              {% else %}
+              <span class="status-badge status-active">Active</span>
+              {% endif %}
+            </td>
+            <td>
+              <a href="{% url 'patient_detail' patient.pk %}" class="btn btn-sm btn-ghost">
+                View →
+              </a>
+            </td>
+          </tr>
+          {% endwith %}
+          {% empty %}
+          <tr>
+            <td colspan="9" class="table-empty">No patients found for this trial.</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% if patients.has_other_pages %}
+    <div class="pagination">
+      {% if patients.has_previous %}
+      <a href="?trial={{ selected_trial.pk }}&page={{ patients.previous_page_number }}" class="page-btn">← Prev</a>
+      {% endif %}
+      <span class="page-info">Page {{ patients.number }} of {{ patients.paginator.num_pages }}</span>
+      {% if patients.has_next %}
+      <a href="?trial={{ selected_trial.pk }}&page={{ patients.next_page_number }}" class="page-btn">Next →</a>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+
+  {% else %}
+  <div class="empty-state fade-in">
+    <div class="empty-icon">⚗️</div>
+    <h3 class="empty-title">No Trials Found</h3>
+    <p class="empty-sub">Start by uploading patient data or generating synthetic data.</p>
+    <a href="{% url 'upload' %}" class="btn btn-gold">Upload Data</a>
+  </div>
+  {% endif %}
+
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+const RISK_DIST = {
+  low:      {{ risk_dist.low }},
+  medium:   {{ risk_dist.medium }},
+  high:     {{ risk_dist.high }},
+  critical: {{ risk_dist.critical }},
+};
+const FORECAST_DATA = {{ forecast_data|safe }};
+
+document.addEventListener('DOMContentLoaded', () => {
+  // ── Donut chart ──
+  const donutCtx = document.getElementById('riskDonutChart');
+  if (donutCtx) {
+    new Chart(donutCtx.getContext('2d'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Low', 'Medium', 'High', 'Critical'],
+        datasets: [{
+          data: [RISK_DIST.low, RISK_DIST.medium, RISK_DIST.high, RISK_DIST.critical],
+          backgroundColor: ['#009639', '#FFB81C', '#E65C00', '#CC0000'],
+          borderColor: '#F0F4F5',
+          borderWidth: 3,
+          hoverOffset: 6,
+        }]
+      },
+      options: {
+        cutout: '65%',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: '#003087',
+            borderColor: '#0072CE',
+            borderWidth: 1,
+            titleColor: '#ffffff',
+            bodyColor: '#ffffff',
+            callbacks: {
+              label: ctx => ` ${ctx.label}: ${ctx.raw} patients`
+            }
+          }
+        }
+      }
+    });
+  }
+
+  // ── Forecast line chart ──
+  const fctx = document.getElementById('forecastLineChart');
+  if (fctx && FORECAST_DATA.length > 0) {
+    const labels = FORECAST_DATA.map(d => d.date);
+    const predicted = FORECAST_DATA.map(d => d.predicted);
+    const ciLower = FORECAST_DATA.map(d => d.ci_lower);
+    const ciUpper = FORECAST_DATA.map(d => d.ci_upper);
+
+    new Chart(fctx.getContext('2d'), {
+      type: 'line',
+      data: {
+        labels,
+        datasets: [
+          {
+            label: 'Predicted Dropouts (60d)',
+            data: predicted,
+            borderColor: '#003087',
+            backgroundColor: 'rgba(0,43,135,0.1)',
+            borderWidth: 2.5,
+            pointBackgroundColor: '#003087',
+            pointRadius: 4,
+            tension: 0.3,
+            fill: false,
+          },
+          {
+            label: 'CI Upper',
+            data: ciUpper,
+            borderColor: 'rgba(0,114,206,0.25)',
+            borderWidth: 1,
+            borderDash: [4, 4],
+            pointRadius: 0,
+            tension: 0.3,
+            fill: '+1',
+            backgroundColor: 'rgba(0,114,206,0.07)',
+          },
+          {
+            label: 'CI Lower',
+            data: ciLower,
+            borderColor: 'rgba(0,114,206,0.25)',
+            borderWidth: 1,
+            borderDash: [4, 4],
+            pointRadius: 0,
+            tension: 0.3,
+            fill: false,
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: {
+            labels: { color: '#212B32', font: { size: 11 } },
+            filter: item => item.datasetIndex === 0,
+          },
+          tooltip: {
+            backgroundColor: '#003087',
+            borderColor: '#0072CE',
+            borderWidth: 1,
+            titleColor: '#ffffff',
+            bodyColor: '#ffffff',
+          }
+        },
+        scales: {
+          x: {
+            ticks: { color: '#425563', maxRotation: 45 },
+            grid: { color: 'rgba(0,43,135,0.06)' },
+          },
+          y: {
+            ticks: { color: '#425563' },
+            grid: { color: 'rgba(0,43,135,0.06)' },
+            beginAtZero: true,
+          }
+        }
+      }
+    });
+  }
+
+  // ── Patient table search ──
+  const searchInput = document.getElementById('patientSearch');
+  const tableBody = document.querySelector('#patientTable tbody');
+  if (searchInput && tableBody) {
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase();
+      tableBody.querySelectorAll('tr.table-row').forEach(row => {
+        const id = row.getAttribute('data-patient-id') || '';
+        row.style.display = id.includes(query) || query === '' ? '' : 'none';
+      });
+    });
+  }
+
+  // ── Table column sort ──
+  document.querySelectorAll('th.sortable').forEach(th => {
+    th.addEventListener('click', () => {
+      const col = th.dataset.sort;
+      const tbody = document.querySelector('#patientTable tbody');
+      const rows = Array.from(tbody.querySelectorAll('tr.table-row'));
+      const dir = th.classList.contains('sort-asc') ? -1 : 1;
+      document.querySelectorAll('th.sortable').forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
+      th.classList.add(dir === 1 ? 'sort-asc' : 'sort-desc');
+
+      const tierOrder = { critical: 4, high: 3, medium: 2, low: 1 };
+      rows.sort((a, b) => {
+        if (col === 'id') {
+          return dir * (parseInt(a.dataset.patientId) - parseInt(b.dataset.patientId));
+        }
+        if (col === 'risk') {
+          const ta = tierOrder[a.querySelector('.risk-badge')?.textContent.toLowerCase().trim()] || 0;
+          const tb = tierOrder[b.querySelector('.risk-badge')?.textContent.toLowerCase().trim()] || 0;
+          return dir * (tb - ta);
+        }
+        if (col === 'prob') {
+          const pa = parseFloat(a.querySelector('.prob-text')?.textContent) || 0;
+          const pb = parseFloat(b.querySelector('.prob-text')?.textContent) || 0;
+          return dir * (pb - pa);
+        }
+        if (col === 'days') {
+          const da = parseFloat(a.querySelector('.days-badge')?.textContent?.replace('~','').replace('d','')) || 9999;
+          const db = parseFloat(b.querySelector('.days-badge')?.textContent?.replace('~','').replace('d','')) || 9999;
+          return dir * (da - db);
+        }
+        return 0;
+      });
+      rows.forEach(r => tbody.appendChild(r));
+    });
+  });
+});
+</script>
+{% endblock %}

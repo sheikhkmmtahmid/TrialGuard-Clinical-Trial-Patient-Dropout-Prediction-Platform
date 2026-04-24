@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Report — TrialGuard{% endblock %}
+
+{% block content %}
+<div class="page-header fade-in">
+  <div class="container">
+    <h1 class="page-title">Report Download</h1>
+    <p class="page-sub">Your PDF report is being prepared.</p>
+  </div>
+</div>
+<div class="container">
+  <div class="empty-state fade-in">
+    <div class="empty-icon">📄</div>
+    <h3 class="empty-title">Generating Report…</h3>
+    <p class="empty-sub">If your download has not started automatically, click below.</p>
+    <a href="javascript:history.back()" class="btn btn-outline">← Back to Patient</a>
+  </div>
+</div>
+{% endblock %}

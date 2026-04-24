@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}TrialGuard — 60-Day Early Warning{% endblock %}</title>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/apple-touch-icon.png' %}?v=2">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════ NAVBAR ═══════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="{% url 'index' %}" class="nav-logo" aria-label="TrialGuard Home">
+      <img src="{% static 'img/logo.svg' %}" alt="TrialGuard" class="nav-logo-img">
+    </a>
+
+    {% if user.is_authenticated %}
+    <ul class="nav-links" id="navLinks">
+      <li><a href="{% url 'dashboard' %}" class="nav-link {% block nav_dashboard %}{% endblock %}">Dashboard</a></li>
+      {% if request.resolver_match.kwargs.trial_id %}
+      <li><a href="{% url 'cohort' request.resolver_match.kwargs.trial_id %}" class="nav-link {% block nav_cohort %}{% endblock %}">Cohort</a></li>
+      {% endif %}
+      {% if user.groups.all|length == 0 or 'Admin' in user.groups.all|join:',' %}
+      <li><a href="{% url 'upload' %}" class="nav-link {% block nav_upload %}{% endblock %}">Upload Data</a></li>
+      {% endif %}
+      <li><a href="/api/docs/" class="nav-link" target="_blank" rel="noopener">API Docs</a></li>
+    </ul>
+    {% endif %}
+
+    <div class="nav-right">
+      {% if user.is_authenticated %}
+      <span class="nav-user">
+        <span class="nav-user-icon">⚕</span>
+        <span class="nav-user-name">{{ user.get_full_name|default:user.username }}</span>
+      </span>
+      <a href="{% url 'logout' %}" class="btn btn-outline btn-sm">Sign Out</a>
+      {% else %}
+      <a href="{% url 'login' %}" class="btn btn-gold btn-sm">Sign In</a>
+      {% endif %}
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════ MESSAGES ═════════════════ -->
+{% if messages %}
+<div class="messages-container">
+  {% for message in messages %}
+  <div class="message message-{{ message.tags }}" role="alert">
+    <span class="message-text">{{ message }}</span>
+    <button class="message-close" aria-label="Dismiss">×</button>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+<!-- ═══════════════════════════════════════ MAIN CONTENT ═════════════ -->
+<main class="main-content" id="main">
+  {% block content %}{% endblock %}
+</main>
+
+<!-- ═══════════════════════════════════════ FOOTER ═══════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="{% static 'img/logo.svg' %}" alt="TrialGuard" height="28">
+    </div>
+    <div class="footer-tagline">60-Day Early Warning for Clinical Trial Retention</div>
+    <div class="footer-links">
+      <a href="https://skmmt.rootexception.com/" target="_blank" rel="noopener" class="footer-link">Built by SKMMT</a>
+      <span class="footer-sep">|</span>
+      <span class="footer-copy">TrialGuard © 2026</span>
+      <span class="footer-sep">|</span>
+      <span class="footer-powered">Powered by XGBoost &amp; Survival Analysis</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Main JS -->
+<script src="{% static 'js/dashboard.js' %}"></script>
+
+{% block extra_js %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,282 @@
+{% extends "base.html" %}
+{% load static tg_filters %}
+
+{% block title %}Patient #{{ patient.pk }} — TrialGuard{% endblock %}
+{% block nav_dashboard %}active{% endblock %}
+
+{% block content %}
+<div class="page-header fade-in">
+  <div class="container">
+    <div class="page-header-inner">
+      <div>
+        <div class="breadcrumb">
+          <a href="{% url 'dashboard' %}">Dashboard</a>
+          <span class="breadcrumb-sep">›</span>
+          <span>Patient #{{ patient.pk }}</span>
+        </div>
+        <h1 class="page-title">Patient Risk Profile</h1>
+        <p class="page-sub">{{ patient.trial.name }} — {{ patient.trial.phase }}</p>
+      </div>
+      <div class="page-header-actions">
+        <a href="{% url 'download_report' patient.pk %}" class="btn btn-gold btn-sm">
+          ⬇ Download PDF Report
+        </a>
+        {% if latest_pred %}
+        <span class="risk-badge risk-{{ latest_pred.risk_tier }} risk-badge-lg">
+          {{ latest_pred.risk_tier|upper }}
+        </span>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container patient-body">
+
+  <!-- ═══════ DEMOGRAPHICS CARD ═══════ -->
+  <div class="detail-grid fade-in-up">
+    <div class="demo-card card">
+      <div class="card-header">
+        <h3 class="card-title">Patient Demographics</h3>
+      </div>
+      <div class="card-body">
+        <dl class="demo-list">
+          <dt>Trial</dt><dd>{{ patient.trial.name }}</dd>
+          <dt>Sponsor</dt><dd>{{ patient.trial.sponsor }}</dd>
+          <dt>Age</dt><dd>{{ patient.age }}</dd>
+          <dt>Gender</dt><dd>{{ patient.get_gender_display }}</dd>
+          <dt>Ethnicity</dt><dd>{{ patient.ethnicity|title }}</dd>
+          <dt>Severity</dt><dd>{{ patient.get_condition_severity_display }}</dd>
+          <dt>Distance to Site</dt><dd>{{ patient.distance_to_site_km|floatformat:1 }} km</dd>
+          <dt>Employment</dt><dd>{{ patient.get_employment_status_display }}</dd>
+          <dt>Prior Dropout</dt><dd>{% if patient.prior_dropout_history %}Yes{% else %}No{% endif %}</dd>
+          <dt>Enrolled</dt><dd>{{ patient.enrollment_date|date:"d M Y" }}</dd>
+          <dt>Status</dt>
+          <dd>
+            {% if patient.dropout_status %}
+            <span class="status-badge status-dropped">Dropped Out — {{ patient.dropout_date|date:"d M Y" }}</span>
+            {% else %}
+            <span class="status-badge status-active">Active</span>
+            {% endif %}
+          </dd>
+        </dl>
+      </div>
+    </div>
+
+    <!-- ═══════ CURRENT RISK CARD ═══════ -->
+    {% if latest_pred %}
+    <div class="risk-summary-card card">
+      <div class="card-header">
+        <h3 class="card-title">Current Risk Assessment</h3>
+        <span class="card-badge">Visit #{{ latest_pred.visit.visit_number }}</span>
+      </div>
+      <div class="card-body">
+        <div class="risk-meter-wrap">
+          <div class="risk-meter">
+            <div class="risk-meter-fill risk-{{ latest_pred.risk_tier }}"
+                 style="width: {{ latest_pred.dropout_probability|as_pct }}%">
+            </div>
+          </div>
+          <div class="risk-prob-label">{{ latest_pred.dropout_probability|as_pct }}%</div>
+        </div>
+
+        <div class="risk-meta">
+          <div class="risk-meta-item">
+            <span class="risk-meta-label">Hazard Ratio</span>
+            <span class="risk-meta-value">{{ latest_pred.hazard_ratio|floatformat:3|default:"—" }}</span>
+          </div>
+          <div class="risk-meta-item">
+            <span class="risk-meta-label">Median Survival</span>
+            <span class="risk-meta-value">{{ latest_pred.survival_time_estimate|floatformat:0|default:"—" }}d</span>
+          </div>
+          <div class="risk-meta-item">
+            <span class="risk-meta-label">Model Version</span>
+            <span class="risk-meta-value">{{ latest_pred.model_version }}</span>
+          </div>
+          <div class="risk-meta-item">
+            <span class="risk-meta-label">Assessed</span>
+            <span class="risk-meta-value">{{ latest_pred.prediction_timestamp|date:"d M Y" }}</span>
+          </div>
+        </div>
+
+        <div class="risk-explanation card-inset">
+          <div class="explanation-label">AI Risk Explanation</div>
+          <p class="explanation-text">{{ latest_pred.plain_english_explanation }}</p>
+        </div>
+
+        {% if latest_pred.shap_top_features %}
+        <div class="top-drivers">
+          <div class="drivers-label">Top 5 Dropout Drivers (SHAP)</div>
+          <ul class="drivers-list">
+            {% for feat in latest_pred.shap_top_features %}
+            <li class="driver-item">
+              <span class="driver-rank">{{ forloop.counter }}</span>
+              <span class="driver-name">{{ feat.feature|human_feature }}</span>
+              <span class="driver-direction {% if feat.direction == 'increases' %}dir-up{% else %}dir-down{% endif %}">
+                {% if feat.direction == 'increases' %}▲ Increases Risk{% else %}▼ Decreases Risk{% endif %}
+              </span>
+              <span class="driver-value">{{ feat.shap_value|floatformat:4 }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  <!-- ═══════ CHARTS ═══════ -->
+  <div class="charts-col fade-in-up">
+
+    <!-- Risk Timeline -->
+    <div class="chart-card card">
+      <div class="card-header">
+        <h3 class="card-title">Dropout Probability Over Visits</h3>
+        <span class="card-badge">All Visits</span>
+      </div>
+      <div class="card-body">
+        {% if risk_timeline_b64 %}
+        <img src="data:image/png;base64,{{ risk_timeline_b64 }}" alt="Risk Timeline" class="chart-img">
+        {% else %}
+        <div class="chart-placeholder">Risk timeline will appear after model training.</div>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Survival Curve -->
+    <div class="chart-card card">
+      <div class="card-header">
+        <h3 class="card-title">Survival (Retention) Curve</h3>
+        <span class="card-badge">Cox PH Model</span>
+      </div>
+      <div class="card-body">
+        {% if survival_b64 %}
+        <img src="data:image/png;base64,{{ survival_b64 }}" alt="Survival Curve" class="chart-img">
+        {% else %}
+        <div class="chart-placeholder">Survival curve will appear after model training.</div>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- SHAP Waterfall -->
+    {% if shap_b64 %}
+    <div class="chart-card card">
+      <div class="card-header">
+        <h3 class="card-title">SHAP Waterfall — Feature Impact</h3>
+        <span class="card-badge">TreeSHAP</span>
+      </div>
+      <div class="card-body">
+        <img src="data:image/png;base64,{{ shap_b64 }}" alt="SHAP Waterfall" class="chart-img">
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+
+  <!-- ═══════ VISIT HISTORY ═══════ -->
+  <div class="table-card card fade-in-up">
+    <div class="card-header">
+      <h3 class="card-title">Prediction History</h3>
+      <span class="card-badge">{{ all_predictions.count }} assessments</span>
+    </div>
+    <div class="table-responsive">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Visit #</th>
+            <th>Date</th>
+            <th>Risk Tier</th>
+            <th>Dropout Prob</th>
+            <th>Hazard Ratio</th>
+            <th>AEs</th>
+            <th>Adherence</th>
+            <th>QoL</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for pred in all_predictions %}
+          <tr>
+            <td>#{{ pred.visit.visit_number }}</td>
+            <td>{{ pred.visit.visit_date|date:"d M Y" }}</td>
+            <td><span class="risk-badge risk-{{ pred.risk_tier }}">{{ pred.risk_tier|upper }}</span></td>
+            <td>{{ pred.dropout_probability|as_pct }}%</td>
+            <td>{{ pred.hazard_ratio|floatformat:3|default:"—" }}</td>
+            <td>{{ pred.visit.adverse_events_count }}</td>
+            <td>{{ pred.visit.medication_adherence_score|floatformat:1 }}%</td>
+            <td>{{ pred.visit.quality_of_life_score|floatformat:1 }}</td>
+          </tr>
+          {% empty %}
+          <tr><td colspan="8" class="table-empty">No predictions yet. Train models first.</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════ COORDINATOR ACTIONS ═══════ -->
+  <div class="actions-section fade-in-up">
+    <div class="action-log card">
+      <div class="card-header">
+        <h3 class="card-title">Intervention Log</h3>
+        <span class="card-badge">{{ coordinator_actions.count }} actions</span>
+      </div>
+      <div class="card-body">
+        {% if coordinator_actions %}
+        <ul class="action-list">
+          {% for action in coordinator_actions %}
+          <li class="action-item outcome-{{ action.outcome }}">
+            <div class="action-date">{{ action.action_date|date:"d M Y" }}</div>
+            <div class="action-meta">
+              <span class="action-type">{{ action.get_action_type_display }}</span>
+              <span class="action-outcome outcome-badge-{{ action.outcome }}">{{ action.get_outcome_display }}</span>
+              {% if action.coordinator %}
+              <span class="action-by">by {{ action.coordinator.get_full_name|default:action.coordinator.username }}</span>
+              {% endif %}
+            </div>
+            {% if action.notes %}
+            <p class="action-notes">{{ action.notes }}</p>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p class="empty-sub">No interventions logged yet.</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Log new action -->
+    <div class="action-form-card card">
+      <div class="card-header">
+        <h3 class="card-title">Log Intervention</h3>
+      </div>
+      <div class="card-body">
+        <form method="post" class="action-form" novalidate>
+          {% csrf_token %}
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label">Action Type</label>
+              {{ action_form.action_type }}
+            </div>
+            <div class="form-group">
+              <label class="form-label">Date</label>
+              {{ action_form.action_date }}
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Notes</label>
+            {{ action_form.notes }}
+          </div>
+          <div class="form-group">
+            <label class="form-label">Outcome</label>
+            {{ action_form.outcome }}
+          </div>
+          <button type="submit" class="btn btn-gold">Save Intervention</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
