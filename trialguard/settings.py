@@ -54,7 +54,14 @@ TEMPLATES = [
 WSGI_APPLICATION = 'trialguard.wsgi.application'
 ASGI_APPLICATION = 'trialguard.asgi.application'
 
+import os as _os
+
 _DB_SSL = config('DB_SSL', default=False, cast=bool)
+_LINUX_CA = '/etc/ssl/certs/ca-certificates.crt'
+if _DB_SSL:
+    _ssl_opts = {'ssl': {'ca': _LINUX_CA}} if _os.path.exists(_LINUX_CA) else {'ssl_mode': 'REQUIRED'}
+else:
+    _ssl_opts = {}
 
 DATABASES = {
     'default': {
@@ -67,7 +74,7 @@ DATABASES = {
         'OPTIONS': {
             'charset': 'utf8mb4',
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-            **({'ssl': {'ca': '/etc/ssl/certs/ca-certificates.crt'}} if _DB_SSL else {}),
+            **_ssl_opts,
         },
     }
 }
