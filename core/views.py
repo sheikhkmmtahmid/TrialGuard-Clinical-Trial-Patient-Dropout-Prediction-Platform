@@ -240,7 +240,6 @@ def dashboard(request):
         base_qs = (
             Patient.objects
             .filter(trial=trial)
-            .prefetch_related('predictions')
             .order_by('-created_at')
         )
 
@@ -248,10 +247,17 @@ def dashboard(request):
         active = base_qs.filter(dropout_status=False).count()
         retention_rate = round((active / total * 100), 1) if total else 0
 
-        for p in base_qs:
-            pred = p.predictions.order_by('-prediction_timestamp').first()
-            if pred:
-                risk_dist[pred.risk_tier] = risk_dist.get(pred.risk_tier, 0) + 1
+        from django.db.models import Subquery, OuterRef
+        latest_pred = PredictionResult.objects.filter(
+            patient=OuterRef('pk')
+        ).order_by('-prediction_timestamp').values('risk_tier')[:1]
+        for row in (
+            base_qs.annotate(latest_risk=Subquery(latest_pred))
+            .values('latest_risk')
+            .annotate(cnt=Count('id'))
+        ):
+            if row['latest_risk']:
+                risk_dist[row['latest_risk']] = row['cnt']
 
         high_risk = risk_dist['high'] + risk_dist['critical']
         critical = risk_dist['critical']
