@@ -1,2 +1,0 @@
--r requirements.txt
-sdv==1.14.0
