@@ -125,6 +125,24 @@ code { font-family: 'Fira Code', 'Courier New', monospace; font-size: 0.88em;
 .nav-user { display: flex; align-items: center; gap: 6px; font-size: 0.85rem; color: rgba(255,255,255,0.7); }
 .nav-user-icon { font-size: 1.1rem; }
 .nav-user-name { display: none; }
+.nav-right .btn,
+.nav-right .btn-outline,
+.nav-right a[href*="logout"] {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  font-weight: 700;
+}
+.nav-right .btn-outline {
+  color: #ffffff;
+  border-color: rgba(255,255,255,0.7) !important;
+}
+
+.nav-right .btn:hover,
+.nav-right .btn-outline:hover,
+.nav-right a[href*="logout"]:hover {
+  color: #ffffff !important;
+  background: rgba(255,255,255,0.18);
+}
 @media (min-width: 768px) { .nav-user-name { display: inline; } }
 
 .nav-hamburger {
@@ -659,4 +677,21 @@ select.form-select { min-width: 220px; }
   body { background: white; color: black; }
   .card { border: 1px solid #ccc; box-shadow: none; }
   .page-header { background: #003087 !important; }
+}
+
+/* Navbar Sign Out visibility fix */
+.navbar .nav-right .btn-outline,
+.navbar .nav-right a.btn-outline,
+.navbar .nav-right button.btn-outline {
+  color: #ffffff !important;
+  border-color: rgba(255,255,255,0.75) !important;
+  background: transparent !important;
+}
+
+.navbar .nav-right .btn-outline:hover,
+.navbar .nav-right a.btn-outline:hover,
+.navbar .nav-right button.btn-outline:hover {
+  color: #ffffff !important;
+  background: rgba(255,255,255,0.18) !important;
+  border-color: #ffffff !important;
 }

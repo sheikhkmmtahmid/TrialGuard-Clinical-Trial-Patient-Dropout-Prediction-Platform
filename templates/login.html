@@ -53,7 +53,7 @@
         </div>
       </div>
 
-      <button type="submit" class="btn btn-gold btn-block">Sign In to TrialGuard</button>
+      <button type="submit" class="btn btn-gold btn-block" id="loginSubmit">Sign In to TrialGuard</button>
     </form>
 
     <div class="auth-footer">
@@ -75,6 +75,16 @@ if (pwToggle && pwInput) {
     const isText = pwInput.type === 'text';
     pwInput.type = isText ? 'password' : 'text';
     pwToggle.setAttribute('aria-label', isText ? 'Show password' : 'Hide password');
+  });
+}
+
+const loginForm = document.querySelector('.auth-form');
+const loginSubmit = document.getElementById('loginSubmit');
+
+if (loginForm && loginSubmit) {
+  loginForm.addEventListener('submit', () => {
+    loginSubmit.disabled = true;
+    loginSubmit.textContent = 'Signing in...';
   });
 }
 </script>
