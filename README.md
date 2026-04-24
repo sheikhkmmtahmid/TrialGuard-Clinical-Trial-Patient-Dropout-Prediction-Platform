@@ -5,7 +5,7 @@ colorFrom: blue
 colorTo: indigo
 sdk: docker
 pinned: false
-short_description: Clinical Trial Patient Dropout Prediction — 60-Day Early Warning
+short_description: Clinical Trial Dropout Prediction Platform
 ---
 
 # TrialGuard — 60-Day Early Warning for Clinical Trial Retention
