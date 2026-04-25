@@ -20,6 +20,14 @@
     </div>
     {% endif %}
 
+    <div class="demo-access-box">
+      <div class="demo-access-info">
+        <span class="demo-access-label">Demo access</span>
+        <span class="demo-access-creds">username: <code>admin</code> &nbsp;·&nbsp; password: <code>admin1234</code></span>
+      </div>
+      <button type="button" class="btn btn-gold btn-sm" id="demoFill">Fill in</button>
+    </div>
+
     <form method="post" class="auth-form" novalidate>
       {% csrf_token %}
       {% if request.GET.next %}
@@ -68,6 +76,14 @@
 
 {% block extra_js %}
 <script>
+const demoFill = document.getElementById('demoFill');
+if (demoFill) {
+  demoFill.addEventListener('click', () => {
+    document.getElementById('id_username').value = 'admin';
+    document.getElementById('id_password').value = 'admin1234';
+  });
+}
+
 const pwToggle = document.getElementById('pwToggle');
 const pwInput = document.getElementById('id_password');
 if (pwToggle && pwInput) {
