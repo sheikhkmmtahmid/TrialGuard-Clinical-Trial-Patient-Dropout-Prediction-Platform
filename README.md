@@ -17,6 +17,8 @@ a 60-day early warning when patients are at risk of dropping out. Powered by
 XGBoost gradient boosting, Cox Proportional Hazards survival analysis, and
 SHAP explainability — deployed as a Django web service.
 
+> Made by [SKMMT](https://skmmt.rootexception.com/).
+> View [Demo](https://sheikhkmmtahmid-trialguard.hf.space/)
 ---
 
 ## Key Metrics
