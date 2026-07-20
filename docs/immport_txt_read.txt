@@ -1,0 +1,806 @@
+
+
+===== D:\Trial Guard\data\immport\batch2\ds1mstr_r_EXTEND.txt =====
+[classified: DATA, reading as tab-separated table]
+shape: (136, 13)
+  SUBJECT_ACCESSION: 136 unique values, e.g. ['SUB244489', 'SUB244490', 'SUB244491', 'SUB244492', 'SUB244493']
+  TRTU: {'Tocilizumab': 89, 'Placebo': 47}
+  SAFFL: {'Y': 135, 'N': 1}
+  ITTFL: {'Y': 135, 'N': 1}
+  PP1FL: {'Y': 125, 'N': 11}
+  PP2FL: {'Y': 116, 'N': 20}
+  phase: {3000: 136}
+  COMPYN: {'Yes': 124, 'No': 12}
+  DSREAS: {nan: 124, 'Withdrawn Consent*': 6, 'Other*': 3, 'Lost to Follow-Up': 3}
+  COV19DS: {nan: 134, 'Yes': 2}
+  INSTANCEID: numeric, min=865997, max=2340559, mean=1758356.19, nulls=0
+  FOLDERNAME: {'Study Termination': 136}
+  DSDY: numeric, min=1, max=894, mean=702.18, nulls=0
+
+
+===== D:\Trial Guard\data\immport\batch2\dsmstr_r_EXTEND.txt =====
+[classified: DATA, reading as tab-separated table]
+shape: (136, 14)
+  SUBJECT_ACCESSION: 136 unique values, e.g. ['SUB244489', 'SUB244490', 'SUB244491', 'SUB244492', 'SUB244493']
+  TRTU: {'Tocilizumab': 89, 'Placebo': 47}
+  SAFFL: {'Y': 135, 'N': 1}
+  ITTFL: {'Y': 135, 'N': 1}
+  PP1FL: {'Y': 125, 'N': 11}
+  PP2FL: {'Y': 116, 'N': 20}
+  phase: {3000: 136}
+  THERYN: {'Yes': 127, 'No': 9}
+  DISTXT2: {nan: 127, 'Anaphylaxis or hypersensitivity reaction*': 3, 'Failure to Return/Lost to Follow-up': 2, 'Elevated Liver Function Tests, as defined by ALT/AST > 5xULN and/or > 3xULN unresolved after 8 weeks*': 1, 'Investigator Decision': 1, 'Other reason for discontinuation, specify': 1, 'Neutropenia, as defined by ANC < 500 cells/uL and/or ANC < 1000 cells/uL unresolved after 8 weeks*': 1}
+  FOLLOW: {'Yes': 74, nan: 59, 'No': 3}
+  OLDTHER: {1: 127, 2: 9}
+  INSTANCEID: numeric, min=865997, max=2340559, mean=1758356.19, nulls=0
+  FOLDERNAME: {'Study Termination': 136}
+  DSSTDY: numeric, min=28.0, max=198.0, mean=164.01, nulls=1
+
+
+===== D:\Trial Guard\data\immport\batch2\ITN020AI.DataSet.DS.txt =====
+[classified: DATA, reading as tab-separated table]
+shape: (83, 19)
+  ACTEVENT: {905: 83}
+  CPEVENT: {'DISPOSITION': 83}
+  DSAENUM: {nan: 82, 1.0: 1}
+  DSAENUM2: all null
+  DSAEPG: {nan: 82, 149.0: 1}
+  DSAEPG2: all null
+  DSDT: 80 unique values, e.g. ['2008/02/18 00:00:00', '2006/07/17 00:00:00', '2006/05/18 00:00:00', '2006/10/11 00:00:00', '2007/12/12 00:00:00']
+  DSREAS: {1: 60, 2: 15, 99: 4, 4: 2, 6: 1, 5: 1}
+  DSRELTX: {0.0: 71, nan: 8, 1.0: 4}
+  ParticipantId: 83 unique values, e.g. ['ITN020AI_108005', 'ITN020AI_116943', 'ITN020AI_123048', 'ITN020AI_125101', 'ITN020AI_125948']
+  QUALIFYV: {157: 83}
+  RESDT: 29 unique values, e.g. ['2008/02/20 00:00:00', '2009/06/06 00:00:00', '2008/05/10 00:00:00', '2008/11/14 00:00:00', '2008/11/27 00:00:00']
+  STUDY: {'ITN020AI': 83}
+  SUBEVE: {0: 83}
+  VERDT: 28 unique values, e.g. ['2008/03/05 00:00:00', '2009/06/07 00:00:00', '2008/05/12 00:00:00', '2008/11/17 00:00:00', '2008/11/29 00:00:00']
+  form: {'DS': 83}
+  visit_orig: {905: 83}
+  visitnum: {'UN': 83}
+  Unnamed: 18: all null
+
+
+===== D:\Trial Guard\data\immport\batch2\ITN020AI.DataSet.DSTX.txt =====
+[classified: DATA, reading as tab-separated table]
+shape: (21, 19)
+  ACTEVENT: {905: 21}
+  CPEVENT: {'DISPOSITION': 21}
+  DSAENUM: {nan: 11, 4.0: 6, 1.0: 3, 3.0: 1}
+  DSAENUM2: {nan: 16, '3': 2, '2, 3, 4': 1, '1, 2': 1, '4': 1}
+  DSAEPG: {nan: 11, 149.2: 4, 149.1: 2, 149.0: 2, 149.4: 1, 149.3: 1}
+  DSAEPG2: {nan: 19, 149.3: 2}
+  DSTXDT: {nan: 3, '2006/01/30 00:00:00': 1, '2005/11/11 00:00:00': 1, '2007/10/04 00:00:00': 1, '2007/10/23 00:00:00': 1, '2006/02/02 00:00:00': 1, '2005/12/07 00:00:00': 1, '2006/05/25 00:00:00': 1, '2006/08/13 00:00:00': 1, '2007/01/19 00:00:00': 1, '2006/09/11 00:00:00': 1, '2006/05/23 00:00:00': 1, '2006/06/02 00:00:00': 1, '2006/04/09 00:00:00': 1, '2006/02/14 00:00:00': 1, '2005/03/27 00:00:00': 1, '2005/07/06 00:00:00': 1, '2006/04/04 00:00:00': 1, '2007/01/30 00:00:00': 1}
+  DSTXOTH: {nan: 17, 'PRIMARY ENDPOINT MET-PT SELECTED COPAXONE THERAPY.': 1, 'COMPLETED STUDY': 1, 'PT COMPLETED TREATMENT': 1, 'SUBJECT DECIDED TO STOP DUE TO INCREASED LFT AND DECREASE IN CHOLESTEROL': 1}
+  DSTXRSN: {2: 10, 1: 5, 99: 4, 4: 2}
+  ParticipantId: {'ITN020AI_123048': 1, 'ITN020AI_829736': 1, 'ITN020AI_942534': 1, 'ITN020AI_918809': 1, 'ITN020AI_917721': 1, 'ITN020AI_891802': 1, 'ITN020AI_891537': 1, 'ITN020AI_866275': 1, 'ITN020AI_852207': 1, 'ITN020AI_840292': 1, 'ITN020AI_815230': 1, 'ITN020AI_257682': 1, 'ITN020AI_689696': 1, 'ITN020AI_675042': 1, 'ITN020AI_560814': 1, 'ITN020AI_533272': 1, 'ITN020AI_426453': 1, 'ITN020AI_417194': 1, 'ITN020AI_330465': 1, 'ITN020AI_260067': 1, 'ITN020AI_980911': 1}
+  QUALIFYV: {153: 21}
+  STUDY: {'ITN020AI': 21}
+  SUBEVE: {0: 21}
+  form: {'DSTX': 21}
+  resdt: {nan: 9, '2008/09/17 00:00:00': 1, '2008/05/10 00:00:00': 1, '2008/12/25 00:00:00': 1, '2008/07/21 00:00:00': 1, '2006/05/18 00:00:00': 1, '2009/03/24 00:00:00': 1, '2009/05/25 00:00:00': 1, '2008/09/04 00:00:00': 1, '2009/05/16 00:00:00': 1, '2008/09/13 00:00:00': 1, '2008/12/19 00:00:00': 1, '2008/04/18 00:00:00': 1}
+  verdt: {nan: 9, '2008/09/19 00:00:00': 1, '2008/05/12 00:00:00': 1, '2008/12/30 00:00:00': 1, '2008/07/22 00:00:00': 1, '2008/05/20 00:00:00': 1, '2009/03/28 00:00:00': 1, '2009/05/30 00:00:00': 1, '2008/09/05 00:00:00': 1, '2009/05/17 00:00:00': 1, '2008/09/13 00:00:00': 1, '2008/12/19 00:00:00': 1, '2008/04/18 00:00:00': 1}
+  visit_orig: {905: 21}
+  visitnum: {'UN': 21}
+  Unnamed: 18: all null
+
+
+===== D:\Trial Guard\data\immport\batch2\ITN027AI.DataSet.ADSTAND.txt =====
+[classified: DATA, reading as tab-separated table]
+shape: (83, 30)
+  ImmPort Accession: 83 unique values, e.g. ['SUB146759', 'SUB146789', 'SUB146788', 'SUB146771', 'SUB146779']
+  Participant ID: 83 unique values, e.g. ['AbATE_106306', 'AbATE_122083', 'AbATE_137567', 'AbATE_156104', 'AbATE_161201']
+  Age Group: {'8-12': 50, '13-17': 27, '18-30': 6}
+  Age (years): numeric, min=8.3, max=29.6, mean=13.24, nulls=0
+  Completed Study: {'Yes': 72, 'No': 11}
+  Completed Study Therapy: {'No': 52, nan: 27, 'Yes': 4}
+  Data Snapshot Date: {'2012-07-25': 83}
+  Diagnosis Date: 79 unique values, e.g. ['2006-08-13', '2005-09-30', '2005-03-13', '2006-10-10', '2006-03-28']
+  Study Termination Reason: {nan: 72, 'Voluntary withdrawal': 7, 'Lost to follow-up': 2, 'Other': 2}
+  Date of Study Drug Disctontinuation: {nan: 64, '2007-09-28': 1, '2006-08-11': 1, '2006-05-14': 1, '2008-03-03': 1, '2010-01-17': 1, '2008-09-23': 1, '2008-02-02': 1, '2006-08-19': 1, '2009-01-14': 1, '2009-01-09': 1, '2007-03-17': 1, '2008-09-09': 1, '2006-04-23': 1, '2007-06-01': 1, '2008-07-19': 1, '2009-04-16': 1, '2008-02-18': 1, '2008-09-25': 1, '2005-05-27': 1}
+  Discontinued Therapy Reason: {nan: 64, 'Adverse event': 13, 'Participant withdrew consent': 3, 'Other': 2, 'Investigator decision': 1}
+  Enrollment Date: 82 unique values, e.g. ['2006-09-23', '2005-11-09', '2005-04-29', '2006-11-19', '2006-09-04']
+  Ethnicity: {'Not Hispanic or Latino': 78, 'Hispanic or Latino': 5}
+  First Dose Date: 52 unique values, e.g. ['2006-09-29', '2005-11-20', '2005-05-01', '2008-07-08', '2005-08-11']
+  Date of last follow-up: 81 unique values, e.g. ['2008-11-22', '2008-02-19', '2007-11-28', '2008-12-04', '2008-09-03']
+  Date Completed IS Withdrawal: all null
+  Intent to Treat: {'Yes': 77, 'No': 6}
+  Last Dose Date: 50 unique values, e.g. ['2006-10-12', '2007-01-02', '2006-12-07', '2009-08-10', '2007-03-25']
+  Time off IS/Drug (Days): all null
+  Race: {'White': 67, 'White; White': 5, 'American Indian or Alaska Native; White': 2, 'Black or African American; White': 2, 'Other': 1, 'White; Other': 1, 'Black or African American': 1, 'Asian': 1, 'White; American Indian or Alaska Native': 1, 'White; Asian': 1, 'Other; Other': 1}
+  Randomized: {'Yes': 83}
+  Date of Randomization: 82 unique values, e.g. ['2006-09-23', '2005-11-09', '2005-04-29', '2006-11-19', '2006-09-04']
+  Safety Sample: {'Yes': 79, 'No': 4}
+  Group/Stratum: all null
+  Sex: {'Male': 48, 'Female': 35}
+  Subject Status: {'Completed study': 59, 'Completed study, Discontinued therapy': 13, 'Terminated from study, Discontinued therapy': 6, 'Terminated from study': 5}
+  Study Identifier: {'ITN027AI': 83}
+  Date of Transplant: all null
+  Transplant Group: all null
+  Randomized Treatment Group: {'hOKT3': 56, 'Control': 27}
+
+
+===== D:\Trial Guard\data\immport\batch2\ITN027AI.DataSet.ADSTART0.txt =====
+[classified: DATA, reading as tab-separated table]
+shape: (83, 46)
+  ImmPort Accession: 83 unique values, e.g. ['SUB146759', 'SUB146789', 'SUB146788', 'SUB146771', 'SUB146779']
+  Participant ID: 83 unique values, e.g. ['AbATE_106306', 'AbATE_122083', 'AbATE_137567', 'AbATE_156104', 'AbATE_161201']
+  Age (years) Rounded: {9.0: 12, 12.0: 11, 10.0: 11, 8.0: 9, 17.0: 7, 11.0: 7, 15.0: 6, 13.0: 6, 14.0: 5, 16.0: 3, 29.0: 2, 27.0: 1, 23.0: 1, 24.0: 1, 25.0: 1}
+  Age Group (years): {'8-12': 50, '13-17': 27, '18-30': 6}
+  Age (years): {9.0: 14, 12.0: 13, 11.0: 12, 13.0: 6, 10.0: 6, 17.0: 6, 15.0: 6, 16.0: 5, 14.0: 5, 8.0: 3, 27.0: 1, 23.0: 1, 30.0: 1, 29.0: 1, 24.0: 1, 26.0: 1, 18.0: 1}
+  Completed Study: {'Yes': 72, 'No': 11}
+  Data Snapshot Date: {'2012-07-25': 83}
+  Day 0: 76 unique values, e.g. ['2006-09-29', '2005-11-20', '2005-05-01', '2006-12-04', '2006-09-17']
+  Diagnosis Date: 79 unique values, e.g. ['2006-08-13', '2005-09-30', '2005-03-13', '2006-10-10', '2006-03-28']
+  Duration of Diabetes: numeric, min=17.0, max=55.0, mean=40.11, nulls=0
+  Discontinued Study Reason: {nan: 72, 'Voluntary withdrawal': 7, 'Lost to follow-up': 2, 'Other': 2}
+  Date of Study Drug Discontinuation: {nan: 64, '2007-09-28': 1, '2006-08-11': 1, '2006-05-14': 1, '2008-03-03': 1, '2010-01-17': 1, '2008-09-23': 1, '2008-02-02': 1, '2006-08-19': 1, '2009-01-14': 1, '2009-01-09': 1, '2007-03-17': 1, '2008-09-09': 1, '2006-04-23': 1, '2007-06-01': 1, '2008-07-19': 1, '2009-04-16': 1, '2008-02-18': 1, '2008-09-25': 1, '2005-05-27': 1}
+  Day of Study Drug Discontinuation: {nan: 68, 4.0: 2, 1.0: 2, 364.0: 1, 388.0: 1, 397.0: 1, 368.0: 1, 12.0: 1, 426.0: 1, 496.0: 1, 6.0: 1, 353.0: 1, 13.0: 1, 5.0: 1}
+  Discontinued Therapy Reason: {nan: 64, 'Adverse event': 13, 'Participant withdrew consent': 3, 'Other': 2, 'Investigator decision': 1}
+  Ethnicity: {'Not Hispanic or Latino': 78, 'Hispanic or Latino': 5}
+  Date of First Infusion in Cycle 1: 52 unique values, e.g. ['2006-09-29', '2005-11-20', '2005-05-01', '2008-07-08', '2005-08-11']
+  Date of First Infusion in Cycle 2: 40 unique values, e.g. ['2006-12-20', '2006-11-24', '2009-07-28', '2007-03-12', '2008-09-24']
+  Date of First MMT: 77 unique values, e.g. ['2006-09-29', '2005-11-20', '2005-05-01', '2006-12-04', '2006-09-17']
+  Date of Last Follow-up: 81 unique values, e.g. ['2008-11-22', '2008-02-19', '2007-11-28', '2008-12-04', '2008-09-03']
+  Day of Last Follow-up: numeric, min=75.0, max=987.0, mean=730.43, nulls=6
+  Date of Informed Consent: 82 unique values, e.g. ['2006-09-16', '2005-10-30', '2005-04-20', '2006-11-10', '2006-08-29']
+  Intent To Treat Population: {'Yes': 77, 'No': 6}
+  Date of Last Infusion: 50 unique values, e.g. ['2006-10-12', '2007-01-02', '2006-12-07', '2009-08-10', '2007-03-25']
+  Per Protocol Population: {'Yes': 60, 'No': 23}
+  Per Prot. Excl.Subjs w/o 24 mo: {'Yes': 56, 'No': 27}
+  IND Race: {'White': 72, 'More than one race': 7, 'Unknown': 2, 'Black or African American': 1, 'Asian': 1}
+  Primary Race: {'White': 75, 'Black or African American': 3, 'American Indian or Alaska Native': 2, 'Other': 2, 'Asian': 1}
+  Secondary Race: {nan: 70, 'White': 9, 'Other': 2, 'American Indian or Alaska Native': 1, 'Asian': 1}
+  Randomized: {'Yes': 83}
+  Date of Randomization: 82 unique values, e.g. ['2006-09-23', '2005-11-09', '2005-04-29', '2006-11-19', '2006-09-04']
+  Responder: 40% decrease AUC: {'No': 56, 'Yes': 23, nan: 4}
+  Analysis Sample: {'I/PI/PE': 56, 'I': 17, nan: 6, 'I/PI': 4}
+  Sex: {1: 48, 2: 35}
+  Sex (Char): {'Male': 48, 'Female': 35}
+  Specimen Consent  Question 1: {'Yes': 83}
+  Specimen Consent  Question 2: {'Yes': 83}
+  Specimen Consent  Question 3: {'No': 83}
+  Status: {'Completed study': 59, 'Completed study, Discontinued therapy': 13, 'Terminated from study, Discontinued therapy': 6, 'Terminated from study': 5}
+  Study Identifier: {'ITN027AI': 83}
+  Treatment Group: {2: 56, 1: 27}
+  Treatment Group (Char): {'hOKT3': 56, 'Control': 27}
+  BMI (kg/m^2) Baseline: numeric, min=14.18, max=36.88, mean=19.70, nulls=1
+  form: {'ADSTART0': 83}
+  Height (cm) Baseline: numeric, min=122.2, max=194.0, mean=153.61, nulls=1
+  visitnum: {'DERIV': 83}
+  Weight (kg) Baseline: numeric, min=24.9, max=93.6, mean=47.83, nulls=1
+
+
+===== D:\Trial Guard\data\immport\batch2\ITN_Diabetes_Study_data_dictionary.txt =====
+[classified: DOCS, reading full text]
+Study Acc Num	File name	File Description	AS AE LT CM or EXP	Comment	"AS - assessment
+AE - adverse event
+LT - lab test
+CM - comcomitant medications
+EXP - experiment"
+SDY524_AbATE	ADCPEP2_PUB_2015-02-20_13-12-18	C-peptide area under curve in response to MMT	LT		
+SDY524_AbATE	ADAE1_PUB_2015-02-20_13-12-52	Adverse Events	AE		
+SDY524_AbATE	ADHB1_PUB_2015-02-20_13-12-35	"HbA1C, C-peptide and Glucose"	LT		
+SDY524_AbATE	ADINS2_PUB_2015-02-20_13-13-07	Insulin usage	AS	includes HbA1c data	
+SDY524_AbATE	ADSTAND_2015-02-20_13-12-01	treatment group and dates	AS		
+SDY524_AbATE	ADSTART0_2015-02-20_13-11-47	"demographics, treatment dates"	AS		
+SDY524_AbATE	Auto Antibody_2015-02-20_13-03-26	Autoantibody	LT	"Autoantibody (GAD65, etc) values "	
+SDY524_AbATE	Extended Flow (Baseline)_2015-02-20_13-14	Extended Flow (Baseline)	EXP	no flow files available	
+SDY524_AbATE	SpecimenTiming_2015-02-27_07-41-32	Specimen Timing	AS		
+SDY565_IL2-RAPA	ADCPEP2_DB_2015-02-23_12-45-04	C-peptide area under curve	LT	C-peptide area under curve	
+SDY565_IL2-RAPA	ADLB1_DB_2015-02-23_12-41-32	Hematology	LT	eosinophil counts	
+SDY565_IL2-RAPA	Cytokine_DB_2015-02-23_13-53-59	Cytokine	LT	"Cell Population (IL2RA, TGFB), Value"	
+SDY565_IL2-RAPA	Demethylation_DB_2015-02-23_12-56-13	Demethylation	EXP	demethylation (Treg/CD3)	
+SDY565_IL2-RAPA	Immunophenotyping_DB_2015-02-23_12-56-34	Immunophenotyping	EXP	Flow experiment loaded	
+SDY565_IL2-RAPA	Phosphoflow_DB_2015-02-23_12-56-51	Phosphoflow	EXP	Flow files not available	
+SDY567_Shapiro	AAB_2015-02-24_11-27-55	Autoantibody	LT	"GAD65, etc values "	
+SDY567_Shapiro	ADI_2015-02-20_13-31-26	Adverse Events	AE		
+SDY567_Shapiro	AEXPCODE_2015-02-20_13-31-52	Adverse Events Codes	AE		
+SDY567_Shapiro	ANM_2015-02-20_13-32-07	Enrollment Anomaly	AS		
+SDY567_Shapiro	ARG_2015-02-20_13-32-28	Centralized Diabetes Assessments	LT	Glucose values by visit	
+SDY567_Shapiro	CHT_2015-02-20_13-33-31	Chemistries	LT	"blood chemistry (albumin, BUN, Ca, HDL, LDL, etc)"	
+SDY567_Shapiro	CMEDMSTR_2015-02-20_13-33-44	Concomitant Medications	CM		
+SDY567_Shapiro	CST_2015-02-20_13-33-58	Clinical Assessment	AS	status of graft	
+SDY567_Shapiro	DEM_2015-02-20_13-34-37	Demographics	AS		
+SDY567_Shapiro	DEV_2015-02-20_13-34-50	Protocol Deviation	AS		
+SDY567_Shapiro	ECNIS01B_2015-02-20_13-35-06	Enrollment	AS	all values are zero	
+SDY567_Shapiro	ENROLL_2015-02-20_13-35-22	Enrollment	AS	"start date, treatment assignment (coded)"	
+SDY567_Shapiro	GLM_2015-02-20_13-36-07	Glucose Level Monitoring	LT	"column headers = glucose fast 1 (CU, SI, units), glucose PP 1 (CU, SI, units), glucose fast date 2 (CU, SI, units)"	
+SDY567_Shapiro	GLU_2015-02-20_13-35-36	Glucose Levels - glucose fasting values by visit	LT	"glucose measurements with day,  no study day or visit ID"	
+SDY567_Shapiro	HMT_2015-02-20_13-36-24	Hematology	LT	"baso, eosin, hemcrit, lymph, prothromb, MCHC, mean corpusc volumne, monocytes, neutrph, platelet, RBC (CU, SI, Units), WBC (CU, SI, Units)"	
+SDY567_Shapiro	IAT_2015-02-20_13-37-06	Insulin Administration - insulin dose by visit number	LT	insulin adiminstration date and dose	
+SDY567_Shapiro	IDT_2015-02-20_13-36-47	Immunosuppressant Dosing	AS	Treatment dosing	
+SDY567_Shapiro	IFT_2015-02-20_13-38-23	Daclizumab Infusion	AS	"symptoms  from treatment includes BP, arrhythmia, nausea,etc"	
+SDY567_Shapiro	IGF_2015-02-20_13-37-50	Islet Graft Failure	AS	c-peptide values	
+SDY567_Shapiro	ILT_2015-02-20_13-38-54	Immunosuppressant Levels	AS	"needs mapping of medication ID (1,2) to treatment name, is missing visit info"	
+SDY567_Shapiro	IMEDMSTR_2015-02-20_13-38-41	Immunsuppressants	AS	dosing information by visit year	
+SDY567_Shapiro	INF_2015-02-20_13-40	Infection Form	AS	type of organisim and body location but organism needs mapping of org code to genus species	
+SDY567_Shapiro	ITX_2015-02-20_13-39-14	Islet Transplant Status	AS	"transplant status, eligibility"	
+SDY567_Shapiro	LTFUMSTR_2015-02-20_13-39-42	Long Term Follow-up	AS	"values for glucose, HBAiC, IA2, IgG, IgM, urine, weight, etc across time"	
+SDY567_Shapiro	MDT_2015-02-20_13-40-32	Concomitant Medications	CM		
+SDY567_Shapiro	MGT_2015-02-20_13-40-14	MAGE	LT	"glucose levels across a day, across visits"	
+SDY567_Shapiro	MRT_2015-02-20_13-41-10	Liver MRI	AS		
+SDY567_Shapiro	PDEVMSTR_2015-02-20_13-40-49	Protocol Deviations	AS		
+SDY567_Shapiro	PGT_2015-02-20_13-41-39	Pregnancy Test	AS		
+SDY567_Shapiro	PRT_2015-02-24_11-36-31	Panel Reactive Antibody	LT	"class I, II antigen screen, etc"	
+SDY567_Shapiro	PTX_2015-02-20_13-43-26	Post_Transplant Assessments	AS		
+SDY567_Shapiro	SEC_2015-02-20_13-42-14	Screening Eligibility Criteria	AS		
+SDY567_Shapiro	T24_2015-02-20_13-41-56	24-Hour Urine	LT	"microalbumin, creatinine values"	
+SDY567_Shapiro	TID_2015-02-20_13-44-01	Infectious Disease	AS	"CMV, EBV, etc status coded, need mapping"	
+SDY567_Shapiro	TYP_2015-02-20_13-43-42	Blood/Tissue Typing	LT	"method for HLA typing (coded), blood type (coded) serologic HLA-A (values 1, 2, 11, 28, etc.)"	
+SDY567_Shapiro	ULT_2015-02-20_13-44-48	Portal Vein Ultrasound	AS		
+SDY567_Shapiro	UNT_2015-02-20_13-44-31	Urinalysis	LT	"blood, glucose, WBC upper value, protein, etc"	
+SDY567_Shapiro	XMC_2015-02-20_13-44-16	Crossmatch	AS	"Auto B cell crossmatch result, Auto B cell crossmatch method, Auto T cell crossmatch result, Auto T cell crossmatch method, Donor B cell crossmatch result, etc"	
+SDY568_Orban	AE_2015-03-02_14-47-22	Adverse Events	AE		
+SDY568_Orban	CM_2015-03-02_14-47-34	Concomitant Medications	CM		
+SDY568_Orban	CRIT_2015-03-02_14-47-45	Inclusion/Exclusion Criteria	AS		
+SDY568_Orban	CX_2015-03-02_14-47-56	Chest X-ray	AS		
+SDY568_Orban	DEM_2015-03-02_14-48-07	Demographics	AS		
+SDY568_Orban	DEV_2015-03-02_14-48-22	Protocol Deviation	AS		
+SDY568_Orban	DH_2015-03-02_14-48-50	Diabetes History	AS		
+SDY568_Orban	DS_2015-03-02_14-49-04	Termination from Protocol	AS		
+SDY568_Orban	EG_2015-03-02_14-49-28	Electrocardiogram	AS		
+SDY568_Orban	EX_2015-03-02_14-49-39	Study Drug Dosing	AS	"site of vaccination, status of injection site, "	
+SDY568_Orban	FH_2015-03-02_14-49-51	Family History	AS		
+SDY568_Orban	HBA_2015-03-02_14-50-05	HbA1C	LT	"HbA1c in %, "	
+SDY568_Orban	HCS_2015-03-02_14-46-53	Humoral and Cellular Studies	LT	"GAD65, heterophile Ab, Ia2Ab, IgG1, IgG2, etc"	
+SDY568_Orban	IC_2015-03-02_14-50-35	Informed Consent	AS		
+SDY568_Orban	ID_2015-03-02_14-50-46	Infectious Disease	AS	"Infectious Disease status (HIV, TB, CMV, EBV, HepB, etc)"	
+SDY568_Orban	INAD_2015-03-02_14-50-57	Insulin Usage	AS		
+SDY568_Orban	LB_2015-03-02_14-51-12	Lab Results	LT	"albumin, BUN, Ca, CL, K, platelets, etc (mmol/L, mg/dL, IU/L g/dL, %, FL, K/cmm)"	
+SDY568_Orban	MMT_2015-03-02_14-51-28	Mixed Meal Test	LT	"INCREMENTAL C-PEPTIDE AUC 0-120 MIN, TOTAL C-PEPTIDE AUC % CFB, etc"	
+SDY568_Orban	NormalLabValues			"Hematology (RBC M/cmm, hemaglobin g/dL, MCV fL, platelet K/cmm, RDW %,e tc"	
+SDY568_Orban	PE_2015-03-02_14-51-39	Physical Exam	AS		
+SDY568_Orban	RPRO_2015-03-02_14-51-53	Female Reproductive Status	AS		
+SDY568_Orban	SI_2015-03-02_14-47-09	T-Cell Stimulation Assay	"LT, EXP"	"B Chain SI-ES, OP 2 (B5-20) SI-ES, OP 3 (B9-23) SI-ES, PROINSULIN SI-ES, TETANUS TOXOID ANTIGEN SI-ES, etc by visit"	
+SDY568_Orban	VIS_2015-03-02_14-52-03	Visit	AS		
+SDY568_Orban	VIT_2015-03-02_14-52-14	Vital Signs	AS		
+SDY569_HeroldII	ANG_2015-03-04_11-21-20	Rubella Titer	LT	Rubella and Hemophilus titer	
+SDY569_HeroldII	AUTOANT1_2015-03-04_11-21-48	Auto-Antibody	LT		
+SDY569_HeroldII	AUTOANT_2015-03-04_11-21-34	Auto-Antibody1	LT		
+SDY569_HeroldII	CLSTANT_2015-03-04_11-22-15	Clinical Studies Antibodies	LT		
+SDY569_HeroldII	CLSTMAB_2015-03-04_11-22-28	Clinical Studies Monoclonal Antibodies	LT		
+SDY569_HeroldII	CLSTOKT_2015-03-04_11-22-41	Clinical Studies hOKT3	LT		
+SDY569_HeroldII	CLST_2015-03-04_11-22-02	Clinical Studies 			
+SDY569_HeroldII	CM_2015-03-04_11-22-55	Concomitant Medications	CM	"GAD_1, GAD_R, ICA512_I, ICA512_R, IAA_1, etc where I = numeric R = positive or neg"	
+SDY569_HeroldII	CRIT_2015-03-04_11-23-19	Criteria Type	AS		
+SDY569_HeroldII	DEM_2015-03-04_11-21-05	Demographics	AS		
+SDY569_HeroldII	DEV_2015-03-04_11-23-45	Protocol Deviation	AS		
+SDY569_HeroldII	DH_2015-03-04_11-23-32	Diabetes History	AS		
+SDY569_HeroldII	DS_2015-03-04_11-24-03	Deviation Specifications	AS		
+SDY569_HeroldII	EXMERGE_2015-03-04_11-24-17	Dosing and Side-Effects	AS	infusion dosing and dates	
+SDY569_HeroldII	EX_2015-03-04_11-24-44	Study Drug Dosing	AS	"infusion start and end times, dosages, total volume, etc"	
+SDY569_HeroldII	HBA_2015-03-04_11-25-21	HbA1C	LT	HbA1c in %	
+SDY569_HeroldII	ID_2015-03-04_11-25	Infectious Disease	AS	"screening, coded values"	
+SDY569_HeroldII	INAD_2015-03-04_11-25-53	Insulin Administration	AS	"insulin type, amount, visit, TOTAL DAILY INSULIN DOSE (/KG), etc"	
+SDY569_HeroldII	INF_2015-03-04_11-25-36	Infection Form	AS	"Infection Site, Culture Site, Organism, Fever, Date of Onset"	
+SDY569_HeroldII	LABDATA_2015-03-04_11-26-17	Lab Results	LT	"Total GLUCOSE AUC 0-240 MINUTES, Total C-PEPTIDE AUC 0-240 MINUTES, INCREMENTAL C-PEP AUC 0-240 MIN, etc"	
+SDY569_HeroldII	LB1_2015-03-04_11-28-02	Lab Tests	LT	"LAB TEST NAME, MAX POST-BL NCI-CTC GRADE (HIGH), MAX POST-BL NCI-CTC GRADE (LOW), NORMAL LAB RANGE, STANDARD LAB UNITS (U/L, mg/dL, mmol/L, %, g/dL, pg, fL, etc), study day"	
+SDY569_HeroldII	LB_2015-03-04_11-27-47	Lab Tests	LT	"LAB TEST NAME, MAX POST-BL NCI-CTC GRADE (HIGH), MAX POST-BL NCI-CTC GRADE (LOW), NORMAL LAB RANGE, STANDARD LAB UNITS (U/L, mg/dL, mmol/L, %, g/dL, pg, fL, etc), study day"	
+SDY569_HeroldII	MHX3_2015-03-04_13-00-04	Medical History	AS		
+SDY569_HeroldII	MHX4_2015-03-04_11-28-26	Medical History	AS		
+SDY569_HeroldII	MH_2015-03-04_11-27-03	Medical History	AS		
+SDY569_HeroldII	MMT_2015-03-04_11-27-20	Mixed Meal Test	LT	"Number Hours Since Eating, Number Hours Since Last Insulin, Type of Insulin Administered, Weight in kg,Dose Administered, etc "	
+SDY569_HeroldII	PE_2015-03-04_11-30-09	Physical Exam	AS		
+SDY569_HeroldII	RPRO_2015-03-04_11-30-24	Reproductive Status	AS		
+SDY569_HeroldII	TAS_2015-03-04_11-28-55	Tolerance Assay		"Tolerance Assay Name (Circular DNA, PBMC), Label Number"	
+SDY569_HeroldII	URIN_2015-03-04_11-31-08	Urinalysis	LT	"Urinalysis Protein, Urinalysis Blood, Urinalysis Glucose, Macroscopic WBC Neg/ND"	
+SDY569_HeroldII	URLB_2015-03-04_11-31-22	Urinalysis	LT	"URINALYSIS EXAM TYPE (MACRO, MICRO, OVERALL), URINALYSIS TEST RESULT, "	
+SDY569_HeroldII	VIS_2015-03-04_11-30-37	Visits	AS		
+SDY569_HeroldII	VIT_2015-03-04_11-30-52	Vital Signs	AS		
+
+
+===== D:\Trial Guard\data\immport\batch2\patientstatus.cit07.txt =====
+[classified: DATA, reading as tab-separated table]
+shape: (48, 5)
+  Accession: 48 unique values, e.g. ['SUB184444', 'SUB184445', 'SUB184446', 'SUB184447', 'SUB184448']
+  StudyID: {7: 48}
+  NumTX: {2: 25, 1: 22, 3: 1}
+  Numdays2ndTX: {nan: 22, 137.0: 2, 123.0: 2, 236.0: 1, 149.0: 1, 243.0: 1, 223.0: 1, 225.0: 1, 234.0: 1, 172.0: 1, 155.0: 1, 109.0: 1, 147.0: 1, 112.0: 1, 167.0: 1, 187.0: 1, 129.0: 1, 140.0: 1, 87.0: 1, 135.0: 1, 165.0: 1, 85.0: 1, 211.0: 1, 170.0: 1, 132.0: 1}
+  Numdays3rdTX: {nan: 47, 227.0: 1}
+
+
+===== D:\Trial Guard\data\immport\batch2\ter2mstr.txt =====
+[classified: DATA, reading as tab-separated table]
+shape: (65, 9)
+  Subject.Accession: 65 unique values, e.g. ['SUB430496', 'SUB430502', 'SUB430501', 'SUB430514', 'SUB430498']
+  COMPCOR: {'Yes': 59, 'No': 6}
+  COMPYN: {'Yes': 47, 'No': 18}
+  DISREAS: {nan: 47, 'Participant Withdrew Consent': 9, 'Other AE': 3, 'Other': 3, 'Investigator Decision': 2, 'Not Eligible for Extension': 1}
+  AE1TERM: all null
+  AE2TERM: all null
+  AE3TERM: all null
+  AE4TERM: {nan: 62, 'more gait instability': 1, 'swelling oflips and mouth': 1, 'disease progression': 1}
+  DISRESP: {nan: 62, 'lost to follow': 1, 'Lost to follow-up': 1, 'Patient is LTF and did not return for any doses': 1}
+
+
+===== D:\Trial Guard\data\immport\batch2\termmstr.txt =====
+[classified: DATA, reading as tab-separated table]
+shape: (65, 9)
+  Subject.Accession: 65 unique values, e.g. ['SUB430496', 'SUB430502', 'SUB430501', 'SUB430514', 'SUB430498']
+  UNMASK: {'No': 64, 'Yes': 1}
+  UMDESC: {nan: 64, 'was unmasked after this visit on May 26 so that patient doctor could decide the best time to start her next therapy': 1}
+  COMPCOR: {'Yes': 59, 'No': 6}
+  COMPSDY: {'Yes': 44, 'No': 21}
+  TERMREA: {nan: 44, 'Participant Withdrew Consent': 9, 'Other': 5, 'Other AE': 3, 'Failure to Return/Lost to Follow-Up': 3, 'Participant Did Not Meet Eligibility Criteria for Extension': 1}
+  AE1TERM: all null
+  AE2TERM: {nan: 62, 'increase gait instability,increase hip pain': 1, 'swelling of lips and mouth': 1, 'Disease activity continual': 1}
+  TERRESP: {nan: 60, 'Worsening of patients multiple sclerosis': 1, 'Subject was not practicing an appropriate form for birth control.': 1, 'After reviewing MRI W52, PI decided to d/c subject. NEw lesions.': 1, "The subject's condition was deteriorating.": 1, "Subject's disease was progressing so the PI decided to remove the sub.": 1}
+
+
+===== D:\Trial Guard\data\immport\batch2\TERMMSTR_2019-03-01_10-44_ITN045AI.txt =====
+[classified: DATA, reading as tab-separated table]
+shape: (49, 15)
+  participantId: 49 unique values, e.g. ['T1DAL_137962', 'T1DAL_142037', 'T1DAL_161919', 'T1DAL_185333', 'T1DAL_243767']
+  ImmPort Accession: 49 unique values, e.g. ['SUB168890', 'SUB168891', 'SUB168892', 'SUB168893', 'SUB168894']
+  Visit: all null
+  DATASTR: {'TERM': 49}
+  PHASE: {4000: 49}
+  SEQNO: {0: 49}
+  visitnum: all null
+  PROJECT: {'ITN045AI-Rigby': 49}
+  PARENT_KEY: numeric, min=421319.0, max=979961.0, mean=924958.88, nulls=0
+  Study Termination Date: 48 unique values, e.g. ['2012-12-24', '2013-12-03', '2013-08-11', '2014-01-11', '2013-01-17']
+  Was treatment assignment unmasked for participant while study was ongoing?: {'No': 48, 'Yes': 1}
+  Did Participant Complete the Study?: {'Yes': 43, 'No': 6}
+  If No, please complete the Last Study Visit Date:: {nan: 43, '2011-06-20': 1, '2012-01-09': 1, '2012-01-20': 1, '2011-12-30': 1, '2011-11-24': 1, '2011-10-17': 1}
+  Reason for Early Termination: {nan: 43, 'Failure to Return/Lost to Follow-Up': 4, 'Other AE': 1, 'Participant or Guardian Withdrew Consent': 1}
+  AE Date of Onset: {nan: 48, '2011-12-07': 1}
+
+
+===== D:\Trial Guard\data\immport\batch3\ADVS1_2019-03-01_10-24-35_ITN045AI.txt =====
+[classified: DATA, reading as tab-separated table]
+shape: (1470, 75)
+  participantId: 49 unique values, e.g. ['T1DAL_137962', 'T1DAL_142037', 'T1DAL_161919', 'T1DAL_185333', 'T1DAL_243767']
+  ImmPort Accession: 49 unique values, e.g. ['SUB168890', 'SUB168891', 'SUB168892', 'SUB168893', 'SUB168894']
+  Visit: 34 unique values, e.g. ['-1', '0', 'Week 11', 'Week 24', 'Week 35']
+  Study Identifier: {'ITN045AI-Rigby': 1470}
+  Treatment: {'A': 1009, 'P': 461}
+  Treatment (Numeric): {1.0: 1009, 2.0: 461}
+  Informed Consent Date: 49 unique values, e.g. ['2010-11-28', '2011-11-05', '2011-07-10', '2012-01-09', '2010-12-21']
+  Randomization Date: 45 unique values, e.g. ['2010-12-19', '2011-12-02', '2011-07-31', '2012-01-21', '2011-01-24']
+  Randomized?: {'Yes': 1470}
+  Intent-to-Treat Sample: {'Yes': 1470}
+  Safety Sample: {'Yes': 1470}
+  Analysis Sample: {'S/I': 1470}
+  Age: {17.0: 190, 23.0: 158, 16.0: 142, 13.0: 105, 18.0: 103, 12.0: 97, 15.0: 96, 33.0: 65, 14.0: 64, 19.0: 63, 32.0: 63, 22.0: 58, 24.0: 47, 31.0: 32, 26.0: 32, 25.0: 32, 21.0: 32, 27.0: 32, 34.0: 31, 28.0: 28}
+  Age Group: {'16-35': 1108, '12-15': 362}
+  Age Group.1: {'22-35': 578, '12-16': 504, '17-21': 388}
+  Age Group.2: {'12-21': 892, '22-35': 578}
+  Gender: {'Male': 856, 'Female': 614}
+  Primary Race: {'White': 1438, 'Black or African American': 32}
+  Secondary RAce: {'White': 729, nan: 699, 'American Indian or Alaska Native': 28, 'Asian': 14}
+  Ethnicity: {'Not Hispanic or Latino': 1364, 'Hispanic or Latino': 78, 'Unknown': 28}
+  First Dose Date, Treatment Cycle 1: 46 unique values, e.g. ['2010-12-19', '2011-12-02', '2011-07-31', '2012-01-21', '2011-01-24']
+  First Dose Date, Treatment Cycle 2: 39 unique values, e.g. ['2011-06-06', '2012-05-18', '2012-01-18', '2012-07-08', '2011-07-10']
+  Last Dose Date: 46 unique values, e.g. ['2011-08-22', '2012-08-04', '2012-04-04', '2012-09-22', '2011-09-28']
+  Completed Study: {'Yes': 1365, 'No': 105}
+  Terminated Study Reason: {nan: 1365, 'Failure to Return/Lost to Follow-Up': 79, 'Participant or Guardian Withdrew Consent': 18, 'Other AE': 8}
+  Terminated Study Date: 48 unique values, e.g. ['2012-12-24', '2013-12-03', '2013-08-11', '2014-01-11', '2013-01-17']
+  Terminated Study Day: numeric, min=41.0, max=778.0, mean=704.75, nulls=0
+  Completed Study Therapy: {'Yes': 1295, 'No': 175}
+  Discontinued Study Therapy Reason: {nan: 1295, 'Other AE, Specify': 105, 'Lost to Follow-up': 38, 'Withdrew Consent': 18, 'Other': 14}
+  Discontinued Study Therapy Reason(Short): {nan: 1295, 'Other AE': 105, 'Lost to Follow-up': 38, 'Withdrew Consent': 18, 'Other': 14}
+  Discontinued Study Therapy Date: 46 unique values, e.g. ['2011-08-22', '2012-08-04', '2012-04-04', '2012-09-22', '2011-09-28']
+  Discontinued Study Therapy Day: {246.0: 503, 245.0: 349, 244.0: 127, 247.0: 123, 237.0: 64, 249.0: 64, 252.0: 33, 231.0: 33, 248.0: 32, 232.0: 32, 253.0: 32, 210.0: 23, 198.0: 18, 57.0: 15, 80.0: 14, 15.0: 8}
+  Study Status: {'Completed study': 1365, 'Terminated study early': 105}
+  Study Therapy Status: {'Completed study drug': 1295, 'Discontinued study drug early': 175}
+  Completed Treatment Cycle 1: {'Yes': 1462, 'No': 8}
+  Completed Treatment Cycle 2: {'Yes': 1295, 'No': 175}
+  Date of Last Follow-up: 48 unique values, e.g. ['2012-12-24', '2013-12-03', '2013-08-11', '2014-01-11', '2013-01-17']
+  Day of Last Follow-up: numeric, min=41.0, max=778.0, mean=704.75, nulls=0
+  Last Study Visit: {'Week 104/Visit 30': 1269, 'Unscheduled Visit': 96, 'Week 35/Visit 26': 27, 'Week 30/Visit 21': 23, 'Week 28/Visit 19': 18, 'Week 19/Visit 13': 15, 'Week 15/Visit 12': 14, 'Early Termination': 8}
+  Date of T1DM diagnosis: 48 unique values, e.g. ['2010-09-14', '2011-10-07', '2011-05-11', '2011-12-16', '2010-12-08']
+  Day of T1DM diagnosis: numeric, min=-100.0, max=-31.0, mean=-73.59, nulls=0
+  Protocol Version Under Which ICF Signed: {7.0: 736, 8.0: 734}
+  Consent to Genetic Tests: {'Yes': 1374, 'No': 96}
+  Consent to Other Tests: {'Yes': 1438, 'No': 32}
+  Consent to Future Use: {'Yes': 1470}
+  Phase: numeric, min=1001, max=5000, mean=1989.60, nulls=0
+  Visit Number: 34 unique values, e.g. ['-1', '0', '11', '15', '26']
+  Visit.1: 34 unique values, e.g. ['Visit -1/Week-5', 'Week 0/Visit 0', 'Week 11/Visit 11', 'Week 24/Visit 15', 'Week 35/Visit 26']
+  Vital Date: 660 unique values, e.g. ['2010-11-28', '2010-12-19', '2011-03-06', '2011-06-06', '2011-08-22']
+  Vital Day: numeric, min=-47.0, max=778.0, mean=158.64, nulls=0
+  Diastolic Blood Pressure (mmHg): numeric, min=42.0, max=100.0, mean=68.55, nulls=3
+  Baseline Diastolic Blood Pressure (mmHg): {68.0: 186, 66.0: 129, 70.0: 126, 78.0: 111, 72.0: 103, 60.0: 96, 69.0: 95, 63.0: 64, 65.0: 64, 56.0: 64, 61.0: 63, 59.0: 63, 77.0: 46, 57.0: 32, 74.0: 32, 73.0: 32, 84.0: 32, 76.0: 32, 83.0: 31, 67.0: 28, 71.0: 23, 58.0: 18}
+  Diastolic BP Change from Baseline (mmHg): numeric, min=-27.0, max=30.0, mean=0.52, nulls=101
+  Systolic Blood Pressure (mmHg): numeric, min=84.0, max=166.0, mean=115.69, nulls=3
+  Baseline Systolic Blood Pressure (mmHg): numeric, min=96.0, max=150.0, mean=113.75, nulls=0
+  Systolic BP Change from Baseline (mmHg): numeric, min=-35.0, max=44.0, mean=2.05, nulls=101
+  Respiration (breaths/min): {16.0: 631, 18.0: 380, 12.0: 165, 20.0: 128, 14.0: 111, 17.0: 14, 19.0: 10, 15.0: 8, 24.0: 7, 22.0: 6, nan: 6, 10.0: 2, 26.0: 1, 21.0: 1}
+  Baseline Respiration (breaths/min): {16.0: 622, 18.0: 410, 12.0: 225, 20.0: 63, 14.0: 55, 19.0: 32, 21.0: 32, 15.0: 31}
+  Resp. Change from Baseline (breaths/min): {0.0: 554, -2.0: 205, 2.0: 195, 4.0: 154, nan: 104, -4.0: 95, 8.0: 33, -3.0: 29, -6.0: 23, -1.0: 20, -8.0: 18, 6.0: 17, 1.0: 12, 3.0: 4, -5.0: 4, 5.0: 2, 10.0: 1}
+  Pulse (beats/min): numeric, min=41.0, max=109.0, mean=74.33, nulls=3
+  Baseline Pulse (beats/min): {80.0: 192, 76.0: 138, 64.0: 111, 88.0: 65, 56.0: 64, 62.0: 64, 78.0: 64, 82.0: 64, 59.0: 64, 84.0: 63, 70.0: 63, 57.0: 62, 86.0: 62, 60.0: 58, 71.0: 50, 87.0: 33, 89.0: 32, 74.0: 32, 85.0: 32, 72.0: 32, 96.0: 32, 66.0: 31, 98.0: 31, 50.0: 23, 51.0: 8}
+  Pulse Change from Baseline (beats/min): numeric, min=-36.0, max=46.0, mean=0.58, nulls=101
+  Temperature (Celsius): numeric, min=34.722222222, max=37.7, mean=36.49, nulls=6
+  Baseline Temperatuer (Celcius): {37.0: 127, 36.5: 127, 36.3: 123, 36.1: 111, 36.2: 96, 36.6: 96, 36.4: 95, 36.777777778: 65, 36.333333333: 64, 35.8: 64, 36.277777778: 63, 36.722222222: 59, 35.7: 55, 36.888888889: 32, 36.555555556: 32, 36.7: 32, 35.6: 32, 37.2: 32, 35.4: 32, 37.388888889: 32, 35.9: 31, 36.833333333: 31, 36.666666667: 31, 36.111111111: 8}
+  Temp. Change from Baseline (Celcius): numeric, min=-2.277777778, max=1.7, mean=0.07, nulls=104
+  Weight (kg): numeric, min=36.4, max=141.0, mean=70.25, nulls=12
+  Baseline Weight (kg): numeric, min=37.7, max=123.0, mean=68.82, nulls=0
+  Weight Change from Baseline (kg): numeric, min=-11.7, max=26.9, mean=1.53, nulls=110
+  Height (cm): numeric, min=124.7, max=193.0, mean=172.18, nulls=268
+  Baseline Height (cm): numeric, min=144.3, max=191.5, mean=172.32, nulls=0
+  Height Change from Baseline (cm): numeric, min=-49.6, max=39.72, mean=0.43, nulls=361
+  BMI (kg/m^2): numeric, min=14.335969918, max=40.900084823, mean=23.58, nulls=269
+  Baseline BMI (kg/m^2): numeric, min=15.621004919, max=37.420492861, mean=22.85, nulls=0
+  BMI Change from Baseline (kg/m^2): numeric, min=-8.849672021, max=20.064344517, mean=0.44, nulls=362
+  Data Snapshot Date: {'2014-11-11': 1470}
+
+
+===== D:\Trial Guard\data\immport\batch3\aexp_ref_AMS01.txt =====
+[classified: DATA, reading as tab-separated table]
+shape: (746, 34)
+  SUBJECT_ORG_ACC_NUM: 44 unique values, e.g. ['SUB142671', 'SUB142672', 'SUB142673', 'SUB142674', 'SUB142675']
+  TRT: {'Albuterol': 400, 'Placebo': 346}
+  ITT: {'Yes': 719, 'No': 27}
+  PP: {'Yes': 652, 'No': 94}
+  PHASE: {5000: 746}
+  AESTDY: numeric, min=-13, max=733, mean=269.98, nulls=0
+  AESPDY: numeric, min=0.0, max=733.0, mean=299.21, nulls=187
+  SDSPDY: {nan: 725, 4.0: 3, 19.0: 2, 0.0: 1, 14.0: 1, 198.0: 1, 219.0: 1, 244.0: 1, 248.0: 1, 1.0: 1, 62.0: 1, 199.0: 1, 608.0: 1, 552.0: 1, 84.0: 1, 246.0: 1, 447.0: 1, 2.0: 1, 226.0: 1}
+  SDRSTDY: {nan: 737, 4.0: 1, 91.0: 1, 617.0: 1, 7.0: 1, 246.0: 1, 227.0: 1, 199.0: 1, 16.0: 1, 30.0: 1}
+  SIGNDY: numeric, min=36.0, max=1048.0, mean=413.51, nulls=76
+  SAEYN: {'N': 743, 'Y': 3}
+  CATEGRY: {'08': 165, '19': 161, '17': 157, '07': 73, '20': 39, '10': 31, '16': 26, '21': 23, '24': 22, '13': 15, '05': 11, '23': 4, '15': 3, '02': 3, '14': 3, '11': 2, '18': 2, '01': 2, '04': 1, 'K': 1, '03': 1, '09': 1}
+  PREEXST: {'N': 534, 'Y': 212}
+  INFECT: {'N': 686, 'Y': 60}
+  OUTCOME: {1: 551, 3: 186, 2: 9}
+  SEVERE: {1: 703, 2: 42, 3: 1}
+  RELATE: {1: 350, 5: 224, 2: 108, 3: 44, 4: 20}
+  ACTION: {1: 725, 4: 12, 2: 8, 3: 1}
+  PISIGN: {'1': 670, 'A': 76}
+  lowlevelname: 232 unique values, e.g. ['Palpitations', 'Spinning sensation', 'Diarrhea', 'Acid reflux (oesophageal)', 'Injection site pain']
+  PREFERREDNAME: 167 unique values, e.g. ['Palpitations', 'Vertigo', 'Diarrhoea', 'Gastrooesophageal reflux disease', 'Injection site pain']
+  HIGHLEVELNAME: 110 unique values, e.g. ['Cardiac signs and symptoms NEC', 'Inner ear signs and symptoms', 'Diarrhoea (excl infective)', 'Gastrointestinal atonic and hypomotility disorders NEC', 'Injection and infusion site reactions']
+  HIGHGROUPNAME: 69 unique values, e.g. ['Cardiac disorder signs and symptoms', 'Inner ear and VIIIth cranial nerve disorders', 'Gastrointestinal motility and defaecation conditions', 'Administration site reactions', 'Infections - pathogen class unspecified']
+  SYSTEMORGANCLASSNAME: {'General disorders and administration site conditions': 243, 'Nervous system disorders': 172, 'Musculoskeletal and connective tissue disorders': 76, 'Infections and infestations': 53, 'Gastrointestinal disorders': 36, 'Psychiatric disorders': 26, 'Eye disorders': 21, 'Respiratory, thoracic and mediastinal disorders': 19, 'Immune system disorders': 18, 'Injury, poisoning and procedural complications': 13, 'Renal and urinary disorders': 12, 'Ear and labyrinth disorders': 12, 'Skin and subcutaneous tissue disorders': 11, 'Cardiac disorders': 10, 'Investigations': 8, 'Vascular disorders': 5, 'Reproductive system and breast disorders': 4, 'Blood and lymphatic system disorders': 4, 'Pregnancy, puerperium and perinatal conditions': 2, 'Metabolism and nutrition disorders': 1}
+  LOWLEVELCODE: numeric, min=10000174, max=10060544, mean=10028001.77, nulls=0
+  PREFERREDCODE: numeric, min=10000060, max=10061594, mean=10025899.73, nulls=0
+  HIGHLEVELCODE: numeric, min=10000235, max=10053103, mean=10024794.88, nulls=0
+  HIGHGROUPCODE: numeric, min=10000211, max=10057167, mean=10018172.60, nulls=0
+  SYSTEMORGANCLASSCODE: {10018065: 243, 10029205: 172, 10028395: 76, 10021881: 53, 10017947: 36, 10037175: 26, 10015919: 21, 10038738: 19, 10021428: 18, 10022117: 13, 10038359: 12, 10013993: 12, 10040785: 11, 10007541: 10, 10022891: 8, 10047065: 5, 10038604: 4, 10005329: 4, 10036585: 2, 10027433: 1}
+  PRIMARYSOCFLAG: {'Y': 746}
+  Split: {nan: 731, 'Y': 15}
+  Status: {'GG': 235, 'GD': 207, 'DD': 172, 'DG': 89, 'SD': 35, 'SS': 6, 'SG': 2}
+  AESPDY_I: {nan: 732, 1.0: 14}
+  AESTDY_I: {nan: 722, 1.0: 24}
+
+
+===== D:\Trial Guard\data\immport\batch3\aexpcode_r_EXTEND.txt =====
+[classified: DATA, reading as tab-separated table]
+shape: (1388, 43)
+  SUBJECT_ACCESSION: 131 unique values, e.g. ['SUB244489', 'SUB244490', 'SUB244491', 'SUB244492', 'SUB244493']
+  TRTU: {'Tocilizumab': 910, 'Placebo': 478}
+  SAFFL: {'Y': 1388}
+  ITTFL: {'Y': 1388}
+  PP1FL: {'Y': 1313, 'N': 75}
+  PP2FL: {'Y': 1207, 'N': 181}
+  phase: {5000: 1388}
+  AEONGO: {0: 1304, 1: 84}
+  AEOUT: {'Resolved without Sequelae': 1293, 'Ongoing at End of Study': 81, 'Resolved with Sequelae': 11, nan: 3}
+  AETOXGR: {'Grade 1 = Mild': 718, 'Grade 2 = Moderate': 430, nan: 187, 'Grade 3 = Severe': 51, 'Grade 4 = Life-Threatening': 2}
+  AEREL: {'Unrelated': 803, 'Unlikely Related': 372, 'Possibly Related': 201, 'Probably Related': 11, 'Definitely Related': 1}
+  AEACN: {'Dose Not Changed': 1370, 'Drug Interrupted': 12, 'Drug Discontinued': 6}
+  AEACNOTH1: {0: 846, 1: 542}
+  AEACTNOTH2: {0: 724, 1: 664}
+  AEACNOTH3: {0: 1225, 1: 163}
+  AEINFECT: {'No': 971, 'Yes': 417}
+  AEINFUS: {'No': 1379, 'Yes': 9}
+  AECGM: {'No': 1332, nan: 55, 'Yes': 1}
+  AEHYPO: {'No': 1195, 'Yes, Hypoglycemic': 192, 'Yes, Hyperglycemic': 1}
+  CRIT1: {nan: 1196, 'Grade 3=blood glucose concentrationv<40 mg/dl or 2.2 mmol/L or events resulting in seizures, loss of consciousness, or requiring the assistance of others for the purpose of altered consciousness': 192}
+  CRIT2: {nan: 1387, 'Grade 4 = coma or life-threatening event or event resulting in hospitalization': 1}
+  GLUVAL: numeric, min=1.1, max=638.0, mean=33.93, nulls=1204
+  AESPI: {'No': 1380, 'Yes': 8}
+  CRIT3: {0: 1387, 1: 1}
+  CRIT4: {0: 1388}
+  CRIT5: {0: 1388}
+  CRIT6: {0: 1385, 1: 3}
+  CRIT7: {0: 1387, 1: 1}
+  CRIT8: {0: 1386, 1: 2}
+  CRIT9: {0: 1387, 1: 1}
+  CRIT10: {0: 1388}
+  CRIT11: {0: 1388}
+  AESER: {'No': 1375, 'Yes': 13}
+  INSTANCEID: numeric, min=887517, max=3267143, mean=2315114.21, nulls=0
+  FOLDERNAME: {'Adverse Events': 1388}
+  PREFERREDNAME: 284 unique values, e.g. ['Upper respiratory tract infection', 'Seasonal allergy', 'Abdominal distension', 'Presyncope', 'Epistaxis']
+  SYSTEMORGANCLASSNAME: {'Infections and infestations': 411, 'Metabolism and nutrition disorders': 204, 'Gastrointestinal disorders': 175, 'Respiratory, thoracic and mediastinal disorders': 102, 'Nervous system disorders': 99, 'Skin and subcutaneous tissue disorders': 85, 'Musculoskeletal and connective tissue disorders': 76, 'Injury, poisoning and procedural complications': 66, 'General disorders and administration site conditions': 54, 'Investigations': 24, 'Immune system disorders': 20, 'Psychiatric disorders': 14, 'Blood and lymphatic system disorders': 11, 'Neoplasms benign, malignant and unspecified (incl cysts and polyps)': 8, 'Vascular disorders': 6, 'Eye disorders': 6, 'Surgical and medical procedures': 5, 'Ear and labyrinth disorders': 5, 'Cardiac disorders': 4, 'Endocrine disorders': 4, 'Renal and urinary disorders': 3, 'Reproductive system and breast disorders': 3, 'Social circumstances': 2, 'Congenital, familial and genetic disorders': 1}
+  VERSION: {'V17.1': 1388}
+  Split: {nan: 1276, 'Y': 112}
+  AESTDYI: {nan: 1376, 1.0: 12}
+  AESTDY: numeric, min=-748.0, max=805.0, mean=288.84, nulls=1
+  AEENDYI: {nan: 1383, 1.0: 5}
+  AEENDY: numeric, min=-23.0, max=807.0, mean=306.46, nulls=85
+
+
+===== D:\Trial Guard\data\immport\batch3\aexpmstr.txt =====
+[classified: DATA, reading as tab-separated table]
+shape: (405, 14)
+  Subject.Accession: 62 unique values, e.g. ['SUB430497', 'SUB430500', 'SUB430512', 'SUB430501', 'SUB430503']
+  AETX_IN: 328 unique values, e.g. ['insomnia', 'weakness in lower extremities', 'decrease in acuity', 'numbness bilateral legs', 'upset stomach']
+  ONGEOS: {nan: 311, 'Yes': 94}
+  OUTCOME: {'Resolved Without Sequelae': 306, 'Ongoing at End of Study': 94, 'Resolved With Sequelae': 5}
+  SEQLSPC: {nan: 404, 'Erythema': 1}
+  RELATE: {'Unrelated': 285, 'Possibly': 72, 'Unlikely': 30, 'Definitely': 12, 'Probably': 6}
+  ACTION: {nan: 243, 'Concomitant Medications': 136, 'Other': 14, 'Discontinued': 10, 'Study Drug Interrupted': 2}
+  ACTSP: {nan: 391, 'study drug held for one week pt to see pcp': 1, 'will withhold gadolinium at MRI': 1, 'will see eye specialist': 1, 'Visit was scheduled twice to await fever resolve': 1, 'oral steroids given': 1, 'Subject was treated in the hospital': 1, 'Eval by ophtha & possible treatment w/steroids': 1, 'IV Solumedrol 1000mg for 3 days': 1, 'Delayed dosing': 1, 'Dosing delayed': 1, 'Dose delayed': 1, 'delayed': 1, 'Labs & urine tests; Ophthalmogy & Neuro eval': 1, 'labs & urine test;Ophthalmology & Neurology eval': 1}
+  CTCAE: {'Grade 2 (Moderate)': 266, 'Grade 1 (Mild)': 110, 'Grade 3 (Severe)': 27, nan: 2}
+  CRIT1: {nan: 347, 'Infection': 58}
+  CRIT2: all null
+  CRIT3: {nan: 340, 'Related to MS Disease-Specific Safety Event/Clinical Exacerbation': 65}
+  CRIT4: all null
+  SERIOUS: {'No': 395, 'Yes': 10}
+
+
+===== D:\Trial Guard\data\immport\batch3\AEXPMSTR_2019-03-01_10-42-22_ITN045AI.txt =====
+[classified: DATA, reading as tab-separated table]
+shape: (1766, 31)
+  participantId: 49 unique values, e.g. ['T1DAL_137962', 'T1DAL_142037', 'T1DAL_161919', 'T1DAL_185333', 'T1DAL_243767']
+  ImmPort Accession: 49 unique values, e.g. ['SUB168890', 'SUB168891', 'SUB168892', 'SUB168893', 'SUB168894']
+  Visit: all null
+  DATASTR: {'AEXP': 1766}
+  PHASE: {4000: 1766}
+  SEQNO: numeric, min=0, max=129, mean=29.84, nulls=0
+  visitnum: all null
+  PROJECT: {'ITN045AI-Rigby': 1766}
+  PARENT_KEY: numeric, min=19270.0, max=988231.0, mean=614327.75, nulls=0
+  Start Date: 807 unique values, e.g. ['2012-02-28', '2012-07-12', '2012-04-03', '2012-03-30', '2012-03-26']
+  Stop Date: 815 unique values, e.g. ['2012-02-28', '2012-07-12', '2012-04-03', '2012-03-30', '2012-03-26']
+  AE Ongoing At End of Study: {nan: 1729, 'Yes': 37}
+  Outcome: {'Resolved Without Sequelae': 1727, 'Ongoing At End Of Study': 37, 'Resolved With Sequelae': 2}
+  CTCAE Grade: {'Grade 2 (Moderate)': 1160, 'Grade 1 (Mild)': 506, 'Grade 3 (Severe)': 94, 'Grade 4 (Life-threatening)': 5, nan: 1}
+  Relationship to Alefacept: {'Unrelated': 683, 'Unlikely Related': 530, 'Possibly Related': 517, 'Probably Related': 33, 'Definitely Related': 3}
+  Action Taken with Therapy: {nan: 1735, 'Interrupted': 28, 'Discontinued': 3}
+  Other Action Taken, None: all null
+  Other Action Taken, Concomitant Medications: {nan: 1502, 'Concomitant Medications': 264}
+  Other Action Taken, Non-Drug Therapies: {nan: 1006, 'Non-drug Therapies': 760}
+  Other Action Taken, Other: {nan: 1698, 'Other': 68}
+  Does the AE Meet Any of the following Criteria?: {'Yes': 1378, 'No': 388}
+  Injection reactions; defined as fever, chills, headache, nausea, vomiting, and injection-site pain: {nan: 1742, 'Injection reactions; defined as fever, chills, headache, nausea, vomiting, and injection-site pain': 24}
+  Hypersensitivity reactions; defined as signs and symptoms of anaphylaxis, wheezing, dyspnea, urticar: {nan: 1765, 'Hypersensitivity reactions; defined as signs and symptoms of anaphylaxis, wheezing, dyspnea, urticaria, and hypotension': 1}
+  Lymphopenia (CD4+T cel count less than 250 cells/uL): {nan: 1760, 'Lymphopenia (CD4+T cel count < 250 cells/uL)': 6}
+  Evidence of infection with EBV, CMV, or TB.: {nan: 1763, 'Evidence of infection with EBV, CMV, or TB.': 3}
+  Was the AE a Hypoglycemia Event?: {'Yes': 1134, 'No': 632}
+  Major hypoglycemia, defined as a glucose concentration of less than 55 mg/dL: {'Major hypoglycemia, defined as a glucose concentration of < 55 mg/dL': 1134, nan: 632}
+  Glucose Level: 110 unique values, e.g. ['51', '55', '47', '44', '34']
+  Infection: {nan: 1591, 'Infection': 175}
+  Asymptomatic Hepatic injury ALT and/or AST elevations up to 3 times the upper limit of normal (ULN): {nan: 1729, 'Asymptomatic Hepatic injury ALT and/or AST elevations up to 3 times the upper limit of normal (ULN)': 37}
+  Serious Adverse Event?: {'No': 1765, 'Yes': 1}
+
+
+===== D:\Trial Guard\data\immport\batch3\demo_ref_AMS01.txt =====
+[classified: DATA, reading as tab-separated table]
+shape: (44, 10)
+  SUBJECT_ORG_ACC_NUM: 44 unique values, e.g. ['SUB142671', 'SUB142672', 'SUB142673', 'SUB142674', 'SUB142675']
+  TRT: {'Albuterol': 23, 'Placebo': 21}
+  ITT: {'Yes': 39, 'No': 5}
+  PP: {'Yes': 34, 'No': 10}
+  PHASE: {1000: 44}
+  VISITDY: {-7: 9, -6: 7, -5: 5, -4: 5, -8: 5, -9: 4, -3: 2, -13: 2, -1: 1, -10: 1, -46: 1, -2: 1, -14: 1}
+  SEX: {'F': 32, 'M': 12}
+  ETHNIC: {2: 44}
+  RACE: {5: 41, 3: 2, 6: 1}
+  age: {44: 5, 45: 4, 33: 3, 41: 3, 36: 3, 43: 3, 23: 3, 47: 2, 38: 2, 25: 2, 42: 2, 24: 1, 18: 1, 50: 1, 40: 1, 49: 1, 32: 1, 35: 1, 46: 1, 39: 1, 30: 1, 37: 1, 27: 1}
+
+
+===== D:\Trial Guard\data\immport\batch3\ITN027AI.DataSet.ADAE1_PUB.txt =====
+[classified: DATA, reading as tab-separated table]
+shape: (1461, 80)
+  ImmPort Accession: 77 unique values, e.g. ['SUB146759', 'SUB146789', 'SUB146788', 'SUB146771', 'SUB146779']
+  Participant ID: 77 unique values, e.g. ['AbATE_106306', 'AbATE_122083', 'AbATE_137567', 'AbATE_156104', 'AbATE_161201']
+  Study Identifier: {'ITN027AI': 1461}
+  Treatment Group: {2: 1232, 1: 229}
+  Treatment Group (Char): {'hOKT3': 1232, 'Control': 229}
+  Date of Informed Consent: 76 unique values, e.g. ['2006-09-16', '2005-10-30', '2005-04-20', '2006-11-10', '2006-08-29']
+  Specimen Consent Question 1: {'Yes': 1461}
+  Specimen Consent Question 2: {'Yes': 1461}
+  Specimen Consent  Question 3: {'No': 1461}
+  Date of Randomization: 76 unique values, e.g. ['2006-09-23', '2005-11-09', '2005-04-29', '2006-11-19', '2006-09-04']
+  Randomized: {'Yes': 1461}
+  Intent To Treat Population: {'Yes': 1455, 'No': 6}
+  Per Prot. Excl.Subjs w/o 24 mo: {'Yes': 1039, 'No': 422}
+  Per Protocol Population: {'Yes': 1057, 'No': 404}
+  Analysis Sample: {'I/PI/PE': 1039, 'I': 398, 'I/PI': 18, nan: 6}
+  Date of First Infusion in Cycle 1: 52 unique values, e.g. ['2006-09-29', '2005-11-20', '2005-05-01', '2008-07-08', '2005-08-11']
+  Date of First Infusion in Cycle 2: 40 unique values, e.g. ['2006-12-20', '2006-11-24', '2009-07-28', '2007-03-12', '2008-09-24']
+  Date of Last Infusion: 50 unique values, e.g. ['2006-10-12', '2007-01-02', '2006-12-07', '2009-08-10', '2007-03-25']
+  Date of First MMT: 74 unique values, e.g. ['2006-09-29', '2005-11-20', '2005-05-01', '2006-12-04', '2006-09-17']
+  Day 0: 74 unique values, e.g. ['2006-09-29', '2005-11-20', '2005-05-01', '2006-12-04', '2006-09-17']
+  Completed Study: {'Yes': 1407, 'No': 54}
+  Date of Last Follow-up: 75 unique values, e.g. ['2008-11-22', '2008-02-19', '2007-11-28', '2008-12-04', '2008-09-03']
+  Day of Last Follow-up: numeric, min=275.0, max=987.0, mean=748.62, nulls=6
+  Discontinued Study Reason: {nan: 1407, 'Voluntary withdrawal': 29, 'Lost to follow-up': 21, 'Other': 4}
+  Date of Study Drug Discontinuation: {nan: 1106, '2006-04-23': 53, '2008-02-02': 44, '2007-09-28': 33, '2008-09-25': 32, '2008-02-18': 30, '2009-04-16': 26, '2007-06-01': 23, '2007-03-17': 21, '2006-08-19': 17, '2006-08-11': 17, '2010-01-17': 14, '2008-09-23': 13, '2009-01-09': 12, '2005-05-27': 11, '2008-07-19': 5, '2008-03-03': 4}
+  Day of Study Drug Discontinuation: {nan: 1111, 4.0: 76, 6.0: 44, 364.0: 33, 388.0: 32, 397.0: 30, 368.0: 26, 12.0: 21, 496.0: 17, 1.0: 17, 13.0: 17, 353.0: 14, 426.0: 12, 5.0: 11}
+  Discontinued Therapy Reason: {nan: 1106, 'Adverse event': 280, 'Investigator decision': 44, 'Participant withdrew consent': 17, 'Other': 14}
+  Age (years): numeric, min=8.2574, max=29.5578, mean=13.45, nulls=0
+  Age (years) Rounded: {12.0: 243, 10.0: 230, 9.0: 178, 8.0: 143, 15.0: 132, 11.0: 124, 14.0: 105, 13.0: 70, 23.0: 53, 17.0: 50, 29.0: 47, 16.0: 41, 27.0: 33, 25.0: 12}
+  Age Group (years): {'8-12': 918, '13-17': 398, '18-30': 145}
+  Sex: {1: 766, 2: 695}
+  Sex (Char): {'Male': 766, 'Female': 695}
+  Primary Race: {'White': 1249, 'Black or African American': 86, 'American Indian or Alaska Native': 65, 'Other': 40, 'Asian': 21}
+  Secondary Race: {nan: 1140, 'White': 242, 'Other': 52, 'American Indian or Alaska Native': 17, 'Asian': 10}
+  IND Race: {'White': 1187, 'More than one race': 189, 'Unknown': 40, 'Black or African American': 24, 'Asian': 21}
+  Ethnicity: {'Not Hispanic or Latino': 1407, 'Hispanic or Latino': 54}
+  Weight (kg) Baseline: numeric, min=24.948, max=93.6, mean=48.29, nulls=11
+  Height (cm) Baseline: numeric, min=122.174, max=194.0, mean=153.44, nulls=11
+  BMI (kg/m^2) Baseline: numeric, min=14.1776, max=36.8845, mean=19.94, nulls=11
+  Status: {'Completed study': 1094, 'Completed study, Discontinued therapy': 313, 'Terminated from study, Discontinued therapy': 42, 'Terminated from study': 12}
+  Responder: 40% decrease AUC: {'No': 829, 'Yes': 590, nan: 42}
+  Diagnosis Date: 73 unique values, e.g. ['2006-08-13', '2005-09-30', '2005-03-13', '2006-10-10', '2006-03-28']
+  Duration of Diabetes: numeric, min=17.0, max=55.0, mean=39.66, nulls=0
+  Data Snapshot Date: {'2012-07-25': 1461}
+  Visit Number: all null
+  AE Number: numeric, min=0.0, max=57.0, mean=13.00, nulls=0
+  Sequence Number: numeric, min=0, max=57, mean=13.00, nulls=0
+  Reported Term for the Adverse Event: 739 unique values, e.g. ['NAUSEA', 'PAIN-HEADACHE', 'Intermittent Stomachache', 'PAIN-THROAT', 'BURN']
+  Start Date of Adverse Event: 812 unique values, e.g. ['2006-09-28', '2006-09-29', '2006-09-30', '2006-10-01', '2006-10-02']
+  Stop Date of Adverse Event: 780 unique values, e.g. ['2008-06-05', '2006-09-28', '2006-10-28', '2006-09-29', '2006-09-30']
+  AE Start Day: numeric, min=-115.0, max=956.0, mean=244.04, nulls=48
+  AE Start Day, Infusion 1: numeric, min=-122.0, max=945.0, mean=234.86, nulls=54
+  AE Stop Day, Infusion 1: numeric, min=-16.0, max=954.0, mean=241.56, nulls=142
+  AE Start Day, Infusion 2: numeric, min=-578.0, max=369.0, mean=-149.50, nulls=537
+  AE Stop Day, Infusion 2: numeric, min=-576.0, max=463.0, mean=-141.49, nulls=585
+  AE Ongoing?: {'No': 1365, 'Yes': 96}
+  Duration of Adverse Event: numeric, min=0.0, max=549.0, mean=18.03, nulls=146
+  Outcome of Adverse Event: {2: 1369, 1: 91, 3: 1}
+  Outcome of Adverse Event (Char): {'Resolved': 1369, 'Unresolved': 91, 'Resolved with sequelae': 1}
+  Severity/Intensity of Adverse Event: {1.0: 1164, 2.0: 245, 3.0: 47, 4.0: 3, nan: 2}
+  Severity/Intensity of AE (Char): {'Mild': 1164, 'Moderate': 245, 'Severe': 47, 'Life threatening': 3, nan: 2}
+  Causality: {1: 571, 3: 325, 2: 275, 4: 186, 5: 104}
+  Causality (Char): {'Unrelated': 571, 'Possible': 325, 'Unlikely': 275, 'Probable': 186, 'Definite': 104}
+  Serious Adverse Event: {0: 1448, 1: 13}
+  Serious Adverse Event (Char): {'No': 1448, 'Yes': 13}
+  Preferred Term - Original: 298 unique values, e.g. ['Nausea', 'Headache', 'Abdominal pain upper', 'Oropharyngeal pain', 'Thermal burn']
+  Preferred Term: 296 unique values, e.g. ['Nausea', 'Headache', 'Abdominal pain', 'Oropharyngeal pain', 'Thermal burn']
+  System Organ Class - Original: {'Infections and infestations': 278, 'Skin and subcutaneous tissue disorders': 221, 'Gastrointestinal disorders': 160, 'Nervous system disorders': 141, 'Blood and lymphatic system disorders': 98, 'Respiratory, thoracic and mediastinal disorders': 97, 'Investigations': 87, 'General disorders and administration site conditions': 86, 'Metabolism and nutrition disorders': 54, 'Musculoskeletal and connective tissue disorders': 51, 'Injury, poisoning and procedural complications': 48, 'Psychiatric disorders': 45, 'Vascular disorders': 25, 'Immune system disorders': 18, 'Renal and urinary disorders': 11, 'Reproductive system and breast disorders': 9, 'Eye disorders': 8, 'Endocrine disorders': 7, 'Hepatobiliary disorders': 5, 'Ear and labyrinth disorders': 5, 'Neoplasms benign, malignant and unspecified (incl cysts and polyps)': 3, 'Cardiac disorders': 3, 'Surgical and medical procedures': 1}
+  System Organ Class: {'Infections and infestations': 278, 'Skin and subcutaneous tissue disorders': 221, 'Gastrointestinal disorders': 160, 'Nervous system disorders': 141, 'Blood and lymphatic system disorders': 98, 'Respiratory, thoracic and mediastinal disorders': 97, 'Investigations': 87, 'General disorders and administration site conditions': 86, 'Metabolism and nutrition disorders': 54, 'Musculoskeletal and connective tissue disorders': 51, 'Injury, poisoning and procedural complications': 48, 'Psychiatric disorders': 45, 'Vascular disorders': 25, 'Immune system disorders': 18, 'Renal and urinary disorders': 11, 'Reproductive system and breast disorders': 9, 'Eye disorders': 8, 'Endocrine disorders': 7, 'Hepatobiliary disorders': 5, 'Ear and labyrinth disorders': 5, 'Neoplasms benign, malignant and unspecified (incl cysts and polyps)': 3, 'Cardiac disorders': 3, 'Surgical and medical procedures': 1}
+  Treatment Required: {0: 788, 1: 508, 2: 134, 3: 31}
+  Treatment Required (Char): {nan: 788, 'Concomitant medications': 508, 'Non-drug therapies': 134, 'Concomitant medications and non-drug therapies': 31}
+  Action Taken: {0: 1436, 4: 20, 1: 5}
+  Action Taken (Char): {nan: 1436, 'Study drug discontinued': 20, 'Study drug interrupted': 5}
+  Infection?: {0: 1177, 1: 284}
+  Infection? (Char): {'No': 1177, 'Yes': 284}
+  AE Unique Numeric Identifier: numeric, min=26558.0, max=1567875.0, mean=791461.63, nulls=0
+  Coding Split Indicator: {nan: 1451, 'Y': 10}
+  Date AE became Serious: {nan: 1456, '2009-04-04': 2, '2008-07-16': 1, '2010-11-07': 1, '2009-12-16': 1}
+  AE New Since Last Report: {'No': 1461}
+  AE Update Since Last  Report: all null
+
+
+===== D:\Trial Guard\data\immport\batch3\vitl_ref_AMS01.txt =====
+[classified: DATA, reading as tab-separated table]
+shape: (46, 13)
+  SUBJECT_ORG_ACC_NUM: 44 unique values, e.g. ['SUB142671', 'SUB142672', 'SUB142673', 'SUB142674', 'SUB142675']
+  TRT: {'Albuterol': 25, 'Placebo': 21}
+  ITT: {'Yes': 40, 'No': 6}
+  PP: {'Yes': 35, 'No': 11}
+  PHASE: {1000: 44, 6000: 2}
+  VISITDY: {-7: 9, -6: 7, -5: 5, -4: 5, -8: 5, -9: 4, -3: 2, -13: 2, -1: 1, -10: 1, 62: 1, 60: 1, -46: 1, -2: 1, -14: 1}
+  TEMP: {98.6: 6, 97.8: 5, 97.1: 4, 98.1: 3, 97.7: 3, 97.9: 3, 98.4: 3, 97.0: 2, 97.2: 2, 98.0: 2, 98.8: 1, 97.4: 1, 99.2: 1, 99.1: 1, 97.5: 1, 96.7: 1, 99.8: 1, 98.5: 1, 98.3: 1, 96.0: 1, 99.5: 1, 97.3: 1, 99.4: 1}
+  PULSE: {72: 9, 80: 8, 76: 6, 84: 5, 68: 4, 64: 4, 56: 2, 52: 1, 96: 1, 82: 1, 92: 1, 88: 1, 60: 1, 70: 1, 65: 1}
+  RESP: {16: 29, 20: 15, 18: 1, 24: 1}
+  SYSTBP: {110: 8, 120: 5, 100: 5, 108: 4, 118: 4, 130: 4, 140: 4, 114: 2, 112: 2, 124: 2, 106: 1, 104: 1, 132: 1, 136: 1, 90: 1, 128: 1}
+  DIASTBP: {70: 12, 60: 10, 80: 9, 74: 3, 56: 3, 66: 2, 64: 2, 88: 1, 90: 1, 58: 1, 86: 1, 68: 1}
+  HEIGHT: {65.0: 8, 63.0: 6, 69.0: 4, 66.0: 4, 67.0: 4, 72.0: 3, nan: 2, 60.0: 2, 64.0: 2, 71.0: 2, 62.0: 1, 69.5: 1, 68.5: 1, 74.0: 1, 66.5: 1, 70.0: 1, 68.0: 1, 61.0: 1, 75.0: 1}
+  WEIGHT: numeric, min=108.0, max=254.0, mean=171.95, nulls=2
+
+
+===== D:\Trial Guard\data\immport\batch3\vitpmstr.txt =====
+[classified: DATA, reading as tab-separated table]
+shape: (3635, 8)
+  Subject.Accession: 65 unique values, e.g. ['SUB430499', 'SUB430500', 'SUB430501', 'SUB430496', 'SUB430503']
+  TPOINT: {'Pre-Infusion': 909, '30 Minutes After Infusion Completed': 903, '15 Minutes After Infusion Start': 901, '30 Minutes After Infusion Start': 897, 'Other Additional Timepoint (optional)': 25}
+  TEMP: numeric, min=34.9, max=99.8, mean=83.31, nulls=5
+  TUNITS: {'Fahrenheit': 2776, 'Celsius': 854, nan: 5}
+  PULSE: numeric, min=44.0, max=109.0, mean=70.27, nulls=3
+  RESP: {16.0: 1680, 18.0: 1184, 20.0: 362, 14.0: 293, 12.0: 61, 17.0: 18, nan: 14, 24.0: 6, 15.0: 6, 19.0: 4, 13.0: 3, 22.0: 2, 26.0: 1, 28.0: 1}
+  SYSBP: numeric, min=71, max=202, mean=120.10, nulls=0
+  DIABP: numeric, min=30, max=119, mean=75.30, nulls=0
+
+
+===== D:\Trial Guard\data\immport\batch3\vspcmstr_r_EXTEND.txt =====
+[classified: DATA, reading as tab-separated table]
+shape: (424, 42)
+  SUBJECT_ACCESSION: 133 unique values, e.g. ['SUB244489', 'SUB244490', 'SUB244491', 'SUB244492', 'SUB244493']
+  TRTU: {'Tocilizumab': 275, 'Placebo': 149}
+  SAFFL: {'Y': 424}
+  ITTFL: {'Y': 424}
+  PP1FL: {'Y': 397, 'N': 27}
+  PP2FL: {'Y': 376, 'N': 48}
+  phase: {2006: 145, 2008: 139, 2010: 130, 6000: 10}
+  VSND: {0: 412, 1: 12}
+  VSTEST1: numeric, min=54.5, max=198.0, mean=157.66, nulls=13
+  VSTEST1_UN: {'cm': 388, 'in': 23, nan: 13}
+  VSTEST2: numeric, min=20.8, max=202.8, mean=62.88, nulls=12
+  VSTEST2_UN: {'kg': 408, nan: 12, 'LB': 4}
+  VSTEST3: numeric, min=34.8, max=98.9, mean=47.39, nulls=14
+  VSTEST3_UN: {'C': 337, 'F': 73, nan: 14}
+  VSTEST4: numeric, min=72.0, max=150.0, mean=113.81, nulls=13
+  VSTEST5: numeric, min=40.0, max=97.0, mean=67.85, nulls=13
+  VSTEST6: numeric, min=41.0, max=109.0, mean=72.11, nulls=13
+  VSTEST7: {16.0: 161, 18.0: 97, 20.0: 62, 14.0: 49, 12.0: 14, nan: 13, 17.0: 11, 22.0: 7, 15.0: 6, 19.0: 2, 24.0: 2}
+  VSTEST8: numeric, min=13.73, max=40.4, mean=22.56, nulls=13
+  VSTEST8_UN: {'kg/m2': 411, nan: 13}
+  PEND: {0: 412, 1: 12}
+  PERES1: {'Normal': 351, 'Abnormal but DOES NOT meet AE reportable criteria': 44, 'Abnormal and MEETS AE reportable criteria (per protocol section 8)': 16, nan: 12, 'Not Done/Not Required': 1}
+  PERES2: {'Normal': 391, 'Abnormal but DOES NOT meet AE reportable criteria': 12, nan: 12, 'Abnormal and MEETS AE reportable criteria (per protocol section 8)': 8, 'Not Done/Not Required': 1}
+  PERES3: {'Normal': 404, nan: 12, 'Abnormal but DOES NOT meet AE reportable criteria': 5, 'Abnormal and MEETS AE reportable criteria (per protocol section 8)': 2, 'Not Done/Not Required': 1}
+  PERES4: {'Normal': 410, nan: 12, 'Not Done/Not Required': 1, 'Abnormal but DOES NOT meet AE reportable criteria': 1}
+  PERES5: {'Normal': 405, nan: 12, 'Abnormal but DOES NOT meet AE reportable criteria': 5, 'Not Done/Not Required': 2}
+  PERES6: {'Normal': 294, 'Not Done/Not Required': 112, nan: 12, 'Abnormal but DOES NOT meet AE reportable criteria': 6}
+  PERES7: {'Normal': 398, nan: 12, 'Abnormal but DOES NOT meet AE reportable criteria': 8, 'Not Done/Not Required': 3, 'Abnormal and MEETS AE reportable criteria (per protocol section 8)': 3}
+  PERES8: {'Normal': 407, nan: 12, 'Abnormal and MEETS AE reportable criteria (per protocol section 8)': 3, 'Not Done/Not Required': 1, 'Abnormal but DOES NOT meet AE reportable criteria': 1}
+  PERES9: {'Normal': 393, nan: 12, 'Abnormal and MEETS AE reportable criteria (per protocol section 8)': 10, 'Abnormal but DOES NOT meet AE reportable criteria': 5, 'Not Done/Not Required': 4}
+  PERES10: {'Normal': 399, nan: 13, 'Not Done/Not Required': 8, 'Abnormal but DOES NOT meet AE reportable criteria': 4}
+  PERES11: {'Normal': 396, nan: 13, 'Abnormal but DOES NOT meet AE reportable criteria': 9, 'Not Done/Not Required': 6}
+  PERES12: {'Not Done/Not Required': 361, nan: 50, 'Normal': 10, 'Abnormal but DOES NOT meet AE reportable criteria': 3}
+  PETEST: {nan: 328, 'Skin': 46, 'Head/EENT': 13, 'Neurological/Psychiatric': 8, 'Musculoskeletal': 6, 'Respiratory/Chest': 5, 'Immunology/Allergies': 5, 'Genitourinary/Reproductive': 3, 'Hematologic/Lymphatic': 3, 'Endocrine/Metabolic': 3, 'Gastrointestinal/Abdominal/Hepatic': 2, 'Cardiovascular': 1, 'Other': 1}
+  PESTAT: {0: 339, 1: 85}
+  INSTANCEID: numeric, min=866000, max=3023154, mean=1757766.83, nulls=0
+  FOLDERNAME: {'Visit 6/Week 24': 145, 'Visit 8/Week 52': 139, 'Visit 10/Week 104': 130, 'Unscheduled Visit': 10}
+  VSDY: numeric, min=161.0, max=894.0, mean=412.67, nulls=12
+  PEDY: numeric, min=161.0, max=894.0, mean=412.66, nulls=12
+  PEDSDYI: {nan: 423, 1.0: 1}
+  PEDSDY: numeric, min=-5976.0, max=739.0, mean=21.43, nulls=341
+  PEDEDY: {nan: 413, 175.0: 2, 173.0: 1, 156.0: 1, 370.0: 1, 155.0: 1, 171.0: 1, 153.0: 1, 729.0: 1, 639.0: 1, 167.0: 1}
+
+
+===== D:\Trial Guard\data\immport\SDY471_docs\Data_Curation_Notes.txt =====
+[classified: DOCS, reading full text]
+AMS01 - Treatment of MS with Copaxone and Albuterol Data Curation Notes
+April, 2015
+
+The following study files were parsed into the ImmPort database:
+
+chem_ref.txt as lab tests
+cmed_ref.txt as concomitant medications
+cytokine_ref.txt as mechanistic assays
+demo_ref.txt as subject annotations
+hema_ref.txt as lab tests
+
+
+===== D:\Trial Guard\data\immport\SDY471_docs\StudyGlossary.txt =====
+[classified: DOCS, reading full text]
+WORKSPACE_ID = 4026
+STUDY_ACCESSION = SDY471
+
+STUDY_GLOSSARY:
+STUDY_ACCESSION	TERM	DEFINITION	UPLOAD_TICKET_NUMBER	WORKSPACE_ID	CREATED_BY	DATE_CREATED	LAST_UPDATED_BY	DATE_LAST_UPDATED
+
+PERIOD:
+PERIOD_ACCESSION	NAME	ORDER_NUMBER	STUDY_ACCESSION	UPLOAD_TICKET_NUMBER	USER_DEFINED_ID	WORKSPACE_ID	CREATED_BY	DATE_CREATED	LAST_UPDATED_BY	DATE_LAST_UPDATED
+P524	Entire Study	1	SDY471	heschaefer_20141120_8978	AMS01_Period1	4026	heschaefer	2014-11-20 18:10:01	heschaefer	2014-11-20 18:10:01
+
+PLANNED_VISIT:
+PLANNED_VISIT_ACCESSION	END_RULE	MAX_START_DAY	MIN_START_DAY	NAME	ORDER_NUMBER	PERIOD_ACCESSION	START_RULE	STUDY_ACCESSION	UPLOAD_TICKET_NUMBER	USER_DEFINED_ID	WORKSPACE_ID	CREATED_BY	DATE_CREATED	LAST_UPDATED_BY	DATE_LAST_UPDATED
+PV3336		-1	-1	Screening (visit -01)	1	P524		SDY471	heschaefer_20141120_8978	AMS01_PV1	4026	heschaefer	2014-11-20 18:10:01	heschaefer	2014-11-20 18:10:01
+PV3337		0	0	Day 0 Baseline (visit 00)	2	P524		SDY471	heschaefer_20141120_8978	AMS01_PV2	4026	heschaefer	2014-11-20 18:10:01	heschaefer	2014-11-20 18:10:01
+PV3338		5	5	Phone Contact	3	P524		SDY471	heschaefer_20141120_8978	AMS01_PV3	4026	heschaefer	2014-11-20 18:10:01	heschaefer	2014-11-20 18:10:01
+PV3339		7	7	Week 1 (visit 01)	4	P524		SDY471	heschaefer_20141120_8978	AMS01_PV4	4026	heschaefer	2014-11-20 18:10:01	heschaefer	2014-11-20 18:10:01
+PV3340		30	30	Month 1 (visit 02)	5	P524		SDY471	heschaefer_20141120_8978	AMS01_PV5	4026	heschaefer	2014-11-20 18:10:01	heschaefer	2014-11-20 18:10:01
+PV3341		90	90	Month 3 (visit 03)	6	P524		SDY471	heschaefer_20141120_8978	AMS01_PV6	4026	heschaefer	2014-11-20 18:10:01	heschaefer	2014-11-20 18:10:01
+PV3342		180	180	Month 6 (visit 04)	7	P524		SDY471	heschaefer_20141120_8978	AMS01_PV7	4026	heschaefer	2014-11-20 18:10:01	heschaefer	2014-11-20 18:10:01
+PV3343		270	270	Month 9 (visit 05)	8	P524		SDY471	heschaefer_20141120_8978	AMS01_PV8	4026	heschaefer	2014-11-20 18:10:01	heschaefer	2014-11-20 18:10:01
+PV3344		360	360	Month 12 (visit 06)	9	P524		SDY471	heschaefer_20141120_8978	AMS01_PV9	4026	heschaefer	2014-11-20 18:10:01	heschaefer	2014-11-20 18:10:01
+PV3345		450	450	Month 15 (visit 07)	10	P524		SDY471	heschaefer_20141120_8978	AMS01_PV10	4026	heschaefer	2014-11-20 18:10:01	heschaefer	2014-11-20 18:10:01
+PV3346		540	540	Month 18 (visit 08)	11	P524		SDY471	heschaefer_20141120_8978	AMS01_PV11	4026	heschaefer	2014-11-20 18:10:01	heschaefer	2014-11-20 18:10:01
+PV3347		630	630	Month 21 (visit 09)	12	P524		SDY471	heschaefer_20141120_8978	AMS01_PV12	4026	heschaefer	2014-11-20 18:10:01	heschaefer	2014-11-20 18:10:01
+PV3348		720	720	Month 24 (visit 10)	13	P524		SDY471	heschaefer_20141120_8978	AMS01_PV13	4026	heschaefer	2014-11-20 18:10:01	heschaefer	2014-11-20 18:10:01
+
+
+===== D:\Trial Guard\data\immport\term_ref_AMS01.txt =====
+[classified: DATA, reading as tab-separated table]
+shape: (44, 10)
+  SUBJECT_ORG_ACC_NUM: 44 unique values, e.g. ['SUB142671', 'SUB142672', 'SUB142673', 'SUB142674', 'SUB142675']
+  TRT: {'Albuterol': 23, 'Placebo': 21}
+  ITT: {'Yes': 39, 'No': 5}
+  PP: {'Yes': 34, 'No': 10}
+  PHASE: {4000: 44}
+  TERMDY: {nan: 27, 4.0: 2, 199.0: 1, 62.0: 1, 623.0: 1, 226.0: 1, 248.0: 1, 19.0: 1, 0.0: 1, 552.0: 1, 364.0: 1, 370.0: 1, 246.0: 1, 537.0: 1, 447.0: 1, 546.0: 1, 183.0: 1}
+  LFOLDY: numeric, min=0, max=740, mean=555.66, nulls=0
+  COMPYN: {'Y': 27, 'N': 17}
+  REASON: {nan: 27, 2.0: 9, 6.0: 5, 99.0: 2, 4.0: 1}
+  FOLREAS: {1: 38, 9: 3, 2: 3}

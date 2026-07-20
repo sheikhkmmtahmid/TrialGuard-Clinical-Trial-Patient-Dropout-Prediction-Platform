@@ -1,0 +1,20 @@
+{
+  "n_train": 4533,
+  "n_test": 1945,
+  "n_events_test": 227,
+  "holdout_studies": [
+    "Colorec_Amgen_2005_262",
+    "Breast_EliLill_2008_168",
+    "Glioma_2008_441",
+    "LungSm_Amgen_2002_266"
+  ],
+  "xgb_roc_auc": 0.5239,
+  "xgb_roc_auc_ci_95": [
+    0.4801,
+    0.5657
+  ],
+  "xgb_f1": 0.1145,
+  "xgb_precision": 0.181,
+  "xgb_recall": 0.0837,
+  "calibration_brier_score": 0.127
+}

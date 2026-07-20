@@ -1,0 +1,99 @@
+{
+  "label": "real",
+  "n_total": 12435,
+  "n_events_total": 1142,
+  "n_pool": 10490,
+  "n_train": 7867,
+  "n_test_random": 2623,
+  "n_events_test_random": 229,
+  "cox_penalizer": 0.01,
+  "cox_l1_ratio": 1.0,
+  "cox_cv_concordance": 0.5554,
+  "cox_train_concordance": 0.6322,
+  "cox_concordance_random_test": 0.6454,
+  "xgb_best_params": {
+    "n_estimators": 440,
+    "max_depth": 3,
+    "learning_rate": 0.04710779471980677,
+    "subsample": 0.6635365623531572,
+    "colsample_bytree": 0.7339723064319753,
+    "min_child_weight": 4,
+    "gamma": 0.28985608166409355,
+    "reg_alpha": 1.2900432047848942,
+    "reg_lambda": 0.12389170483069223,
+    "scale_pos_weight": 4.5087329577926365,
+    "random_state": 42,
+    "eval_metric": "auc",
+    "tree_method": "hist"
+  },
+  "xgb_optuna_cv_auc": 0.6877,
+  "xgb_roc_auc_random_test": 0.7549,
+  "xgb_roc_auc_random_test_ci95": [
+    0.7209,
+    0.7855
+  ],
+  "xgb_f1_random_test": 0.2977,
+  "xgb_precision_random_test": 0.3701,
+  "xgb_recall_random_test": 0.2489,
+  "xgb_brier_random_test": 0.0997,
+  "xgb_threshold_sweep_random_test": [
+    {
+      "threshold": 0.2,
+      "recall": 0.8384,
+      "precision": 0.1414,
+      "fraction_flagged": 0.5177
+    },
+    {
+      "threshold": 0.3,
+      "recall": 0.5808,
+      "precision": 0.1919,
+      "fraction_flagged": 0.2642
+    },
+    {
+      "threshold": 0.4,
+      "recall": 0.3668,
+      "precision": 0.2701,
+      "fraction_flagged": 0.1186
+    },
+    {
+      "threshold": 0.5,
+      "recall": 0.2489,
+      "precision": 0.3701,
+      "fraction_flagged": 0.0587
+    },
+    {
+      "threshold": 0.6,
+      "recall": 0.1703,
+      "precision": 0.4875,
+      "fraction_flagged": 0.0305
+    },
+    {
+      "threshold": 0.7,
+      "recall": 0.1048,
+      "precision": 0.4615,
+      "fraction_flagged": 0.0198
+    }
+  ],
+  "holdout_studies": [
+    "Colorec_Amgen_2005_262",
+    "Breast_EliLill_2008_168",
+    "Glioma_2008_441",
+    "LungSm_Amgen_2002_266"
+  ],
+  "n_holdout": 1945,
+  "n_events_holdout": 227,
+  "cox_concordance_holdout": 0.5505,
+  "xgb_roc_auc_holdout": 0.5502,
+  "xgb_roc_auc_holdout_ci95": [
+    0.5087,
+    0.5905
+  ],
+  "xgb_f1_holdout": 0.1,
+  "xgb_precision_holdout": 0.2642,
+  "xgb_recall_holdout": 0.0617,
+  "xgb_brier_holdout": 0.1135,
+  "shap_stability_score": 0.5109,
+  "shap_robustness_score": 0.9033,
+  "shap_eval_set": "holdout_studies",
+  "elapsed_seconds": 751.8
+}

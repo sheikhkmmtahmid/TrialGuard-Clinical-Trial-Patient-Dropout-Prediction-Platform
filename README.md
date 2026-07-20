@@ -8,30 +8,67 @@ pinned: false
 short_description: Clinical Trial Dropout Prediction Platform
 ---
 
-# TrialGuard — 60-Day Early Warning for Clinical Trial Retention
+# TrialGuard — Clinical Trial Dropout Prediction
 
-> **Predict patient dropout before it happens. Protect your trial. Save $40K per dropout.**
+> A three-stage ML pipeline (Cox survival analysis → XGBoost → SHAP) that predicts which
+> clinical trial patients are at risk of dropping out, built end-to-end — synthetic data,
+> real-world validation, and all — as a portfolio project.
 
-TrialGuard is a production-ready clinical AI platform that gives trial coordinators
-a 60-day early warning when patients are at risk of dropping out. Powered by
-XGBoost gradient boosting, Cox Proportional Hazards survival analysis, and
-SHAP explainability — deployed as a Django web service.
+TrialGuard gives trial coordinators a per-patient dropout risk score, a survival timeline,
+and a plain-English explanation of *why* the model flagged that patient. It's a Django web
+app backed by Cox Proportional Hazards (lifelines), XGBoost (Optuna-tuned), and SHAP.
 
-> Made by [SKMMT](https://skmmt.rootexception.com/).
-> View [Demo](https://sheikhkmmtahmid-trialguard.hf.space/)
+> Built by [SKMMT](https://skmmt.rootexception.com/).
+> [Live demo](https://sheikhkmmtahmid-trialguard.hf.space/) · [How it was built & validated](/methodology/)
+
 ---
 
-## Key Metrics
+## Read this before the metrics
 
-| Metric | Achieved | Technology |
-|---|---|---|
-| XGBoost ROC-AUC | **0.9914** | XGBoost + Optuna (50 trials) |
-| XGBoost F1 Score | **0.8842** | Balanced F1 on held-out test |
-| Cox Concordance Index | **0.9119** | lifelines CoxPHFitter |
-| Brier Score | **0.0253** | Excellent probability calibration |
-| SHAP Stability | **0.8348** | TreeSHAP pairwise cosine similarity |
-| Prediction Latency | < 100ms | Django + joblib (cached models) |
-| Early Warning Window | **60 days** | Cox survival analysis |
+I trained this two ways: on synthetic data I generated myself, and on 12,435 real,
+de-identified patients pulled from 28 real clinical trials and studies (Project Data
+Sphere, ImmPort, PPMI, MUSIC). The synthetic model performs well. The real-data model,
+tested honestly — held out on hospitals it never trained on, not just a random shuffle —
+performs close to chance.
+
+I'm leading with that instead of hiding it because how a model's limits get found and
+explained is the point of this project, not a footnote. I've since more than doubled the
+real dataset and retrained everything specifically to test whether more real data would
+close that gap — it didn't (see Results below). The full breakdown, including the
+bugs I hit while combining 28 differently-structured real datasets, is at
+[`/methodology/`](/methodology/) once the app is running, or in
+[`docs/model_training_log.md`](docs/model_training_log.md) if you're reading the code
+directly.
+
+---
+
+## Results
+
+Both models below were tuned with the same effort (Optuna, 50 trials, cross-validated),
+so this is an even comparison — not a case of one getting more attention than the other.
+
+| Metric | Real Data | Synthetic Data | Note |
+|---|---|---|---|
+| Cox concordance index | 0.551 (on hospitals never seen in training) | 0.734 | 50 = coin flip, 100 = perfect ranking |
+| XGBoost ROC-AUC | 0.550 (on hospitals never seen in training) | 0.732 | same scale |
+| XGBoost ROC-AUC (random split) | 0.755 | — | shown for comparison — this is the flattering number that hides the generalization gap |
+| Brier score (calibration) | 0.114 | 0.042 | lower is better |
+| SHAP explanation robustness | 0.903 | 0.975 | does the explanation survive small, realistic noise in the input? max 1.0 |
+| Cox risk factors statistically significant | 1 of 3 (p = 0.997, 0.136, 0.0004) | 3 of 5 (all p < 0.01) | is the pattern real or just noise? |
+
+The real-data drop from 0.755 (random split) to 0.550 (new-hospital holdout) is the actual
+finding of this project: with real trial data, a model can partly "cheat" by learning which
+hospital a patient came from, since each hospital has its own baseline dropout rate. Remove
+that shortcut and there isn't enough real signal yet to transfer to a hospital the model
+hasn't seen — a known, still-unsolved problem in clinical ML generally, not something unique
+to this implementation. I retrained on more than double the real data (up from 6,476
+patients / 23 studies) specifically to test whether more data would close this gap; it
+didn't move the new-hospital number, though it did make the model's reasoning measurably
+steadier and turned one more Cox risk factor statistically real. Full explanation at
+[`/methodology/`](/methodology/).
+
+The live demo currently serves the **synthetic-trained model**, since it's the one with
+clean signal to actually demonstrate the pipeline end to end.
 
 ---
 
@@ -44,10 +81,11 @@ SHAP explainability — deployed as a Django web service.
 │  Django Web UI  │   REST API (DRF)  │   Admin Panel         │
 │  ─────────────  │  ─────────────    │  ─────────────        │
 │  Landing Page   │  JWT Auth         │  Full ORM admin       │
-│  Dashboard      │  /api/trials/     │  Risk tier colouring  │
-│  Patient Detail │  /api/patients/   │  Inline predictions   │
-│  Cohort Forecast│  /api/health/     │                       │
-│  CSV Upload     │  /api/docs/       │                       │
+│  Methodology    │  /api/trials/     │  Risk tier colouring  │
+│  Dashboard      │  /api/patients/   │  Inline predictions   │
+│  Patient Detail │  /api/health/     │                       │
+│  Cohort Forecast│  /api/docs/       │                       │
+│  CSV Upload     │                   │                       │
 └────────┬────────┴────────┬──────────┴───────────────────────┘
          │                 │
          ▼                 ▼
@@ -65,7 +103,7 @@ SHAP explainability — deployed as a Django web service.
          │
          ▼
 ┌─────────────────────────────────────────────────────────────┐
-│  MySQL Database (Django ORM)                                │
+│  MySQL-compatible Database (Django ORM, tested against TiDB)│
 │  trials · patients · visits · prediction_results            │
 │  cohort_forecasts · coordinator_actions                     │
 └─────────────────────────────────────────────────────────────┘
@@ -77,7 +115,7 @@ SHAP explainability — deployed as a Django web service.
 
 ### 1. Prerequisites
 - Python 3.10+
-- MySQL 8.0+
+- MySQL 8.0+ or a MySQL-compatible database (this project was run against TiDB)
 - A virtual environment
 
 ### 2. Installation
@@ -97,7 +135,6 @@ pip install -r requirements.txt
 ### 3. Database Setup
 
 ```bash
-# Create MySQL database
 mysql -u root -p
 CREATE DATABASE trialguard_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 CREATE USER 'trialguard_user'@'localhost' IDENTIFIED BY 'your_password';
@@ -123,12 +160,14 @@ python manage.py collectstatic --no-input
 ### 6. Generate Synthetic Data & Train Models
 
 ```bash
-# Generate 5,000 synthetic patients
 python manage.py generate_synthetic_data --n 5000
-
-# Train Cox PH + XGBoost (50 Optuna trials) + run batch inference
 python manage.py train_models --optuna-trials 50
 ```
+
+The real-data training pipeline (data harmonization, grouped cross-validation, and the
+leave-studies-out validation behind the numbers above) lives in `scripts/real_data/` and
+isn't wired into a management command — it was a one-time investigation, not something the
+app re-runs on demand. See `docs/model_training_log.md` for the exact steps.
 
 ### 7. Run Development Server
 
@@ -136,7 +175,8 @@ python manage.py train_models --optuna-trials 50
 python manage.py runserver
 ```
 
-Open [http://localhost:8000](http://localhost:8000) in your browser.
+Open [http://localhost:8000](http://localhost:8000), and [/methodology/](http://localhost:8000/methodology/)
+for the write-up on how this was built and validated.
 
 ### 8. Generate Favicons
 
@@ -181,12 +221,10 @@ Full OpenAPI schema available at `/api/docs/` (Swagger UI) and `/api/redoc/`.
 ### Authentication
 
 ```bash
-# Get JWT token
 curl -X POST http://localhost:8000/api/token/ \
   -H "Content-Type: application/json" \
   -d '{"username": "admin", "password": "yourpassword"}'
 
-# Use token
 curl -H "Authorization: Bearer <token>" \
   http://localhost:8000/api/trials/
 ```
@@ -197,10 +235,32 @@ curl -H "Authorization: Bearer <token>" \
 
 | Source | Type | Usage |
 |---|---|---|
-| SDV GaussianCopula synthesis | Synthetic | Primary training data (5,000 patients) |
-| CDISC CDASH Demo Datasets | Real (public) | Supplementary validation |
-| UCI Heart Disease | Real (public) | Supplementary cohort |
-| UCI Diabetic Retinopathy | Real (public) | Supplementary cohort |
+| Custom synthetic generator (`core/utils/data_pipeline.py`) | Synthetic | Powers the live demo — 12,435+ generated patients with intentional, known dropout relationships |
+| [Project Data Sphere](https://www.projectdatasphere.org/) | Real (public) | 18 real oncology trials, used for honest validation, not training the live model |
+| [ImmPort](https://www.immport.org/) | Real (public) | 5 real NIH/NIAID-funded trials (MS + type 1 diabetes), same use |
+| [PPMI](https://www.ppmi-info.org/) (via IDA/LONI) | Real (public) | 4 real cohorts (Parkinson's, at-risk/prodromal, healthy control, SWEDD), same use |
+| MUSIC (via PhysioNet) | Real (public) | 1 real heart-failure cohort, same use |
+| AACT (ClinicalTrials.gov mirror) | Real (public) | Used only to sanity-check synthetic dropout rates against real aggregate statistics, not patient-level |
+
+28 real trials/studies, 12,435 real patients total, all de-identified and pulled from
+public repositories. Broken down by sponsor:
+
+| Sponsor / Program | Studies | Area | Source |
+|---|---|---|---|
+| Amgen | 5 | 3 colorectal, 1 head & neck, 1 small-cell lung | Project Data Sphere |
+| Eli Lilly | 3 | breast, non-small-cell lung, small-cell lung | Project Data Sphere |
+| EMD Serono | 3 | 2 glioma, 1 pancreatic | Project Data Sphere |
+| G1 Therapeutics | 3 | small-cell lung | Project Data Sphere |
+| Pfizer | 1 trial, 2 cohorts | small-cell lung | Project Data Sphere |
+| Clovis Oncology | 1 | pancreatic | Project Data Sphere |
+| Alliance for Clinical Trials in Oncology | 1 | breast (CALGB 40502) | Project Data Sphere |
+| NIH / NIAID, incl. Immune Tolerance Network | 5 | 2 multiple sclerosis, 3 new-onset type 1 diabetes | ImmPort |
+| Michael J. Fox Foundation (PPMI) | 4 cohorts | Parkinson's, at-risk/prodromal, healthy control, SWEDD | IDA / LONI (USC) |
+| MUSIC study group | 1 | heart failure | PhysioNet |
+
+Every file — patient data and documentation alike — was read and its field meanings
+verified before use; details in `docs/harmonized_dataset_build_log.md`,
+`docs/ppmi_data_build_log.md`, and `docs/data_sourcing.md`.
 
 ---
 
@@ -219,13 +279,13 @@ curl -H "Authorization: Bearer <token>" \
 | ML — Classification | XGBoost 2.1 + Optuna |
 | ML — Survival Analysis | lifelines CoxPHFitter |
 | ML — Explainability | SHAP TreeExplainer |
-| Synthetic Data | SDV GaussianCopula |
+| Synthetic Data | Custom generator (`core/utils/data_pipeline.py`) |
 | PDF Reports | ReportLab |
-| Database | MySQL 8.0 (mysqlclient) |
+| Database | MySQL-compatible (tested against TiDB) |
 | Static Files | WhiteNoise |
 | Production Server | Gunicorn |
 | Frontend Charts | Chart.js 4.4 |
-| Typography | Cinzel + Lato (Google Fonts) |
+| Typography | Fira Sans + Lato (Google Fonts) |
 
 ---
 
@@ -239,43 +299,51 @@ Trial Guard/
 │   └── wsgi.py / asgi.py
 ├── core/                # Main application
 │   ├── models.py        # Trial, Patient, Visit, PredictionResult, etc.
-│   ├── views.py         # Web views + DRF API views
+│   ├── views.py         # Web views + DRF API views (incl. /methodology/)
 │   ├── admin.py         # Admin interface with risk colour coding
 │   ├── forms.py         # CSV upload + coordinator action forms
 │   ├── serializers.py   # DRF serializers
 │   ├── urls.py          # App URL patterns
 │   ├── utils/
-│   │   ├── data_pipeline.py    # Feature engineering
+│   │   ├── data_pipeline.py    # Feature engineering + synthetic generator
 │   │   ├── survival_model.py   # Cox PH model
 │   │   ├── xgboost_model.py    # XGBoost + Optuna
 │   │   ├── shap_explainer.py   # SHAP TreeExplainer
 │   │   └── report_generator.py # PDF reports (ReportLab)
 │   ├── management/commands/
 │   │   ├── generate_synthetic_data.py
-│   │   └── train_models.py
+│   │   ├── train_models.py
+│   │   └── validate_against_aact.py
 │   └── migrations/
-├── ml_models/           # Trained model artifacts (.pkl)
+├── ml_models/            # Trained model artifacts actually served by the app (.pkl)
 │   ├── cox_model.pkl
 │   ├── xgb_model.pkl
 │   ├── shap_explainer.pkl
 │   └── scaler.pkl
-├── templates/           # Django HTML templates
-│   ├── base.html        # Navbar + footer (Cinzel/Lato, Gryffindor palette)
-│   ├── index.html       # Public landing page
-│   ├── dashboard.html   # Coordinator dashboard
+├── scripts/real_data/    # Real-data acquisition, harmonization, and validation work
+│                         # (not wired into the app — a one-time investigation, see
+│                         #  docs/model_training_log.md)
+├── data/                 # Real, de-identified patient data (Project Data Sphere, ImmPort,
+│                         #  PPMI, MUSIC)
+├── docs/                 # Build logs, validation methodology, findings
+├── templates/            # Django HTML templates
+│   ├── base.html         # Navbar + footer
+│   ├── index.html        # Public landing page
+│   ├── methodology.html  # How this was built & validated (public)
+│   ├── dashboard.html    # Coordinator dashboard
 │   ├── patient_detail.html
-│   ├── cohort.html      # Cohort forecast view
-│   ├── upload.html      # CSV data import
+│   ├── cohort.html       # Cohort forecast view
+│   ├── upload.html       # CSV data import
 │   └── login.html
 ├── static/
-│   ├── css/main.css     # Full design system (CSS custom properties)
-│   ├── js/dashboard.js  # Navigation + Chart.js helpers
+│   ├── css/main.css      # Design system (CSS custom properties)
+│   ├── js/dashboard.js   # Navigation + Chart.js helpers
 │   └── img/
-│       ├── logo.svg     # TrialGuard SVG logo (shield + DNA helix)
+│       ├── logo.svg
 │       ├── favicon.ico
 │       └── apple-touch-icon.png
-├── media/reports/       # Generated PDF reports
-├── evaluation_results.json   # Model metrics (generated after training)
+├── media/reports/        # Generated PDF reports
+├── evaluation_results.json   # Live model's metrics (regenerated on each train)
 ├── model_card.md
 ├── requirements.txt
 └── .env.example
@@ -283,34 +351,32 @@ Trial Guard/
 
 ---
 
-## Colour Palette (Gryffindor-Inspired)
+## Colour Palette (NHS-Inspired)
 
 | Token | Hex | Usage |
 |---|---|---|
-| `--crimson` | `#740001` | Primary brand, headers, critical risk |
-| `--gold` | `#D3A625` | Accents, links, charts, logo text |
-| `--dark-bg` | `#1A0A00` | Page background |
-| `--card-bg` | `#2C1A0E` | Cards and panels |
-| `--text-primary` | `#F5E6C8` | Body text (warm parchment) |
-| `--accent` | `#FF6B35` | Hover states |
+| `--primary` | `#003087` | Primary brand, navbar, headers |
+| `--accent` | `#0072CE` | Links, buttons, active states |
+| `--accent-light` | `#41B6E6` | Secondary accents, icons |
 
 ---
 
 ## Risk Tier System
 
-| Tier | Probability | Colour | Action |
-|---|---|---|---|
-| Low | 0–30% | `#4CAF50` | Routine monitoring |
-| Medium | 31–55% | `#FFC107` | Check-in recommended |
-| High | 56–75% | `#FF5722` | Immediate outreach |
-| Critical | 76–100% | `#740001` | Emergency intervention (pulsing UI) |
+| Tier | Colour | Meaning |
+|---|---|---|
+| Low | `#009639` | Routine monitoring |
+| Medium | `#FFB81C` | Check-in recommended |
+| High | `#E65C00` | Immediate outreach |
+| Critical | `#CC0000` | Emergency intervention |
 
 ---
 
 ## Model Card
 
-See [model_card.md](model_card.md) for full model documentation including features,
-performance targets, limitations, and ethical considerations.
+See [model_card.md](model_card.md) for model documentation — note it predates the real-data
+validation work described above and in [`/methodology/`](/methodology/), which is the more
+current source on what the model can and can't actually do.
 
 ---
 
@@ -320,4 +386,4 @@ Proprietary. All rights reserved.
 
 ---
 
-**Built by [SKMMT](https://skmmt.rootexception.com/)** · TrialGuard © 2026 · Powered by XGBoost & Survival Analysis
+**Built by [SKMMT](https://skmmt.rootexception.com/)** · TrialGuard © 2026

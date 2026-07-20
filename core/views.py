@@ -50,14 +50,10 @@ def _models_trained():
 
 def _get_patient_features_dict(patient, visit):
     """Build the covariate dict needed by the survival model."""
-    from core.utils.data_pipeline import (
-        _SEVERITY_MAP, _age_group, _distance_bucket
-    )
+    from core.utils.data_pipeline import _SEVERITY_MAP
     return {
         'age': patient.age,
         'condition_severity_encoded': _SEVERITY_MAP.get(patient.condition_severity, 1),
-        'distance_to_site_km': patient.distance_to_site_km,
-        'prior_dropout_history': int(patient.prior_dropout_history),
         'cumulative_missed_visits': visit.missed_visits_to_date,
         'adverse_event_rate': visit.adverse_events_count,
         'medication_adherence_score': visit.medication_adherence_score,
@@ -73,7 +69,7 @@ def _run_prediction_for_patient(patient, visit):
         return None
 
     try:
-        from core.utils.data_pipeline import engineer_features_for_patient, load_scaler, FEATURE_COLUMNS
+        from core.utils.data_pipeline import engineer_features_for_patient, load_scaler, MODEL_FEATURE_COLUMNS
         from core.utils.xgboost_model import load_xgb_model
         from core.utils.survival_model import predict_survival
         from core.utils.shap_explainer import load_shap_explainer, shap_values_to_json
@@ -87,21 +83,28 @@ def _run_prediction_for_patient(patient, visit):
         if row.empty:
             row = df.tail(1)
 
-        X_raw = row[FEATURE_COLUMNS].values
+        X_raw = row[MODEL_FEATURE_COLUMNS].values
         X_scaled = scaler.transform(X_raw)
 
-        xgb_model = load_xgb_model()
-        prob = float(xgb_model.predict_proba(X_scaled)[0][1])
-        risk_tier = PredictionResult.get_risk_tier(prob)
-
+        # XGBoost was trained on MODEL_FEATURE_COLUMNS plus the Cox hazard
+        # ratio appended as one extra column (see train_models.py step 5).
+        # The hazard ratio has to be computed and appended here too, not
+        # just for Cox's own output, otherwise this function hands the
+        # model fewer columns than it was trained on.
         features_dict = _get_patient_features_dict(patient, visit)
         survival_info = predict_survival(features_dict)
+        hazard_ratio = survival_info.get('hazard_ratio', 1.0) or 1.0
+        X_full = np.hstack([X_scaled, [[hazard_ratio]]])
+
+        xgb_model = load_xgb_model()
+        prob = float(xgb_model.predict_proba(X_full)[0][1])
+        risk_tier = PredictionResult.get_risk_tier(prob)
 
         explainer = load_shap_explainer()
-        shap_vals = explainer.shap_values(X_scaled)
+        shap_vals = explainer.shap_values(X_full)
         if isinstance(shap_vals, list):
             shap_vals = shap_vals[1]
-        shap_json = shap_values_to_json(shap_vals[0], FEATURE_COLUMNS)
+        shap_json = shap_values_to_json(shap_vals[0], MODEL_FEATURE_COLUMNS + ['hazard_ratio'])
 
         result = PredictionResult.objects.update_or_create(
             patient=patient,
@@ -184,6 +187,23 @@ def index(request):
         ).values('patient').distinct().count(),
     }
     return render(request, 'index.html', {'stats': stats})
+
+def methodology(request):
+    """
+    Public case-study page: how TrialGuard was built and validated,
+    including the honest real-vs-synthetic data comparison. Reads the
+    actual training result JSONs rather than hardcoding numbers in the
+    template, so this page can't silently drift out of sync with what
+    was really measured.
+    """
+    results_dir = Path(r'D:\Trial Guard\scripts\real_data')
+    try:
+        real = json.loads((results_dir / 'tuned_results_real.json').read_text())
+        synthetic = json.loads((results_dir / 'tuned_results_synthetic.json').read_text())
+    except FileNotFoundError:
+        real, synthetic = {}, {}
+    return render(request, 'methodology.html', {'real': real, 'synthetic': synthetic})
+
 
 @never_cache
 def login_view(request):

@@ -19,9 +19,9 @@ logger = logging.getLogger('core')
 COX_MODEL_PATH = Path(__file__).resolve().parents[2] / 'ml_models' / 'cox_model.pkl'
 
 COX_COVARIATES = [
-    'age', 'condition_severity_encoded', 'distance_to_site_km',
+    'age', 'condition_severity_encoded',
     'cumulative_missed_visits', 'adverse_event_rate',
-    'medication_adherence_score', 'prior_dropout_history',
+    'medication_adherence_score',
 ]
 
 
@@ -42,8 +42,6 @@ def train_cox_model(df: pd.DataFrame):
             .agg({
                 'age': 'first',
                 'condition_severity_encoded': 'first',
-                'distance_to_site_km': 'first',
-                'prior_dropout_history': 'first',
                 'cumulative_missed_visits': 'max',
                 'adverse_event_rate': 'mean',
                 'medication_adherence_score': 'mean',

@@ -1,0 +1,41 @@
+{
+  "overall_mean_dropout_rate": 0.042,
+  "by_phase": {
+    "EARLY_PHASE1": 0.0412,
+    "PHASE1": 0.0326,
+    "PHASE1/PHASE2": 0.0405,
+    "PHASE2": 0.0392,
+    "PHASE2/PHASE3": 0.0494,
+    "PHASE3": 0.0445,
+    "PHASE4": 0.0416
+  },
+  "by_phase_and_therapeutic_area": {
+    "PHASE2|Oncology": 0.0336,
+    "PHASE1/PHASE2|Oncology": 0.039,
+    "PHASE3|Oncology": 0.0462,
+    "PHASE1|Oncology": 0.0443,
+    "PHASE3|Endocrinology": 0.0473,
+    "PHASE2|Neurology": 0.0413,
+    "PHASE3|Neurology": 0.0475,
+    "PHASE3|Cardiovascular": 0.0262,
+    "PHASE4|Cardiovascular": 0.0286,
+    "PHASE2|Cardiovascular": 0.0246,
+    "PHASE4|Endocrinology": 0.0436,
+    "PHASE2|Endocrinology": 0.0503,
+    "PHASE4|Neurology": 0.0425,
+    "PHASE4|Oncology": 0.0472,
+    "PHASE1|Neurology": 0.0253,
+    "PHASE1|Endocrinology": 0.0201,
+    "PHASE1/PHASE2|Neurology": 0.0527,
+    "PHASE2/PHASE3|Oncology": 0.0425,
+    "PHASE1|Cardiovascular": 0.0206,
+    "EARLY_PHASE1|Oncology": 0.0261,
+    "PHASE2/PHASE3|Neurology": 0.0699,
+    "PHASE1/PHASE2|Endocrinology": 0.0738,
+    "PHASE2/PHASE3|Endocrinology": 0.0439,
+    "PHASE2/PHASE3|Cardiovascular": 0.0266,
+    "PHASE1/PHASE2|Cardiovascular": 0.0241
+  },
+  "source": "AACT (aggregate ClinicalTrials.gov mirror), behavioral dropout only (Withdrawal by Subject, Lost to Follow-up, Withdrew Consent from the drop_withdrawals reason field), divided by milestones STARTED count, interventional trials only, minimum 50 trials per bucket. Corrected from an earlier version that used all-cause discontinuation (which included death and disease progression) as a proxy for dropout, see docs/pds_validation_report.md for why that was wrong.",
+  "n_trials_used": 63233
+}

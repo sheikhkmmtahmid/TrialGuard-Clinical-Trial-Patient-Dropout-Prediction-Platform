@@ -1,26 +1,64 @@
 {
-  "xgb_roc_auc": 0.9924,
-  "xgb_f1": 0.8962,
-  "xgb_precision": 0.8726,
-  "xgb_recall": 0.9212,
-  "calibration_brier_score": 0.0231,
-  "optuna_best_val_auc": 0.9938,
-  "n_train": 17022,
-  "n_test": 5007,
+  "xgb_roc_auc": 0.7634,
+  "xgb_f1": 0.0833,
+  "xgb_precision": 0.75,
+  "xgb_recall": 0.0441,
+  "calibration_brier_score": 0.0378,
+  "n_train": 4857,
+  "n_test": 1619,
   "best_params": {
-    "n_estimators": 574,
-    "max_depth": 6,
-    "learning_rate": 0.15082238813987686,
-    "subsample": 0.9899243577039616,
-    "colsample_bytree": 0.7968593220409543,
-    "min_child_weight": 2,
-    "gamma": 0.17720138029972468,
-    "reg_alpha": 0.4898974317402677,
-    "reg_lambda": 0.07065795254574314,
-    "scale_pos_weight": 3.6207754557434413,
-    "random_state": 42,
-    "early_stopping_rounds": 20
+    "n_estimators": 216,
+    "max_depth": 3,
+    "learning_rate": 0.22723648891459014,
+    "subsample": 0.6083065558670876,
+    "colsample_bytree": 0.6465413351062463,
+    "min_child_weight": 9,
+    "gamma": 0.2617981474084337,
+    "reg_alpha": 0.7168299319366956,
+    "reg_lambda": 0.07825606165723742,
+    "scale_pos_weight": 1.364971365061086,
+    "random_state": 42
   },
-  "shap_stability_score": 0.8668,
-  "cox_concordance_index": 0.9111
+  "threshold_sweep": [
+    {
+      "threshold": 0.2,
+      "recall": 0.2059,
+      "precision": 0.2692,
+      "fraction_flagged": 0.0321
+    },
+    {
+      "threshold": 0.3,
+      "recall": 0.1029,
+      "precision": 0.2593,
+      "fraction_flagged": 0.0167
+    },
+    {
+      "threshold": 0.4,
+      "recall": 0.0735,
+      "precision": 0.4545,
+      "fraction_flagged": 0.0068
+    },
+    {
+      "threshold": 0.5,
+      "recall": 0.0441,
+      "precision": 0.75,
+      "fraction_flagged": 0.0025
+    },
+    {
+      "threshold": 0.6,
+      "recall": 0.0147,
+      "precision": 1.0,
+      "fraction_flagged": 0.0006
+    },
+    {
+      "threshold": 0.7,
+      "recall": 0.0,
+      "precision": 0.0,
+      "fraction_flagged": 0.0
+    }
+  ],
+  "shap_stability_score": 0.0275,
+  "shap_robustness_score": 0.9404,
+  "cox_concordance_index": 0.7563,
+  "trained_on": "synthetic (freshly generated, n=6476, Optuna-tuned 50 trials, grouped/stratified CV) - see docs/model_training_log.md"
 }

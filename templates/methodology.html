@@ -1,0 +1,468 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}TrialGuard — How I Built &amp; Validated This{% endblock %}
+
+{% block content %}
+
+<!-- ════════════════════ HERO ════════════════════ -->
+<section class="hero fade-in" id="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-inner container">
+    <div class="hero-badge">Case Study</div>
+    <h1 class="hero-title">
+      <span class="hero-title-main">How I Built &amp; Tested Trial<span class="text-gold">Guard</span></span>
+    </h1>
+    <p class="hero-sub">
+      A walkthrough of the modeling pipeline, where the real data came from, and what happened
+      when I actually tried to break it instead of just reporting the flattering number.
+    </p>
+  </div>
+</section>
+
+<!-- ════════════════════ WHAT IT IS ════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <div class="section-badge">Overview</div>
+      <h2 class="section-title">What I Built and Why</h2>
+    </div>
+    <div class="card" style="padding: 28px 30px;">
+      <p style="margin-bottom: 14px;">
+        TrialGuard predicts which clinical trial patients are at risk of dropping out. It's a
+        three-stage pipeline: a <strong>Cox Proportional Hazards</strong> model for survival
+        timing, an <strong>XGBoost</strong> classifier on top of it for the actual risk score, and
+        <strong>SHAP</strong> to explain each prediction in plain terms instead of leaving it as a
+        black box.
+      </p>
+      <p style="margin-bottom: 14px;">
+        I started on synthetic data, since it let me control the signal and confirm the pipeline
+        itself was doing what it was supposed to before worrying about anything messier. Once that
+        worked, I went and pulled real, de-identified patient data from public trial repositories
+        to see whether any of it actually held up outside a clean synthetic sandbox.
+      </p>
+      <p>
+        Mostly, it didn't — and I think walking through exactly why is a better use of this page
+        than pretending it did. Below is the real process: where the data came from, what broke
+        along the way, and the honest numbers once I stopped testing it the easy way.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ THE MODELS ════════════════════ -->
+<section class="section" style="background: var(--dark-bg);">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <div class="section-badge">Architecture</div>
+      <h2 class="section-title">Three Models, Three Different Jobs</h2>
+      <p class="section-sub">
+        "The AI predicts dropout" isn't one thing. Here's exactly which piece does what, and why I
+        picked each one over the alternative.
+      </p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+      <div class="card" style="padding: 24px 28px;">
+        <h3 style="margin-bottom: 6px;">Cox Proportional Hazards</h3>
+        <p style="color: var(--text-muted); margin-bottom: 12px;">
+          Estimates <em>when</em> a patient is likely to drop out, not just whether they will.
+        </p>
+        <p style="margin-bottom: 12px;">
+          Two patients can carry the same overall risk, but Cox is what tells you one of them has
+          weeks of runway left and the other has months — the hazard ratio is what the risk tiers
+          and the "60-day early warning" framing are actually built on.
+        </p>
+        <p style="color: var(--text-muted); font-size: 0.92rem; border-top: 1px solid var(--border); padding-top: 12px;">
+          <strong>Why this one:</strong> Cox has been the standard tool for time-to-event medical
+          data since 1972, and its hazard ratios are something a trial coordinator can read and
+          trust, not a black-box score. Kaplan-Meier, the simpler and even more standard option,
+          only produces a population-level survival curve — it can't take one patient's missed
+          visits or adverse events into account, which defeats the point of a per-patient score.
+          Random Survival Forests and similar ML-based survival models can capture more complex,
+          non-linear relationships, but they need more data per group than this project has —
+          most real sources here average 280 to 450 patients each — so a simpler, more
+          data-efficient model was the more honest choice than a flexible one I couldn't actually
+          feed enough data. I also looked at AFT (accelerated failure time) models, but those
+          require committing upfront to a specific distribution for survival times (Weibull,
+          log-normal, etc.), an extra assumption Cox's semi-parametric approach avoids.
+        </p>
+      </div>
+      <div class="card" style="padding: 24px 28px;">
+        <h3 style="margin-bottom: 6px;">XGBoost</h3>
+        <p style="color: var(--text-muted); margin-bottom: 12px;">
+          Turns the Cox hazard ratio plus every engineered visit-history feature into one dropout
+          probability per visit.
+        </p>
+        <p style="margin-bottom: 12px;">
+          This is the number that actually drives the risk tiers on the dashboard — missed visits,
+          adverse-event trend, adherence trend, quality-of-life trend, and the Cox hazard ratio all
+          feed into it, and it learns which combinations mattered in the training data.
+        </p>
+        <p style="color: var(--text-muted); font-size: 0.92rem; border-top: 1px solid var(--border); padding-top: 12px;">
+          <strong>Why this one:</strong> gradient-boosted trees are the standard strong performer on
+          small-to-medium tabular clinical data, and XGBoost specifically has a native, exact SHAP
+          TreeExplainer, so the "why" behind every score on this platform is a real calculation, not
+          an approximation. LightGBM and CatBoost are close, well-regarded siblings in the same
+          family that would likely do comparably well; I haven't specifically benchmarked either
+          against this project's data. Plain logistic regression would be even more directly
+          interpretable, but can't capture interactions the way a tree ensemble can — for example, a
+          missed visit mattering more when adherence is already low. That's a well-established
+          general reason to prefer tree ensembles on this kind of tabular data, not a comparison I
+          ran myself on this dataset, and I want to be upfront about that distinction.
+        </p>
+      </div>
+      <div class="card" style="padding: 24px 28px;">
+        <h3 style="margin-bottom: 6px;">SHAP (TreeExplainer)</h3>
+        <p style="color: var(--text-muted); margin-bottom: 12px;">
+          Explains, after the fact, exactly why XGBoost gave the probability it gave for one
+          specific patient.
+        </p>
+        <p style="margin-bottom: 12px;">
+          Instead of just showing "62% risk," a patient's page breaks the number down: how many
+          points came from missed visits, from the adverse-event trend, from the Cox hazard ratio,
+          and so on — so a coordinator sees the reasoning, not just a number to trust blindly.
+        </p>
+        <p style="color: var(--text-muted); font-size: 0.92rem; border-top: 1px solid var(--border); padding-top: 12px;">
+          <strong>Why this one:</strong> SHAP is grounded in Shapley values from game theory, and for
+          tree models specifically, TreeExplainer computes the exact answer rather than an
+          approximation. The main alternative, LIME, is faster but works by sampling nearby
+          synthetic examples and fitting a local approximation, which means asking it twice about
+          the same patient can give a slightly different answer. For a clinical tool, where a
+          coordinator might reasonably check the same patient's explanation more than once, an exact
+          method that gives the same answer every time was the right tradeoff.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ THE DATA ════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <div class="section-badge">Data</div>
+      <h2 class="section-title">Where the Data Came From</h2>
+      <p class="section-sub">
+        Synthetic data for a clean training signal, plus real de-identified patient records to
+        find out if any of it generalizes.
+      </p>
+    </div>
+    <div class="tier-grid">
+      <div class="tier-card">
+        <div class="tier-range" style="color: var(--accent);">Synthetic</div>
+        <div class="tier-label">Generated Training Data</div>
+        <div class="tier-action">
+          12,435 generated patients with intentional, known relationships between risk factors
+          and dropout, so I could sanity-check the pipeline against a ground truth I actually
+          controlled.
+        </div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-range" style="color: var(--accent);">28 Real Trials</div>
+        <div class="tier-label">Real-World Validation Data</div>
+        <div class="tier-action">
+          12,435 real, de-identified patients pulled from Project Data Sphere, ImmPort, PPMI, and
+          MUSIC — public repositories of completed trials and studies — across oncology, diabetes,
+          multiple sclerosis, Parkinson's, and heart failure.
+        </div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-range" style="color: var(--accent);">1,190+</div>
+        <div class="tier-label">Files Read By Hand</div>
+        <div class="tier-action">
+          Every file and every data dictionary or case report form across all 28 studies got
+          opened and read before I trusted a single field. File extensions don't tell you whether
+          something is patient data or documentation — I found that out the hard way partway
+          through and had to redo a chunk of the work.
+        </div>
+      </div>
+    </div>
+
+    <div class="table-card" style="margin-top: 24px;">
+      <div class="table-header"><span class="table-title">Exactly Where the 28 Real Trials Came From</span></div>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Sponsor / Program</th><th>Studies</th><th>Area</th><th>Source</th></tr></thead>
+          <tbody>
+            <tr><td>Amgen</td><td>5</td><td>3 colorectal, 1 head &amp; neck, 1 small-cell lung</td><td>Project Data Sphere</td></tr>
+            <tr><td>Eli Lilly</td><td>3</td><td>breast, non-small-cell lung, small-cell lung</td><td>Project Data Sphere</td></tr>
+            <tr><td>EMD Serono</td><td>3</td><td>2 glioma, 1 pancreatic</td><td>Project Data Sphere</td></tr>
+            <tr><td>G1 Therapeutics</td><td>3</td><td>small-cell lung</td><td>Project Data Sphere</td></tr>
+            <tr><td>Pfizer</td><td>1 trial, 2 cohorts</td><td>small-cell lung</td><td>Project Data Sphere</td></tr>
+            <tr><td>Clovis Oncology</td><td>1</td><td>pancreatic</td><td>Project Data Sphere</td></tr>
+            <tr><td>Alliance for Clinical Trials in Oncology</td><td>1</td><td>breast (CALGB 40502)</td><td>Project Data Sphere</td></tr>
+            <tr><td>NIH / NIAID, incl. Immune Tolerance Network</td><td>5</td><td>2 multiple sclerosis, 3 new-onset type 1 diabetes</td><td>ImmPort</td></tr>
+            <tr><td>Michael J. Fox Foundation (PPMI)</td><td>4 cohorts</td><td>Parkinson's, at-risk/prodromal, healthy control, SWEDD</td><td>IDA / LONI (USC)</td></tr>
+            <tr><td>MUSIC study group</td><td>1</td><td>heart failure</td><td>PhysioNet</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <p style="color: var(--text-muted); font-size: 0.92rem; margin-top: 20px;">
+      One more source is worth naming, because I looked hard at it and specifically decided
+      <strong>not</strong> to use it. A real Type 1 Diabetes dataset from a hospital in Granada,
+      Spain (736 real patients, over 22 million real glucose readings) looked like a strong
+      candidate for a ninth therapeutic area. But its own published paper only describes early
+      data-collection stops in aggregate — device allergy, death, hospital transfer, or a patient's
+      own decision to stop are all lumped into one sentence, with no field in any of its four data
+      files saying which reason applied to which patient. Every other real source in this project is
+      filtered by exactly that kind of reason field, specifically to keep death and
+      medical/administrative stops out of a "behavioral dropout" label. I checked all four raw
+      files by hand to make sure I wasn't missing a hidden column — there wasn't one. Rather than
+      guess which patients' early stops were genuine dropout, I left the whole source out.
+    </p>
+  </div>
+</section>
+
+<!-- ════════════════════ ENGINEERING RIGOR ════════════════════ -->
+<section class="section" style="background: var(--dark-bg);">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <div class="section-badge">Process</div>
+      <h2 class="section-title">A Few Things I Ran Into</h2>
+      <p class="section-sub">
+        Combining 28 real datasets, each structured its own way, turns up real problems. Here are
+        five I actually hit, not hypotheticals.
+      </p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card fade-in-up" style="--delay: 0ms">
+        <h3 class="feature-title">Label Leakage</h3>
+        <p class="feature-desc">
+          An early version of one of my training labels was accidentally built partly from the
+          outcome it was supposed to predict — a Python operator-precedence mistake
+          (<code>&amp;</code> binds tighter than <code>|</code>). Caught it before it inflated
+          every accuracy number downstream.
+        </p>
+      </div>
+      <div class="feature-card fade-in-up" style="--delay: 80ms">
+        <h3 class="feature-title">Patient IDs Colliding</h3>
+        <p class="feature-desc">
+          One multi-site trial reused patient numbers at every site (every site had its own
+          "patient #1"). Matching on that number alone silently merged records from different real
+          people. I caught it because one merged "patient" ended up with 713 recorded side
+          effects, which isn't physically possible for one person.
+        </p>
+      </div>
+      <div class="feature-card fade-in-up" style="--delay: 160ms">
+        <h3 class="feature-title">A Field-Parsing Bug</h3>
+        <p class="feature-desc">
+          Some studies recorded sex as "Male"/"Female" or as numeric codes instead of single
+          letters. My parsing only looked for M/F, so it silently marked 65% of the real dataset's
+          gender field "unknown" until I actually went and checked the raw values.
+        </p>
+      </div>
+      <div class="feature-card fade-in-up" style="--delay: 240ms">
+        <h3 class="feature-title">Code and Model Drift</h3>
+        <p class="feature-desc">
+          I'd reduced the feature set from 23 to 20 columns in code at some point, but never
+          retrained the deployed model to match — so the live model and the code disagreed about
+          how many inputs to expect. Found and fixed it while writing this page.
+        </p>
+      </div>
+      <div class="feature-card fade-in-up" style="--delay: 320ms">
+        <h3 class="feature-title">An Undocumented Code, Resolved Without Guessing</h3>
+        <p class="feature-desc">
+          One real cardiovascular dataset's own codebook only defined 1 of its 4 outcome codes.
+          Rather than guess what the other 3 meant, I cross-checked them against a second field
+          (cause of death) already in the data — every patient coded one way had a real death
+          cause attached, every patient coded the other two ways didn't. That's how "did this
+          person actually leave the study on their own" got answered honestly instead of assumed.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ THE VALIDATION STORY ════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <div class="section-badge">Validation</div>
+      <h2 class="section-title">Testing It the Honest Way</h2>
+    </div>
+    <div class="card" style="padding: 28px 30px; margin-bottom: 24px;">
+      <p style="margin-bottom: 14px;">
+        The easy way to test a model trained on data pooled from many hospitals is a random
+        train/test split — mix everyone together, hold out 25%. That gave me 0.75 AUC on real
+        data, which looks fine on its own. But it's a flattering number, because the model can
+        partly cheat: it can learn "which hospital is this patient from" as a shortcut, since each
+        hospital has its own baseline dropout rate that leaks through the other features.
+      </p>
+      <p style="margin-bottom: 14px;">
+        So I reran it holding out four entire hospitals the model had never touched during
+        training or tuning, and tested only on those. That's the harder, more honest test. It
+        dropped the AUC to <strong>0.55</strong> — barely better than a coin flip.
+      </p>
+      <p>
+        That's the real result, and I'd rather show it than not. I've since more than doubled the
+        real dataset (from 6,476 to 12,435 patients, adding two entirely new therapeutic areas -
+        Parkinson's and heart failure - to what started as an oncology/diabetes/MS collection) and
+        retrained everything, specifically to see whether more real data would close that gap.
+        It didn't move: still 0.55 on new hospitals. More data made the model's reasoning
+        noticeably steadier and made one more risk factor statistically real (see the tables
+        below), but it did not teach the model to generalize to a hospital it's never seen. With
+        roughly 280-450 patients per source on average, and a lot of the extra columns only
+        actually measured for a minority of patients rather than filled in with a placeholder,
+        there isn't enough consistent signal yet for a model to learn something that transfers
+        cleanly from one hospital to another. This is a known, still-unsolved problem in clinical
+        ML in general — models trained across multiple sites routinely struggle to generalize to a
+        new one — not something specific to how this was built, and not something more data alone
+        fixes.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ RESULTS TABLES ════════════════════ -->
+<section class="section" style="background: var(--dark-bg);">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <div class="section-badge">Results</div>
+      <h2 class="section-title">Cox → XGBoost → SHAP, Real vs. Synthetic</h2>
+      <p class="section-sub">
+        Both were hyperparameter-tuned with the same effort (Optuna, 50 trials each), so this is
+        an even comparison, not one model getting more attention than the other.
+      </p>
+    </div>
+
+    <div class="table-card">
+      <div class="table-header"><span class="table-title">1. Cox (Survival Model)</span></div>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Metric</th><th>Real Data</th><th>Synthetic Data</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Concordance Index<br><span style="color:var(--text-muted); font-weight:400;">correct pairwise risk ranking, out of 100</span></td>
+              <td>{{ real.cox_concordance_holdout|default:"0.551" }} on new hospitals</td>
+              <td>{{ synthetic.cox_concordance_random_test|default:"0.734" }}</td>
+            </tr>
+            <tr>
+              <td>Risk factors statistically significant<br><span style="color:var(--text-muted); font-weight:400;">p &lt; 0.05</span></td>
+              <td>1 of 3 (p = 0.997, 0.136, 0.0004)</td>
+              <td>3 of 5 (p &lt; 0.01 each)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <div class="table-header"><span class="table-title">2. XGBoost (Classifier)</span></div>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Metric</th><th>Real Data</th><th>Synthetic Data</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>ROC-AUC<br><span style="color:var(--text-muted); font-weight:400;">correct pairwise risk ranking, out of 100</span></td>
+              <td>{{ real.xgb_roc_auc_holdout|default:"0.550" }} on new hospitals</td>
+              <td>{{ synthetic.xgb_roc_auc_random_test|default:"0.732" }}</td>
+            </tr>
+            <tr>
+              <td>Calibration (Brier score)<br><span style="color:var(--text-muted); font-weight:400;">lower is better, 0 = perfect</span></td>
+              <td>{{ real.xgb_brier_holdout|default:"0.114" }}</td>
+              <td>{{ synthetic.xgb_brier_random_test|default:"0.042" }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <div class="table-header"><span class="table-title">3. SHAP (Explainability)</span></div>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Metric</th><th>Real Data</th><th>Synthetic Data</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Explanation robustness<br><span style="color:var(--text-muted); font-weight:400;">does the explanation survive small, realistic noise? max 1.0</span></td>
+              <td>{{ real.shap_robustness_score|default:"0.903" }}</td>
+              <td>{{ synthetic.shap_robustness_score|default:"0.975" }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <p style="color: var(--text-muted); font-size: 0.9rem;">
+      The full write-up, including the continual-learning tests and every bug I found during the
+      data work, is in the project repository.
+    </p>
+  </div>
+</section>
+
+<!-- ════════════════════ CURRENT STATUS ════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <div class="section-badge">Current Status</div>
+      <h2 class="section-title">What's Actually Running Right Now</h2>
+    </div>
+    <div class="card" style="padding: 28px 30px;">
+      <p style="margin-bottom: 14px;">
+        The live predictions in this demo come from the <strong>synthetic-trained model</strong> —
+        the one with the strong numbers above — since it has clean, reliable signal to actually
+        show the full pipeline working: Cox survival estimates, XGBoost risk scores, SHAP
+        explanations, end to end.
+      </p>
+      <p>
+        The real-data numbers exist to answer the harder question honestly: would this actually
+        work on a hospital it's never seen. Right now, no — and I'd rather say that plainly than
+        dress it up.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ WHAT THE MODEL DOESN'T SEE ════════════════════ -->
+<section class="section" style="background: var(--dark-bg);">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <div class="section-badge">Disclosure</div>
+      <h2 class="section-title">Three Fields the Model Never Actually Sees</h2>
+    </div>
+    <div class="card" style="padding: 28px 30px;">
+      <p style="margin-bottom: 14px;">
+        Distance to trial site, employment status, and prior dropout history are still collected on
+        every patient — the add-patient form, CSV upload, and PDF reports all still ask for and show
+        them — but as of this version, none of the three ever reaches the scaler or either model.
+        Neither Cox nor XGBoost can see them, so they cannot influence a hazard ratio, a dropout
+        probability, or a SHAP explanation, full stop, not just "deprioritized."
+      </p>
+      <p>
+        This wasn't a guess. I searched by hand across all four independent real-world sources in
+        this project — Project Data Sphere, MUSIC, UCI Heart Failure, and ImmPort — and none of them
+        record any of these three fields for any real patient. Every earlier version of this model
+        that used them only ever had their importance demonstrated on synthetic data built to make
+        them predictive, never confirmed against a real patient's chart. They're kept in the schema,
+        not deleted, so if a future real source ever does supply genuine values for one of them, it
+        can be added back to training without rebuilding any collection or encoding logic.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ CONTACT ════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <div class="section-badge">Questions</div>
+      <h2 class="section-title">If Something Here Looks Wrong</h2>
+    </div>
+    <div class="card" style="padding: 28px 30px;">
+      <p style="margin-bottom: 14px;">
+        Every real dataset used here came from a public research-data platform under its own
+        registration or data-use agreement — Project Data Sphere, ImmPort, PPMI, PhysioNet's MUSIC
+        study — not from scraping. If you're affiliated with one of these studies and think
+        something on this page misrepresents your data, or you'd like a source removed from this
+        project, email me directly and I'll act on it.
+      </p>
+      <a href="mailto:sheikh.k.m.m.tahmid@gmail.com" style="color: var(--accent); font-weight: 600;">
+        sheikh.k.m.m.tahmid@gmail.com
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

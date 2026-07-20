@@ -1,0 +1,1131 @@
+=== Breast_Allianc_2002_194 ===
+  Breast_Allianc_2002_194/40101-10.pdf
+  Breast_Allianc_2002_194/aeclean_finala.sas7bdat
+  Breast_Allianc_2002_194/CALGB40101_CRF.pdf
+  Breast_Allianc_2002_194/data_dictionary_40101a.docx
+  Breast_Allianc_2002_194/eval46_3_finala.sas7bdat
+=== Breast_Allianc_2002_200 ===
+  Breast_Allianc_2002_200/40101-10.pdf
+  Breast_Allianc_2002_200/40101_Annotated_CRFs.pdf
+  Breast_Allianc_2002_200/aeclean_finalb.sas7bdat
+  Breast_Allianc_2002_200/all_finalb.sas7bdat
+  Breast_Allianc_2002_200/data_dictionary_40101b.docx
+=== Breast_Allianc_2006_216 ===
+  Breast_Allianc_2006_216/NCT00265759.csv
+  Breast_Allianc_2006_216/Z1031 A7 CRFS 08-09-10.pdf
+  Breast_Allianc_2006_216/Z1031Prot_06Apr2015.pdf
+  Breast_Allianc_2006_216/z1031_datadictionary.docx
+=== Breast_Allianc_2008_158 ===
+  Breast_Allianc_2008_158/c40502_ae.csv
+  Breast_Allianc_2008_158/c40502_CRF.pdf
+  Breast_Allianc_2008_158/c40502_cycles.csv
+  Breast_Allianc_2008_158/c40502_datadictionary.pdf
+  Breast_Allianc_2008_158/c40502_efficacy.csv
+  Breast_Allianc_2008_158/c40502_protocol.pdf
+=== Breast_Allianc_2009_162 ===
+  Breast_Allianc_2009_162/40603 protocol.pdf
+  Breast_Allianc_2009_162/40603_CRF.pdf
+  Breast_Allianc_2009_162/40603_datadictionary.pdf
+  Breast_Allianc_2009_162/aeclean.csv
+  Breast_Allianc_2009_162/PoC_aeclean_xomic.csv
+  Breast_Allianc_2009_162/PoC_treated2_xomic.csv
+  Breast_Allianc_2009_162/treated2.csv
+=== Breast_EliLill_2008_168 ===
+  Breast_EliLill_2008_168/adam20161103/adae.sas7bdat
+  Breast_EliLill_2008_168/adam20161103/adcm.sas7bdat
+  Breast_EliLill_2008_168/adam20161103/adexsum.sas7bdat
+  Breast_EliLill_2008_168/adam20161103/adlb.sas7bdat
+  Breast_EliLill_2008_168/adam20161103/admh.sas7bdat
+  Breast_EliLill_2008_168/adam20161103/adrs.sas7bdat
+  Breast_EliLill_2008_168/adam20161103/adsl.sas7bdat
+  Breast_EliLill_2008_168/adam20161103/adtte.sas7bdat
+  Breast_EliLill_2008_168/adam20161103/advs.sas7bdat
+  Breast_EliLill_2008_168/JVBC_ADaM_dataset_specifications_redacted.pdf
+  Breast_EliLill_2008_168/JVBC_SDTM_aCRF_redacted.pdf
+  Breast_EliLill_2008_168/V8.0 Protocol CP12-0606_Redacted.pdf
+=== Breast_Multipl_2004_414 ===
+  Breast_Multipl_2004_414/CODEBOOK_linked_breast135.pdf
+  Breast_Multipl_2004_414/Dataset Contents and Variable Crosswalk.xlsx
+  Breast_Multipl_2004_414/Descriptive_Stats_Linked_Breast_SanofiU_2004_135.xlsx
+  Breast_Multipl_2004_414/Linked Breast_SanofiU_2004_135 Documentation.docx
+  Breast_Multipl_2004_414/linked_breast135.sas7bdat
+  Breast_Multipl_2004_414/Proc Contents Data Dictionary Linked_Breast_SanofiU_2004_135.pdf
+=== Colorec_Allianc_1994_201 ===
+  Colorec_Allianc_1994_201/int-0146_CRFs.pdf
+  Colorec_Allianc_1994_201/int-0146_datadictionary.pdf
+  Colorec_Allianc_1994_201/int-0146_Protocol.pdf
+  Colorec_Allianc_1994_201/master.csv
+=== Colorec_Allianc_1997_182 ===
+  Colorec_Allianc_1997_182/9581 protocol.doc
+  Colorec_Allianc_1997_182/9581_all_forms.pdf
+  Colorec_Allianc_1997_182/adverse_event_c272.xlsx
+  Colorec_Allianc_1997_182/Data_Dictionary.xlsx
+  Colorec_Allianc_1997_182/new_primary_c1001.xlsx
+  Colorec_Allianc_1997_182/off_trt_c300.xlsx
+  Colorec_Allianc_1997_182/onstudy_c437.xlsx
+  Colorec_Allianc_1997_182/outcome_other_baseline_data.xlsx
+=== Colorec_Allianc_2004_161 ===
+  Colorec_Allianc_2004_161/characteristic.csv
+  Colorec_Allianc_2004_161/n0147_ddt.pdf
+  Colorec_Allianc_2004_161/n0147_forms.pdf
+  Colorec_Allianc_2004_161/n0147_protocol.pdf
+  Colorec_Allianc_2004_161/objectives.csv
+  Colorec_Allianc_2004_161/tox.csv
+=== Colorec_Amgen_2004_310 ===
+  Colorec_Amgen_2004_310/20020408_Amendment 4_26APR05.pdf
+  Colorec_Amgen_2004_310/DDT_408_v2.xlsx
+  Colorec_Amgen_2004_310/Final CRF 200704 Ver 2.pdf
+  Colorec_Amgen_2004_310/PDS_DSA_20020408/adae_pds2019.sas7bdat
+  Colorec_Amgen_2004_310/PDS_DSA_20020408/adlb_pds2019.sas7bdat
+  Colorec_Amgen_2004_310/PDS_DSA_20020408/adls_pds2019.sas7bdat
+  Colorec_Amgen_2004_310/PDS_DSA_20020408/adpm_pds2019.sas7bdat
+  Colorec_Amgen_2004_310/PDS_DSA_20020408/adrsp_pds2019.sas7bdat
+  Colorec_Amgen_2004_310/PDS_DSA_20020408/adsl_pds2019.sas7bdat
+  Colorec_Amgen_2004_310/PDS_DSA_20020408/biomark_pds2019.sas7bdat
+=== Colorec_Amgen_2005_262 ===
+  Colorec_Amgen_2005_262/20040249_01.20.01 Protocol Amend 2 2007-08-07 English_Redacted.pdf
+  Colorec_Amgen_2005_262/Amgen 20040249 CRF REDACTED.pdf
+  Colorec_Amgen_2005_262/Amgen 20040249 DDT.pdf
+  Colorec_Amgen_2005_262/SAS dataset - 20040249/ae.sas7bdat
+  Colorec_Amgen_2005_262/SAS dataset - 20040249/a_eendpt.sas7bdat
+  Colorec_Amgen_2005_262/SAS dataset - 20040249/a_sendpt.sas7bdat
+  Colorec_Amgen_2005_262/SAS dataset - 20040249/chemotx.sas7bdat
+  Colorec_Amgen_2005_262/SAS dataset - 20040249/corevar.sas7bdat
+  Colorec_Amgen_2005_262/SAS dataset - 20040249/death.sas7bdat
+  Colorec_Amgen_2005_262/SAS dataset - 20040249/demo.sas7bdat
+  Colorec_Amgen_2005_262/SAS dataset - 20040249/disposit.sas7bdat
+  Colorec_Amgen_2005_262/SAS dataset - 20040249/eligcrit.sas7bdat
+  Colorec_Amgen_2005_262/SAS dataset - 20040249/exposure.sas7bdat
+  Colorec_Amgen_2005_262/SAS dataset - 20040249/lab.sas7bdat
+  Colorec_Amgen_2005_262/SAS dataset - 20040249/lesion.sas7bdat
+  Colorec_Amgen_2005_262/SAS dataset - 20040249/medhist.sas7bdat
+  Colorec_Amgen_2005_262/SAS dataset - 20040249/radiotx.sas7bdat
+  Colorec_Amgen_2005_262/SAS dataset - 20040249/respeval.sas7bdat
+  Colorec_Amgen_2005_262/SAS dataset - 20040249/surghist.sas7bdat
+  Colorec_Amgen_2005_262/SAS dataset - 20040249/vitals_v.sas7bdat
+=== Colorec_Amgen_2006_263 ===
+  Colorec_Amgen_2006_263/20050181_01.20.01 Protocol Amend 2 2008-04-04 English_Redacted.pdf
+  Colorec_Amgen_2006_263/ae.sas7bdat
+  Colorec_Amgen_2006_263/Amgen 20050181 CRF REDACTED.pdf
+  Colorec_Amgen_2006_263/Amgen 20050181 DDT.pdf
+  Colorec_Amgen_2006_263/a_eendpt.sas7bdat
+  Colorec_Amgen_2006_263/a_endpt.sas7bdat
+  Colorec_Amgen_2006_263/a_sendpt.sas7bdat
+  Colorec_Amgen_2006_263/chemotx.sas7bdat
+  Colorec_Amgen_2006_263/corevar.sas7bdat
+  Colorec_Amgen_2006_263/death.sas7bdat
+  Colorec_Amgen_2006_263/demo.sas7bdat
+  Colorec_Amgen_2006_263/disposit.sas7bdat
+  Colorec_Amgen_2006_263/eligcrit.sas7bdat
+  Colorec_Amgen_2006_263/exposure.sas7bdat
+  Colorec_Amgen_2006_263/lab.sas7bdat
+  Colorec_Amgen_2006_263/lesion.sas7bdat
+  Colorec_Amgen_2006_263/lesnprog.sas7bdat
+  Colorec_Amgen_2006_263/medhist.sas7bdat
+  Colorec_Amgen_2006_263/othcantx.sas7bdat
+  Colorec_Amgen_2006_263/radiotx.sas7bdat
+  Colorec_Amgen_2006_263/respeval.sas7bdat
+  Colorec_Amgen_2006_263/SAS dataset - 20050181/ae.sas7bdat
+  Colorec_Amgen_2006_263/SAS dataset - 20050181/a_eendpt.sas7bdat
+  Colorec_Amgen_2006_263/SAS dataset - 20050181/a_endpt.sas7bdat
+  Colorec_Amgen_2006_263/SAS dataset - 20050181/a_sendpt.sas7bdat
+  Colorec_Amgen_2006_263/SAS dataset - 20050181/chemotx.sas7bdat
+  Colorec_Amgen_2006_263/SAS dataset - 20050181/corevar.sas7bdat
+  Colorec_Amgen_2006_263/SAS dataset - 20050181/death.sas7bdat
+  Colorec_Amgen_2006_263/SAS dataset - 20050181/demo.sas7bdat
+  Colorec_Amgen_2006_263/SAS dataset - 20050181/disposit.sas7bdat
+  Colorec_Amgen_2006_263/SAS dataset - 20050181/eligcrit.sas7bdat
+  Colorec_Amgen_2006_263/SAS dataset - 20050181/exposure.sas7bdat
+  Colorec_Amgen_2006_263/SAS dataset - 20050181/lab.sas7bdat
+  Colorec_Amgen_2006_263/SAS dataset - 20050181/lesion.sas7bdat
+  Colorec_Amgen_2006_263/SAS dataset - 20050181/lesnprog.sas7bdat
+  Colorec_Amgen_2006_263/SAS dataset - 20050181/medhist.sas7bdat
+  Colorec_Amgen_2006_263/SAS dataset - 20050181/othcantx.sas7bdat
+  Colorec_Amgen_2006_263/SAS dataset - 20050181/radiotx.sas7bdat
+  Colorec_Amgen_2006_263/SAS dataset - 20050181/respeval.sas7bdat
+  Colorec_Amgen_2006_263/SAS dataset - 20050181/surghist.sas7bdat
+  Colorec_Amgen_2006_263/SAS dataset - 20050181/vitals_v.sas7bdat
+  Colorec_Amgen_2006_263/surghist.sas7bdat
+  Colorec_Amgen_2006_263/vitals_v.sas7bdat
+=== Colorec_Amgen_2006_264 ===
+  Colorec_Amgen_2006_264/20050203_01.20.01 Protocol Amend 2 2009-01-21 English_Redacted.pdf
+  Colorec_Amgen_2006_264/ae.sas7bdat
+  Colorec_Amgen_2006_264/Amgen 20050203 CRF REDACTED.pdf
+  Colorec_Amgen_2006_264/Amgen 20050203 DDT.pdf
+  Colorec_Amgen_2006_264/a_eendpt.sas7bdat
+  Colorec_Amgen_2006_264/a_endpt.sas7bdat
+  Colorec_Amgen_2006_264/a_sendpt.sas7bdat
+  Colorec_Amgen_2006_264/chemotx.sas7bdat
+  Colorec_Amgen_2006_264/corevar.sas7bdat
+  Colorec_Amgen_2006_264/death.sas7bdat
+  Colorec_Amgen_2006_264/demo.sas7bdat
+  Colorec_Amgen_2006_264/disposit.sas7bdat
+  Colorec_Amgen_2006_264/eligcrit.sas7bdat
+  Colorec_Amgen_2006_264/exposure.sas7bdat
+  Colorec_Amgen_2006_264/lab.sas7bdat
+  Colorec_Amgen_2006_264/lesion.sas7bdat
+  Colorec_Amgen_2006_264/lesnprog.sas7bdat
+  Colorec_Amgen_2006_264/medhist.sas7bdat
+  Colorec_Amgen_2006_264/othcantx.sas7bdat
+  Colorec_Amgen_2006_264/radiotx.sas7bdat
+  Colorec_Amgen_2006_264/respeval.sas7bdat
+  Colorec_Amgen_2006_264/SAS dataset - 20050203/ae.sas7bdat
+  Colorec_Amgen_2006_264/SAS dataset - 20050203/a_eendpt.sas7bdat
+  Colorec_Amgen_2006_264/SAS dataset - 20050203/a_endpt.sas7bdat
+  Colorec_Amgen_2006_264/SAS dataset - 20050203/a_sendpt.sas7bdat
+  Colorec_Amgen_2006_264/SAS dataset - 20050203/chemotx.sas7bdat
+  Colorec_Amgen_2006_264/SAS dataset - 20050203/corevar.sas7bdat
+  Colorec_Amgen_2006_264/SAS dataset - 20050203/death.sas7bdat
+  Colorec_Amgen_2006_264/SAS dataset - 20050203/demo.sas7bdat
+  Colorec_Amgen_2006_264/SAS dataset - 20050203/disposit.sas7bdat
+  Colorec_Amgen_2006_264/SAS dataset - 20050203/eligcrit.sas7bdat
+  Colorec_Amgen_2006_264/SAS dataset - 20050203/exposure.sas7bdat
+  Colorec_Amgen_2006_264/SAS dataset - 20050203/lab.sas7bdat
+  Colorec_Amgen_2006_264/SAS dataset - 20050203/lesion.sas7bdat
+  Colorec_Amgen_2006_264/SAS dataset - 20050203/lesnprog.sas7bdat
+  Colorec_Amgen_2006_264/SAS dataset - 20050203/medhist.sas7bdat
+  Colorec_Amgen_2006_264/SAS dataset - 20050203/othcantx.sas7bdat
+  Colorec_Amgen_2006_264/SAS dataset - 20050203/radiotx.sas7bdat
+  Colorec_Amgen_2006_264/SAS dataset - 20050203/respeval.sas7bdat
+  Colorec_Amgen_2006_264/SAS dataset - 20050203/surghist.sas7bdat
+  Colorec_Amgen_2006_264/SAS dataset - 20050203/vitals_v.sas7bdat
+  Colorec_Amgen_2006_264/surghist.sas7bdat
+  Colorec_Amgen_2006_264/vitals_v.sas7bdat
+=== Colorec_Amgen_2006_309 ===
+  Colorec_Amgen_2006_309/AMG_954_20050203v0_3.pdf
+  Colorec_Amgen_2006_309/DDT_203_v2.xlsx
+  Colorec_Amgen_2006_309/PDS_DSA_20050203/adae_pds2019.sas7bdat
+  Colorec_Amgen_2006_309/PDS_DSA_20050203/adlb_pds2019.sas7bdat
+  Colorec_Amgen_2006_309/PDS_DSA_20050203/adls_pds2019.sas7bdat
+  Colorec_Amgen_2006_309/PDS_DSA_20050203/adpm_pds2019.sas7bdat
+  Colorec_Amgen_2006_309/PDS_DSA_20050203/adrsp_pds2019.sas7bdat
+  Colorec_Amgen_2006_309/PDS_DSA_20050203/adsl_pds2019.sas7bdat
+  Colorec_Amgen_2006_309/PDS_DSA_20050203/biomark_pds2019.sas7bdat
+  Colorec_Amgen_2006_309/Protocol Amend 2 2009-01-21 English_2.pdf
+=== Colorec_Multipl_2006_251 ===
+  Colorec_Multipl_2006_251/Codebook_linked_pds78_20180429_final FINAL.rtf
+  Colorec_Multipl_2006_251/Documentation of Data and Methods.docx
+  Colorec_Multipl_2006_251/linked_pds78_20180429_final.sas7bdat
+  Colorec_Multipl_2006_251/MEPS Variable Crosswalk.xlsx
+=== Gastric_Multipl_1999_416 ===
+  Gastric_Multipl_1999_416/CODEBOOK_linked_gastric143.pdf
+  Gastric_Multipl_1999_416/Dataset Contents and Variable Crosswalk.xlsx
+  Gastric_Multipl_1999_416/Descriptive_Stats_Linked_Gastric_SanofiU_1999_143.xlsx
+  Gastric_Multipl_1999_416/Linked Gastric_SanofiU_1999_143 Documentation.docx
+  Gastric_Multipl_1999_416/linked_gastric143.sas7bdat
+  Gastric_Multipl_1999_416/Proc Contents Data Dictionary Gastric_SanofiU_1999_143.pdf
+=== Gastric_Multipl_2008_415 ===
+  Gastric_Multipl_2008_415/Dataset Contents and Variable Crosswalk.xlsx
+  Gastric_Multipl_2008_415/Descriptive_Stats_Linked_Gastric_MerckKG_2008_130.xlsx
+  Gastric_Multipl_2008_415/Linked Gastric_MerckKG_2008_130 Documentation.docx
+  Gastric_Multipl_2008_415/linked_gastric130.sas7bdat
+  Gastric_Multipl_2008_415/PDS_DATA_PROFILE_CREATED_130.xlsx
+  Gastric_Multipl_2008_415/Proc Contents Data Dictionary Linked_Gastric_MerckKG_2008_130.pdf
+=== Glioma_EMDSero_2008_441 ===
+  Glioma_EMDSero_2008_441/ae.xpt
+  Glioma_EMDSero_2008_441/blankcrf.pdf
+  Glioma_EMDSero_2008_441/cm.xpt
+  Glioma_EMDSero_2008_441/co.xpt
+  Glioma_EMDSero_2008_441/CTP_EMD121974-011_final_redacted.pdf
+  Glioma_EMDSero_2008_441/DATA1.zip
+  Glioma_EMDSero_2008_441/datadict.xpt
+  Glioma_EMDSero_2008_441/DATA_SAS/ae.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/cm.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/co.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/datadict.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/dm.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/ds.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/dv.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/eg.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/ex.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/ie.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/lb.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/mh.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/qs.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/se.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/suppae.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/suppcm.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/suppdm.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/suppds.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/suppeg.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/suppex.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/supplb.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/suppmh.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/suppqs.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/suppsv.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/suppxh.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/suppxn.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/suppxx.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/suppya.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/suppyf.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/suppyh.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/suppyp.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/suppyr.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/suppzm.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/sv.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/ta.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/te.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/ti.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/ts.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/tv.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/vs.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/xh.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/xn.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/xp.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/xx.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/ya.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/yf.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/yh.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/yp.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/yr.sas7bdat
+  Glioma_EMDSero_2008_441/DATA_SAS/zm.sas7bdat
+  Glioma_EMDSero_2008_441/Descriptive_Stats_EMD121974_011.xlsx
+  Glioma_EMDSero_2008_441/dm.xpt
+  Glioma_EMDSero_2008_441/ds.xpt
+  Glioma_EMDSero_2008_441/dv.xpt
+  Glioma_EMDSero_2008_441/eg.xpt
+  Glioma_EMDSero_2008_441/ex.xpt
+  Glioma_EMDSero_2008_441/ie.xpt
+  Glioma_EMDSero_2008_441/lb.xpt
+  Glioma_EMDSero_2008_441/mh.xpt
+  Glioma_EMDSero_2008_441/Proc Contents Data Dictionary EMD121974_011.pdf
+  Glioma_EMDSero_2008_441/qs.xpt
+  Glioma_EMDSero_2008_441/se.xpt
+  Glioma_EMDSero_2008_441/suppae.xpt
+  Glioma_EMDSero_2008_441/suppcm.xpt
+  Glioma_EMDSero_2008_441/suppdm.xpt
+  Glioma_EMDSero_2008_441/suppds.xpt
+  Glioma_EMDSero_2008_441/suppeg.xpt
+  Glioma_EMDSero_2008_441/suppex.xpt
+  Glioma_EMDSero_2008_441/supplb.xpt
+  Glioma_EMDSero_2008_441/suppmh.xpt
+  Glioma_EMDSero_2008_441/suppqs.xpt
+  Glioma_EMDSero_2008_441/suppsv.xpt
+  Glioma_EMDSero_2008_441/suppxh.xpt
+  Glioma_EMDSero_2008_441/suppxn.xpt
+  Glioma_EMDSero_2008_441/suppxx.xpt
+  Glioma_EMDSero_2008_441/suppya.xpt
+  Glioma_EMDSero_2008_441/suppyf.xpt
+  Glioma_EMDSero_2008_441/suppyh.xpt
+  Glioma_EMDSero_2008_441/suppyp.xpt
+  Glioma_EMDSero_2008_441/suppyr.xpt
+  Glioma_EMDSero_2008_441/suppzm.xpt
+  Glioma_EMDSero_2008_441/sv.xpt
+  Glioma_EMDSero_2008_441/ta.xpt
+  Glioma_EMDSero_2008_441/te.xpt
+  Glioma_EMDSero_2008_441/ti.xpt
+  Glioma_EMDSero_2008_441/ts.xpt
+  Glioma_EMDSero_2008_441/tv.xpt
+  Glioma_EMDSero_2008_441/vs.xpt
+  Glioma_EMDSero_2008_441/xh.xpt
+  Glioma_EMDSero_2008_441/xn.xpt
+  Glioma_EMDSero_2008_441/xp.xpt
+  Glioma_EMDSero_2008_441/xx.xpt
+  Glioma_EMDSero_2008_441/ya.xpt
+  Glioma_EMDSero_2008_441/yf.xpt
+  Glioma_EMDSero_2008_441/yh.xpt
+  Glioma_EMDSero_2008_441/yp.xpt
+  Glioma_EMDSero_2008_441/yr.xpt
+  Glioma_EMDSero_2008_441/zm.xpt
+=== Glioma_EMDSero_2009_440 ===
+  Glioma_EMDSero_2009_440/ae.xpt
+  Glioma_EMDSero_2009_440/Centric_eCRF_ANNOTATED_Version 4_18AUG2011.pdf
+  Glioma_EMDSero_2009_440/cm.xpt
+  Glioma_EMDSero_2009_440/co.xpt
+  Glioma_EMDSero_2009_440/ctp-emd-121974-core-v3.0-signed_Redacted.pdf
+  Glioma_EMDSero_2009_440/DATA/ae.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/cm.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/co.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/datadict.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/dm.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/ds.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/dv.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/eg.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/ex.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/ie.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/lb.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/mh.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/qs.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/se.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/suppae.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/suppcm.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/suppdm.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/suppds.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/suppeg.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/suppex.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/supplb.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/suppmh.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/suppsv.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/suppxh.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/suppxn.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/suppxx.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/suppya.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/suppyf.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/suppyh.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/suppyp.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/suppyr.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/suppzm.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/sv.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/ta.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/te.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/ti.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/ts.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/tv.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/vs.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/xh.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/xn.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/xp.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/xx.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/ya.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/yf.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/yh.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/yp.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/yr.sas7bdat
+  Glioma_EMDSero_2009_440/DATA/zm.sas7bdat
+  Glioma_EMDSero_2009_440/datadict.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/ae.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/cm.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/co.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/datadict.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/dm.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/ds.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/dv.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/eg.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/ex.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/ie.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/lb.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/mh.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/qs.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/se.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/suppae.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/suppcm.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/suppdm.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/suppds.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/suppeg.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/suppex.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/supplb.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/suppmh.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/suppsv.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/suppxh.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/suppxn.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/suppxx.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/suppya.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/suppyf.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/suppyh.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/suppyp.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/suppyr.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/suppzm.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/sv.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/ta.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/te.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/ti.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/ts.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/tv.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/vs.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/xh.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/xn.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/xp.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/xx.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/ya.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/yf.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/yh.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/yp.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/yr.xpt
+  Glioma_EMDSero_2009_440/DATA_XPT/zm.xpt
+  Glioma_EMDSero_2009_440/Descriptive_Stats_EMD_121974_012.xlsx
+  Glioma_EMDSero_2009_440/dm.xpt
+  Glioma_EMDSero_2009_440/ds.xpt
+  Glioma_EMDSero_2009_440/dv.xpt
+  Glioma_EMDSero_2009_440/eg.xpt
+  Glioma_EMDSero_2009_440/ex.xpt
+  Glioma_EMDSero_2009_440/ie.xpt
+  Glioma_EMDSero_2009_440/lb.xpt
+  Glioma_EMDSero_2009_440/mh.xpt
+  Glioma_EMDSero_2009_440/Proc Contents Data Dictionary EMD_121974_012.pdf
+  Glioma_EMDSero_2009_440/qs.xpt
+  Glioma_EMDSero_2009_440/se.xpt
+  Glioma_EMDSero_2009_440/suppae.xpt
+  Glioma_EMDSero_2009_440/suppcm.xpt
+  Glioma_EMDSero_2009_440/suppdm.xpt
+  Glioma_EMDSero_2009_440/suppds.xpt
+  Glioma_EMDSero_2009_440/suppeg.xpt
+  Glioma_EMDSero_2009_440/suppex.xpt
+  Glioma_EMDSero_2009_440/supplb.xpt
+  Glioma_EMDSero_2009_440/suppmh.xpt
+  Glioma_EMDSero_2009_440/suppsv.xpt
+  Glioma_EMDSero_2009_440/suppxh.xpt
+  Glioma_EMDSero_2009_440/suppxn.xpt
+  Glioma_EMDSero_2009_440/suppxx.xpt
+  Glioma_EMDSero_2009_440/suppya.xpt
+  Glioma_EMDSero_2009_440/suppyf.xpt
+  Glioma_EMDSero_2009_440/suppyh.xpt
+  Glioma_EMDSero_2009_440/suppyp.xpt
+  Glioma_EMDSero_2009_440/suppyr.xpt
+  Glioma_EMDSero_2009_440/suppzm.xpt
+  Glioma_EMDSero_2009_440/sv.xpt
+  Glioma_EMDSero_2009_440/ta.xpt
+  Glioma_EMDSero_2009_440/te.xpt
+  Glioma_EMDSero_2009_440/ti.xpt
+  Glioma_EMDSero_2009_440/ts.xpt
+  Glioma_EMDSero_2009_440/tv.xpt
+  Glioma_EMDSero_2009_440/vs.xpt
+  Glioma_EMDSero_2009_440/xh.xpt
+  Glioma_EMDSero_2009_440/xn.xpt
+  Glioma_EMDSero_2009_440/xp.xpt
+  Glioma_EMDSero_2009_440/xx.xpt
+  Glioma_EMDSero_2009_440/ya.xpt
+  Glioma_EMDSero_2009_440/yf.xpt
+  Glioma_EMDSero_2009_440/yh.xpt
+  Glioma_EMDSero_2009_440/yp.xpt
+  Glioma_EMDSero_2009_440/yr.xpt
+  Glioma_EMDSero_2009_440/zm.xpt
+=== HeadNe_Amgen_2007_265 ===
+  HeadNe_Amgen_2007_265/20050251_01.20.01 Protocol Ver 1.0 2006-10-10 English_Redacted.pdf
+  HeadNe_Amgen_2007_265/ae.sas7bdat
+  HeadNe_Amgen_2007_265/aeendpt.sas7bdat
+  HeadNe_Amgen_2007_265/Amgen 20050251 CRF REDACTED.pdf
+  HeadNe_Amgen_2007_265/Amgen 20050251 DDT.pdf
+  HeadNe_Amgen_2007_265/asendpt.sas7bdat
+  HeadNe_Amgen_2007_265/chemotx.sas7bdat
+  HeadNe_Amgen_2007_265/corevar.sas7bdat
+  HeadNe_Amgen_2007_265/death.sas7bdat
+  HeadNe_Amgen_2007_265/demo.sas7bdat
+  HeadNe_Amgen_2007_265/disposit.sas7bdat
+  HeadNe_Amgen_2007_265/eligcrit.sas7bdat
+  HeadNe_Amgen_2007_265/exposure.sas7bdat
+  HeadNe_Amgen_2007_265/lab.sas7bdat
+  HeadNe_Amgen_2007_265/lesion.sas7bdat
+  HeadNe_Amgen_2007_265/lesnprog.sas7bdat
+  HeadNe_Amgen_2007_265/medhist.sas7bdat
+  HeadNe_Amgen_2007_265/othcantx.sas7bdat
+  HeadNe_Amgen_2007_265/radiotx.sas7bdat
+  HeadNe_Amgen_2007_265/respeval.sas7bdat
+  HeadNe_Amgen_2007_265/SAS dataset - 20050251/ae.sas7bdat
+  HeadNe_Amgen_2007_265/SAS dataset - 20050251/aeendpt.sas7bdat
+  HeadNe_Amgen_2007_265/SAS dataset - 20050251/asendpt.sas7bdat
+  HeadNe_Amgen_2007_265/SAS dataset - 20050251/chemotx.sas7bdat
+  HeadNe_Amgen_2007_265/SAS dataset - 20050251/corevar.sas7bdat
+  HeadNe_Amgen_2007_265/SAS dataset - 20050251/death.sas7bdat
+  HeadNe_Amgen_2007_265/SAS dataset - 20050251/demo.sas7bdat
+  HeadNe_Amgen_2007_265/SAS dataset - 20050251/disposit.sas7bdat
+  HeadNe_Amgen_2007_265/SAS dataset - 20050251/eligcrit.sas7bdat
+  HeadNe_Amgen_2007_265/SAS dataset - 20050251/exposure.sas7bdat
+  HeadNe_Amgen_2007_265/SAS dataset - 20050251/lab.sas7bdat
+  HeadNe_Amgen_2007_265/SAS dataset - 20050251/lesion.sas7bdat
+  HeadNe_Amgen_2007_265/SAS dataset - 20050251/lesnprog.sas7bdat
+  HeadNe_Amgen_2007_265/SAS dataset - 20050251/medhist.sas7bdat
+  HeadNe_Amgen_2007_265/SAS dataset - 20050251/othcantx.sas7bdat
+  HeadNe_Amgen_2007_265/SAS dataset - 20050251/radiotx.sas7bdat
+  HeadNe_Amgen_2007_265/SAS dataset - 20050251/respeval.sas7bdat
+  HeadNe_Amgen_2007_265/SAS dataset - 20050251/surghist.sas7bdat
+  HeadNe_Amgen_2007_265/surghist.sas7bdat
+=== LungNo_EliLill_2009_438 ===
+  LungNo_EliLill_2009_438/Descriptive_Stats_H3E_US_S130.xlsx
+  LungNo_EliLill_2009_438/h3e_us_s130_control_data/bor.sas7bdat
+  LungNo_EliLill_2009_438/h3e_us_s130_control_data/cmtpy.sas7bdat
+  LungNo_EliLill_2009_438/h3e_us_s130_control_data/cmtpyatc.sas7bdat
+  LungNo_EliLill_2009_438/h3e_us_s130_control_data/diag.sas7bdat
+  LungNo_EliLill_2009_438/h3e_us_s130_control_data/disposit.sas7bdat
+  LungNo_EliLill_2009_438/h3e_us_s130_control_data/events.sas7bdat
+  LungNo_EliLill_2009_438/h3e_us_s130_control_data/exsum.sas7bdat
+  LungNo_EliLill_2009_438/h3e_us_s130_control_data/history.sas7bdat
+  LungNo_EliLill_2009_438/h3e_us_s130_control_data/lesions.sas7bdat
+  LungNo_EliLill_2009_438/h3e_us_s130_control_data/pdsumm.sas7bdat
+  LungNo_EliLill_2009_438/h3e_us_s130_control_data/sdytrt.sas7bdat
+  LungNo_EliLill_2009_438/h3e_us_s130_control_data/subjinfo.sas7bdat
+  LungNo_EliLill_2009_438/h3e_us_s130_control_data/syst.sas7bdat
+  LungNo_EliLill_2009_438/h3e_us_s130_control_data/ttevent.sas7bdat
+  LungNo_EliLill_2009_438/h3e_us_s130_control_data/visit.sas7bdat
+  LungNo_EliLill_2009_438/h3e_us_s130_control_data/vitals.sas7bdat
+  LungNo_EliLill_2009_438/Proc Contents Data Dictionary H3E_US_S130.pdf
+  LungNo_EliLill_2009_438/S130_ads_requirement_redacted.pdf
+  LungNo_EliLill_2009_438/S130_CRF_redacted.pdf
+  LungNo_EliLill_2009_438/S130_Protocol_Redacted.pdf
+=== LungNo_EliLill_2010_272 ===
+  LungNo_EliLill_2010_272/jfcc_acrf_redacted.pdf
+  LungNo_EliLill_2010_272/jfcc_adam_define_redacted.pdf
+  LungNo_EliLill_2010_272/jfcc_deid_ctrl_trt/adae.sas7bdat
+  LungNo_EliLill_2010_272/jfcc_deid_ctrl_trt/adcm.sas7bdat
+  LungNo_EliLill_2010_272/jfcc_deid_ctrl_trt/adexsum.sas7bdat
+  LungNo_EliLill_2010_272/jfcc_deid_ctrl_trt/adlb.sas7bdat
+  LungNo_EliLill_2010_272/jfcc_deid_ctrl_trt/admh.sas7bdat
+  LungNo_EliLill_2010_272/jfcc_deid_ctrl_trt/adresp.sas7bdat
+  LungNo_EliLill_2010_272/jfcc_deid_ctrl_trt/adsl.sas7bdat
+  LungNo_EliLill_2010_272/jfcc_deid_ctrl_trt/adtte.sas7bdat
+  LungNo_EliLill_2010_272/jfcc_deid_ctrl_trt/advs.sas7bdat
+  LungNo_EliLill_2010_272/V6-0 Protocol CP11-0806-redact_v3.pdf
+=== LungNo_Multipl_2018_231 ===
+  LungNo_Multipl_2018_231/Codebook_Linked_PDS145.rtf
+  LungNo_Multipl_2018_231/linked_pds145_20170424.sas7bdat
+  LungNo_Multipl_2018_231/MEPS Variable Crosswalk.xlsx
+  LungNo_Multipl_2018_231/Methods and Data Documentation.docx
+=== LungSm_Allianc_1998_261 ===
+  LungSm_Allianc_1998_261/c9732_ae.sas7bdat
+  LungSm_Allianc_1998_261/C9732_CRFs.pdf
+  LungSm_Allianc_1998_261/c9732_demographic.sas7bdat
+  LungSm_Allianc_1998_261/C9732_Dictionary.xlsx
+  LungSm_Allianc_1998_261/c9732_fmt.sas7bdat
+  LungSm_Allianc_1998_261/C9732_protocol.pdf
+=== LungSm_Allianc_2007_218 ===
+  LungSm_Allianc_2007_218/ae.csv
+  LungSm_Allianc_2007_218/C30504-13.pdf
+  LungSm_Allianc_2007_218/C30504-Allforms.pdf
+  LungSm_Allianc_2007_218/c30504_dd.docx
+  LungSm_Allianc_2007_218/clinical.csv
+=== LungSm_Amgen_2002_266 ===
+  LungSm_Amgen_2002_266/20010145_01.20.01 Protocol Amend 2 2004-07-16 English_Redacted.pdf
+  LungSm_Amgen_2002_266/Amgen 20010145 CRF PRO.pdf
+  LungSm_Amgen_2002_266/Amgen 20010145 DDT - v2.pdf
+  LungSm_Amgen_2002_266/Amgen 20010145 DDT.pdf
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/a_eendes.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/a_eendfu.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/a_eendpt.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/a_lab.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/a_qol.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/a_sendpt.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/c_ae.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/c_bchar.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/c_chem.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/c_chemo.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/c_conmed.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/c_death.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/c_diag.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/c_disp.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/c_doses.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/c_entry.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/c_hbscan.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/c_hemat.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/c_iron.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/c_keyvar.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/c_lesion.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/c_medhis.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/c_radio.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/c_trans.sas7bdat
+  LungSm_Amgen_2002_266/SAS dataset - 20010145/c_vitals.sas7bdat
+=== LungSm_EliLill_2011_287 ===
+  LungSm_EliLill_2011_287/Lilly CRF LY2510924_CXAC.pdf
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/ae.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/biomrkr.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/cclm_cen.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/chem_cen.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/cm.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/dm.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/dor.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/dosmod.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/ds_fl.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/ds_l.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/ds_t.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/ecg.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/ex.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/excomp.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/exvial.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/hema_cen.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/immune.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/lbcen.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/mh.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/os.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/pe.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/pfs.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/pfsclin.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/pfs_ns.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/pfs_sen.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/ph.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/rs.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/ta.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/te.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/thyp.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/tissue.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/tms.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/tr.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/tv.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/urin_cen.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/vs.sas7bdat
+  LungSm_EliLill_2011_287/Lilly data LY2510924_CXAC/wbcm_cen.sas7bdat
+  LungSm_EliLill_2011_287/Lilly Protocol LY2510924_CXAC.pdf
+  LungSm_EliLill_2011_287/Proc Contents Data Dictionary.docx
+=== LungSm_G1Thera_2015_433 ===
+  LungSm_G1Thera_2015_433/adae.sas7bdat
+  LungSm_G1Thera_2015_433/adcm.sas7bdat
+  LungSm_G1Thera_2015_433/addv.sas7bdat
+  LungSm_G1Thera_2015_433/adeg.sas7bdat
+  LungSm_G1Thera_2015_433/adex.sas7bdat
+  LungSm_G1Thera_2015_433/adex2.sas7bdat
+  LungSm_G1Thera_2015_433/adlb.sas7bdat
+  LungSm_G1Thera_2015_433/admh.sas7bdat
+  LungSm_G1Thera_2015_433/adpr.sas7bdat
+  LungSm_G1Thera_2015_433/adqs.sas7bdat
+  LungSm_G1Thera_2015_433/adrs.sas7bdat
+  LungSm_G1Thera_2015_433/adsl.sas7bdat
+  LungSm_G1Thera_2015_433/adtr.sas7bdat
+  LungSm_G1Thera_2015_433/adtr2.sas7bdat
+  LungSm_G1Thera_2015_433/adtte.sas7bdat
+  LungSm_G1Thera_2015_433/advs.sas7bdat
+  LungSm_G1Thera_2015_433/Data descriptors for SCLC 01.xlsx
+  LungSm_G1Thera_2015_433/Descriptive_Stats_G1T_NCT02499770.xlsx
+  LungSm_G1Thera_2015_433/Proc Contents Data Dictionary G1T_NCT02499770.pdf
+=== LungSm_G1Thera_2015_434 ===
+  LungSm_G1Thera_2015_434/adae.sas7bdat
+  LungSm_G1Thera_2015_434/adcm.sas7bdat
+  LungSm_G1Thera_2015_434/addv.sas7bdat
+  LungSm_G1Thera_2015_434/adecog.sas7bdat
+  LungSm_G1Thera_2015_434/adeg.sas7bdat
+  LungSm_G1Thera_2015_434/adex.sas7bdat
+  LungSm_G1Thera_2015_434/adex2.sas7bdat
+  LungSm_G1Thera_2015_434/admh.sas7bdat
+  LungSm_G1Thera_2015_434/adpr.sas7bdat
+  LungSm_G1Thera_2015_434/adrs.sas7bdat
+  LungSm_G1Thera_2015_434/adsl.sas7bdat
+  LungSm_G1Thera_2015_434/adtr.sas7bdat
+  LungSm_G1Thera_2015_434/adtr2.sas7bdat
+  LungSm_G1Thera_2015_434/adtte.sas7bdat
+  LungSm_G1Thera_2015_434/advs.sas7bdat
+  LungSm_G1Thera_2015_434/Data descriptors for SCLC 02.xlsx
+  LungSm_G1Thera_2015_434/Descriptive_Stats_G1T_NCT02514447.xlsx
+  LungSm_G1Thera_2015_434/Proc Contents Data Dictionary G1T_NCT02514447.pdf
+=== LungSm_G1Thera_2017_435 ===
+  LungSm_G1Thera_2017_435/adae.sas7bdat
+  LungSm_G1Thera_2017_435/adcm.sas7bdat
+  LungSm_G1Thera_2017_435/addv.sas7bdat
+  LungSm_G1Thera_2017_435/adecog.sas7bdat
+  LungSm_G1Thera_2017_435/adeg.sas7bdat
+  LungSm_G1Thera_2017_435/adex.sas7bdat
+  LungSm_G1Thera_2017_435/adex2.sas7bdat
+  LungSm_G1Thera_2017_435/adlb.sas7bdat
+  LungSm_G1Thera_2017_435/admh.sas7bdat
+  LungSm_G1Thera_2017_435/adpr.sas7bdat
+  LungSm_G1Thera_2017_435/adrs.sas7bdat
+  LungSm_G1Thera_2017_435/adsl.sas7bdat
+  LungSm_G1Thera_2017_435/adtr.sas7bdat
+  LungSm_G1Thera_2017_435/adtr2.sas7bdat
+  LungSm_G1Thera_2017_435/adtte.sas7bdat
+  LungSm_G1Thera_2017_435/advs.sas7bdat
+  LungSm_G1Thera_2017_435/Data descriptors for SCLC 03.xlsx
+  LungSm_G1Thera_2017_435/Descriptive_Stats_G1T_NCT03041311.xlsx
+  LungSm_G1Thera_2017_435/Proc Contents Data Dictionary G1T_NCT03041311.pdf
+=== LungSm_Pfizer_2002_419 ===
+  LungSm_Pfizer_2002_419/NCT00143455_CRF_README.docx
+  LungSm_Pfizer_2002_419/PDS_DATA_PROFILE_CREATED_419.xlsx
+  LungSm_Pfizer_2002_419/XRP4174D-3001 Protocol Amendment 5 15 December 2004_Redacted.pdf
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_ae_analysis.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_ae_raw.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_autopsy.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_batchnum.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_cadiag.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_caradio.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_casurg.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_chemo.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_clibenev.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_comment.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_conmeds.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_death.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_decision.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_demo.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_doseval.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_drughist.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_dsstat.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_ei.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_ess.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_evaltum.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_formats.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_htwt.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_incexc.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_infcon.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_labs_analysis.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_labs_raw.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_medhist.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_neuroexm.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_normals.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_oncadmin.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_oncecg.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_ovrsp.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_pafustat.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_patwork.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_pe.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_perfstat.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_popu.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_premed.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_qol.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_qolcs.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_random.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_smw.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_tumasses.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/cohort1_tumther.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/Descriptive_Stats_NCT00143455.xlsx
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/Proc Contents Data Dictionary NCT00143455.pdf
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_CSVfiles/XRP4174D-3001 De-identification Report - cohort1.pdf
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_ae_analysis.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_ae_raw.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_autopsy.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_batchnum.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_cadiag.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_caradio.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_casurg.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_chemo.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_clibenev.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_comment.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_conmeds.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_death.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_decision.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_demo.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_doseval.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_drughist.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_dsstat.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_ei.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_ess.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_evaltum.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_formats.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_htwt.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_incexc.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_infcon.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_labs_analysis.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_labs_raw.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_medhist.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_neuroexm.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_normals.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_oncadmin.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_oncecg.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_ovrsp.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_pafustat.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_patwork.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_pe.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_perfstat.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_popu.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_premed.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_qol.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_qolcs.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_random.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_smw.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_tumasses.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/cohort1_tumther.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/Descriptive_Stats_NCT00143455.xlsx
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/Proc Contents Data Dictionary NCT00143455.pdf
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort1_SAS7BDATfiles/XRP4174D-3001 De-identification Report - cohort1.pdf
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_ae.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_autopsy.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_batchnum.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_cadiag.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_caradio.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_casurg.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_chemo.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_clibenev.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_comment.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_conmeds.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_death.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_decision.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_demo.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_doseval.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_drughist.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_dsstat.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_ei.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_ess.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_evaltum.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_evaltum2.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_formats.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_htwt.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_incexc.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_infcon.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_labs_analysis.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_labs_raw.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_medhist.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_neuroexm.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_normals.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_oncadmin.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_oncecg.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_ovrsp.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_pafustat.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_patwork.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_pe.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_perfstat.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_popu.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_premed.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_qol.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_qolcs.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_random.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_smw.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_tumasses.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/cohort2_tumther.csv
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/Descriptive_Stats_NCT00143455.xlsx
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/Proc Contents Data Dictionary NCT00143455.pdf
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_CSVfiles/XRP4174D-3001 De-identification Report - cohort2.pdf
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_ae.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_autopsy.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_batchnum.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_cadiag.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_caradio.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_casurg.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_chemo.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_clibenev.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_comment.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_conmeds.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_death.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_decision.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_demo.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_doseval.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_drughist.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_dsstat.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_ei.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_ess.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_evaltum.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_evaltum2.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_formats.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_htwt.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_incexc.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_infcon.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_labs_analysis.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_labs_raw.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_medhist.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_neuroexm.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_normals.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_oncadmin.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_oncecg.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_ovrsp.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_pafustat.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_patwork.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_pe.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_perfstat.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_popu.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_premed.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_qol.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_qolcs.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_random.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_smw.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_tumasses.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/cohort2_tumther.sas7bdat
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/Descriptive_Stats_NCT00143455.xlsx
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/Proc Contents Data Dictionary NCT00143455.pdf
+  LungSm_Pfizer_2002_419/XRP4174D-3001_cohort2_SAS7BDATfiles/XRP4174D-3001 De-identification Report - cohort2.pdf
+=== Lymphom_Allianc_2006_212 ===
+  Lymphom_Allianc_2006_212/events.sas7bdat
+  Lymphom_Allianc_2006_212/FormsPacket_21Sep2007.pdf
+  Lymphom_Allianc_2006_212/N0489Prot_06Aug2008.pdf
+  Lymphom_Allianc_2006_212/n0489_datasphere_datadictionary.docx
+  Lymphom_Allianc_2006_212/outcome17mar24.sas7bdat
+=== Multiple_Allianc_2002_202 ===
+  Multiple_Allianc_2002_202/casecrse.sas7bdat
+  Multiple_Allianc_2002_202/chklist.sas7bdat
+  Multiple_Allianc_2002_202/chklist2.sas7bdat
+  Multiple_Allianc_2002_202/end_at.sas7bdat
+  Multiple_Allianc_2002_202/fagerstm.sas7bdat
+  Multiple_Allianc_2002_202/n99c4_ddt.docx
+  Multiple_Allianc_2002_202/n99c4_forms.pdf
+  Multiple_Allianc_2002_202/n99c4_protocol.doc
+  Multiple_Allianc_2002_202/relapse.sas7bdat
+  Multiple_Allianc_2002_202/smokehx.sas7bdat
+  Multiple_Allianc_2002_202/visit.sas7bdat
+  Multiple_Allianc_2002_202/wt_scale.sas7bdat
+=== Multiple_Allianc_2002_213 ===
+  Multiple_Allianc_2002_213/CRFs.pdf
+  Multiple_Allianc_2002_213/NCT00052910_COMBINED_Data_Dictionary.pdf
+  Multiple_Allianc_2002_213/NCT00052910_D1_(EFFICACY).csv
+  Multiple_Allianc_2002_213/NCT00052910_D2_(AE).csv
+  Multiple_Allianc_2002_213/protocol.pdf
+=== Multiple_Brigham_454 ===
+  Multiple_Brigham_454/MacFarlane VITAL VitD fish oil knee pain ArthRheum 2020.pdf
+  Multiple_Brigham_454/Manson_VITAL_protocol_NEJM_2019.pdf
+  Multiple_Brigham_454/PDS_DATA_PROFILE_CREATED_VITAL_trial_NEJM_2022.xlsx
+  Multiple_Brigham_454/vitalkneepain012725.sas7bdat
+  Multiple_Brigham_454/vitalkneepain111623.sas7bdat
+  Multiple_Brigham_454/vitalstatin.sas7bdat
+  Multiple_Brigham_454/VITAL_data_dictionary_2023_1.docx
+  Multiple_Brigham_454/VITAL_data_dictionary_2025_1.docx
+  Multiple_Brigham_454/VITAL_trial_NEJM_2019.xlsx
+  Multiple_Brigham_454/VITAL_trial_NEJM_2022.sas7bdat
+=== Pancrea_ClovisO_2010_186 ===
+  Pancrea_ClovisO_2010_186/CVSDVPAN-ADVPAN aCRF 13-Sep-2010_2.pdf
+  Pancrea_ClovisO_2010_186/DataSphere/adae.sas7bdat
+  Pancrea_ClovisO_2010_186/DataSphere/adcm.sas7bdat
+  Pancrea_ClovisO_2010_186/DataSphere/addur.sas7bdat
+  Pancrea_ClovisO_2010_186/DataSphere/adef.sas7bdat
+  Pancrea_ClovisO_2010_186/DataSphere/adeg.sas7bdat
+  Pancrea_ClovisO_2010_186/DataSphere/adex.sas7bdat
+  Pancrea_ClovisO_2010_186/DataSphere/adie.sas7bdat
+  Pancrea_ClovisO_2010_186/DataSphere/adlb.sas7bdat
+  Pancrea_ClovisO_2010_186/DataSphere/admh.sas7bdat
+  Pancrea_ClovisO_2010_186/DataSphere/ador.sas7bdat
+  Pancrea_ClovisO_2010_186/DataSphere/adpf.sas7bdat
+  Pancrea_ClovisO_2010_186/DataSphere/adqs.sas7bdat
+  Pancrea_ClovisO_2010_186/DataSphere/adsl.sas7bdat
+  Pancrea_ClovisO_2010_186/DataSphere/adsv.sas7bdat
+  Pancrea_ClovisO_2010_186/DataSphere/advs.sas7bdat
+  Pancrea_ClovisO_2010_186/define.pdf
+  Pancrea_ClovisO_2010_186/Protocol_CO-101-001_Amend2 20110314 final.pdf
+  Pancrea_ClovisO_2010_186/SAP CO-101-001 Amendment 1 03May2012.docx
+=== Pancrea_EMDSero_2009_442 ===
+  Pancrea_EMDSero_2009_442/ae.xpt
+  Pancrea_EMDSero_2009_442/cm.xpt
+  Pancrea_EMDSero_2009_442/co.xpt
+  Pancrea_EMDSero_2009_442/DATA/ae.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/cm.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/co.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/datadict.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/dm.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/ds.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/dv.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/eg.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/ex.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/ie.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/lb.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/mh.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/rs.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/sc.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/se.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/suppae.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/suppcm.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/suppds.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/suppdv.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/suppeg.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/suppex.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/supplb.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/suppmh.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/supprs.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/suppxx.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/suppyf.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/suppzo.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/sv.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/ta.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/te.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/ti.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/tr.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/ts.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/tu.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/tv.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/vs.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/xp.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/xx.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/yf.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/zc.sas7bdat
+  Pancrea_EMDSero_2009_442/DATA/zo.sas7bdat
+  Pancrea_EMDSero_2009_442/datadict.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/ae.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/cm.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/co.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/datadict.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/dm.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/ds.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/dv.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/eg.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/ex.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/ie.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/lb.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/mh.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/rs.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/sc.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/se.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/suppae.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/suppcm.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/suppds.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/suppdv.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/suppeg.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/suppex.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/supplb.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/suppmh.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/supprs.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/suppxx.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/suppyf.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/suppzo.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/sv.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/ta.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/te.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/ti.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/tr.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/ts.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/tu.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/tv.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/vs.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/xp.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/xx.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/yf.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/zc.xpt
+  Pancrea_EMDSero_2009_442/DATA_XPT/zo.xpt
+  Pancrea_EMDSero_2009_442/Descriptive_Stats_EMR 200066-003.xlsx
+  Pancrea_EMDSero_2009_442/dm.xpt
+  Pancrea_EMDSero_2009_442/ds.xpt
+  Pancrea_EMDSero_2009_442/dv.xpt
+  Pancrea_EMDSero_2009_442/eg.xpt
+  Pancrea_EMDSero_2009_442/EMR200066-003 CTP V7.0 20Mar2013 fully signed_Redacted.pdf
+  Pancrea_EMDSero_2009_442/ex.xpt
+  Pancrea_EMDSero_2009_442/ie.xpt
+  Pancrea_EMDSero_2009_442/lb.xpt
+  Pancrea_EMDSero_2009_442/MEKi003_24May2013_Version_3.0_eCRF.pdf
+  Pancrea_EMDSero_2009_442/mh.xpt
+  Pancrea_EMDSero_2009_442/Proc Contents Data Dictionary EMR 200066-003.pdf
+  Pancrea_EMDSero_2009_442/rs.xpt
+  Pancrea_EMDSero_2009_442/sc.xpt
+  Pancrea_EMDSero_2009_442/se.xpt
+  Pancrea_EMDSero_2009_442/suppae.xpt
+  Pancrea_EMDSero_2009_442/suppcm.xpt
+  Pancrea_EMDSero_2009_442/suppds.xpt
+  Pancrea_EMDSero_2009_442/suppdv.xpt
+  Pancrea_EMDSero_2009_442/suppeg.xpt
+  Pancrea_EMDSero_2009_442/suppex.xpt
+  Pancrea_EMDSero_2009_442/supplb.xpt
+  Pancrea_EMDSero_2009_442/suppmh.xpt
+  Pancrea_EMDSero_2009_442/supprs.xpt
+  Pancrea_EMDSero_2009_442/suppxx.xpt
+  Pancrea_EMDSero_2009_442/suppyf.xpt
+  Pancrea_EMDSero_2009_442/suppzo.xpt
+  Pancrea_EMDSero_2009_442/sv.xpt
+  Pancrea_EMDSero_2009_442/ta.xpt
+  Pancrea_EMDSero_2009_442/te.xpt
+  Pancrea_EMDSero_2009_442/ti.xpt
+  Pancrea_EMDSero_2009_442/tr.xpt
+  Pancrea_EMDSero_2009_442/ts.xpt
+  Pancrea_EMDSero_2009_442/tu.xpt
+  Pancrea_EMDSero_2009_442/tv.xpt
+  Pancrea_EMDSero_2009_442/vs.xpt
+  Pancrea_EMDSero_2009_442/xp.xpt
+  Pancrea_EMDSero_2009_442/xx.xpt
+  Pancrea_EMDSero_2009_442/yf.xpt
+  Pancrea_EMDSero_2009_442/zc.xpt
+  Pancrea_EMDSero_2009_442/zo.xpt
+=== Pancrea_Multipl_2020_430 ===
+  Pancrea_Multipl_2020_430/CODEBOOK_linked_pancrea186.pdf
+  Pancrea_Multipl_2020_430/Dataset Contents and Variable Crosswalk.xlsx
+  Pancrea_Multipl_2020_430/Descriptive_Stats_Linked_Pancrea_ClovisO_2010_186.xlsx
+  Pancrea_Multipl_2020_430/Linked Pancrea_ClovisO_2010_186 Documentation.docx
+  Pancrea_Multipl_2020_430/linked_pancrea186.sas7bdat
+  Pancrea_Multipl_2020_430/Proc Contents Data Dictionary linked_pancrea186.pdf
+=== Prostat_Asociac_484 ===
+  Prostat_Asociac_484/BBDD_Spain_IAD_v4.xlsx
+  Prostat_Asociac_484/CEIC_PROTOCOLO_Ca prostat.pdf
+  Prostat_Asociac_484/DataDescription_v1.xlsx
+  Prostat_Asociac_484/IAD_CRF_v1.docx
+=== Prostat_Multipl_2008_406 ===
+  Prostat_Multipl_2008_406/CODEBOOK_linked_prostate103.pdf
+  Prostat_Multipl_2008_406/Dataset Contents and Variable Crosswalk.xlsx
+  Prostat_Multipl_2008_406/Descriptive_Stats_Linked_Prostat_AstraZe_2008_103.xlsx
+  Prostat_Multipl_2008_406/Linked Prostate_AstraZe_2008_103 Documentation.docx
+  Prostat_Multipl_2008_406/linked_prostate103.sas7bdat
+  Prostat_Multipl_2008_406/Proc Contents Data Dictionary Linked_Prostat_AstraZe_2008_103.pdf
+=== Prostat_Multipl_2008_420 ===
+  Prostat_Multipl_2008_420/CODEBOOK_linked_prostate104.pdf
+  Prostat_Multipl_2008_420/Dataset Contents and Variable Crosswalk.xlsx
+  Prostat_Multipl_2008_420/Descriptive_Stats_Linked_Prostat_AstraZe_2008_104.xlsx
+  Prostat_Multipl_2008_420/Linked Prostate_AstraZe_2008_104 Documentation.docx
+  Prostat_Multipl_2008_420/linked_prostate104.sas7bdat
+  Prostat_Multipl_2008_420/Proc Contents Data Dictionary Linked_Prostate104.pdf
+=== Prostat_Multipl_2009_417 ===
+  Prostat_Multipl_2009_417/CODEBOOK_linked_prostate144.pdf
+  Prostat_Multipl_2009_417/Dataset Contents and Variable Crosswalk.xlsx
+  Prostat_Multipl_2009_417/Descriptive_Stats_Linked_Prostat_AstraZe_2009_144.xlsx
+  Prostat_Multipl_2009_417/Linked Prostate_AstraZe_2009_144 Documentation.docx
+  Prostat_Multipl_2009_417/linked_prostate144.sas7bdat
+  Prostat_Multipl_2009_417/Proc Contents Data Dictionary Linked_Prostate144.pdf
+=== Prostat_Multipl_2018_234 ===
+  Prostat_Multipl_2018_234/Codebook_Linked_PDS90_20171109.rtf
+  Prostat_Multipl_2018_234/Documentation of Data and Methods.docx
+  Prostat_Multipl_2018_234/linked_pds90_20171109.sas7bdat
+  Prostat_Multipl_2018_234/MEPS Variable Crosswalk_20171109.xlsx
+=== Prostat_Researc_2016_167 ===
+  Prostat_Researc_2016_167/Prostate Cancer Tumor Growth Dataset/input celgene09.csv
+  Prostat_Researc_2016_167/Prostate Cancer Tumor Growth Dataset/input centoco06.csv
+  Prostat_Researc_2016_167/Prostate Cancer Tumor Growth Dataset/input cougar06.csv
+  Prostat_Researc_2016_167/Prostate Cancer Tumor Growth Dataset/input novacea06.csv
+  Prostat_Researc_2016_167/Prostate Cancer Tumor Growth Dataset/input pfizer08.csv
+  Prostat_Researc_2016_167/Prostate Cancer Tumor Growth Dataset/input sanfi00.csv
+  Prostat_Researc_2016_167/Prostate Cancer Tumor Growth Dataset/input sanofi79.csv
+  Prostat_Researc_2016_167/Prostate Cancer Tumor Growth Dataset/inputS83OFF.csv
+  Prostat_Researc_2016_167/Prostate Cancer Tumor Growth Dataset/inputS83ON.csv
+  Prostat_Researc_2016_167/Prostate Cancer Tumor Growth dataset - CRF.pdf
+  Prostat_Researc_2016_167/Prostate Cancer Tumor Growth dataset - Data Dictionary.pdf
+  Prostat_Researc_2016_167/Prostate Cancer Tumor Growth dataset.pdf

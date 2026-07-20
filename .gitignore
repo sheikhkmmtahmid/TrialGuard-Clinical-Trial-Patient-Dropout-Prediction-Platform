@@ -55,3 +55,52 @@ htmlcov/
 
 # Node (if frontend tooling added later)
 node_modules/
+
+# AACT reference data (real clinical trial data, downloaded via docs/data_sourcing.md
+# instructions, too large to commit, re-download from aact.ctti-clinicaltrials.org)
+/data/aact/*.txt
+
+# Project Data Sphere: real, individual clinical trial patient data. Never
+# commit real patient-level data, and never share these files outside this
+# project regardless of license terms.
+/data/pds/
+
+# PPMI (IDA/LONI), ImmPort, MUSIC (PhysioNet), T1DiabetesGranada (Zenodo):
+# all real, individual patient-level data obtained under their own
+# registration or Data Usage Agreement. Same rule as Project Data Sphere
+# above — never commit or redistribute, regardless of license terms.
+# (T1DiabetesGranada specifically was evaluated and excluded from this
+# project's dataset, see docs/data_sourcing.md, but the raw download still
+# isn't ours to redistribute.)
+/data/ida/
+/data/immport/
+/data/music/
+/data/T1DiabetesGranada/
+
+# UCI Heart Failure is public domain (CC0) but already fully absorbed into
+# scripts/real_data/real_dataset_final.csv — no need to carry the raw copy.
+/data/heart_failure/
+
+# This file has a live SAS analytics credential embedded on its last page,
+# never commit it, and treat the file itself as sensitive.
+/Project Data Sphere.pdf
+
+# Debug/backup model snapshots from mid-session fixes — historical, not
+# needed to run or reproduce the live app.
+/ml_models_pre_feature_reduction_backup/
+/ml_models_stale_23feature_backup/
+/ml_models_synthetic_backup/
+/scripts/real_data/v1_model_backup/
+
+# Harmonized real, individual-patient-level tables (one row per real
+# patient, incl. usubjid) built from PDS/ImmPort/PPMI/MUSIC during
+# extraction — same DUA restriction as /data/pds/ above applies to these
+# even though they're engineered features, not the raw CRF. The
+# extraction scripts, docs, and aggregate result/metric files that don't
+# contain per-patient rows are NOT covered by this and are still tracked.
+/scripts/real_data/*_real.csv
+/scripts/real_data/*_real_part*.csv
+/scripts/real_data/real_combined.csv
+/scripts/real_data/real_combined_v2.csv
+/scripts/real_data/real_dataset_final.csv
+/scripts/real_data/real_dataset_v2_final.csv

@@ -1,0 +1,57 @@
+{
+  "n_total": 6478,
+  "n_events_total": 273,
+  "n_train": 4858,
+  "n_test": 1620,
+  "n_events_test": 68,
+  "cox_concordance_index": 0.7356,
+  "xgb_roc_auc": 0.6804,
+  "xgb_roc_auc_ci_95": [
+    0.6125,
+    0.7458
+  ],
+  "xgb_f1": 0.1259,
+  "xgb_precision": 0.12,
+  "xgb_recall": 0.1324,
+  "calibration_brier_score": 0.063,
+  "threshold_sweep": [
+    {
+      "threshold": 0.2,
+      "recall": 0.4265,
+      "precision": 0.0876,
+      "fraction_flagged": 0.2043
+    },
+    {
+      "threshold": 0.3,
+      "recall": 0.2794,
+      "precision": 0.09,
+      "fraction_flagged": 0.1302
+    },
+    {
+      "threshold": 0.4,
+      "recall": 0.2206,
+      "precision": 0.119,
+      "fraction_flagged": 0.0778
+    },
+    {
+      "threshold": 0.5,
+      "recall": 0.1324,
+      "precision": 0.12,
+      "fraction_flagged": 0.0463
+    },
+    {
+      "threshold": 0.6,
+      "recall": 0.0882,
+      "precision": 0.1667,
+      "fraction_flagged": 0.0222
+    },
+    {
+      "threshold": 0.7,
+      "recall": 0.0735,
+      "precision": 0.2778,
+      "fraction_flagged": 0.0111
+    }
+  ],
+  "shap_stability_score": 0.0106,
+  "shap_robustness_score": 0.9136
+}

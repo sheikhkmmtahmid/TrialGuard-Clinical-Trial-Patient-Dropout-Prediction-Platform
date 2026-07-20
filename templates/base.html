@@ -32,8 +32,8 @@
       <img src="{% static 'img/logo.svg' %}" alt="TrialGuard" class="nav-logo-img">
     </a>
 
-    {% if user.is_authenticated %}
     <ul class="nav-links" id="navLinks">
+      {% if user.is_authenticated %}
       <li><a href="{% url 'dashboard' %}" class="nav-link {% block nav_dashboard %}{% endblock %}">Dashboard</a></li>
       {% if request.resolver_match.kwargs.trial_id %}
       <li><a href="{% url 'cohort' request.resolver_match.kwargs.trial_id %}" class="nav-link {% block nav_cohort %}{% endblock %}">Cohort</a></li>
@@ -41,9 +41,10 @@
       {% if user.groups.all|length == 0 or 'Admin' in user.groups.all|join:',' %}
       <li><a href="{% url 'upload' %}" class="nav-link {% block nav_upload %}{% endblock %}">Upload Data</a></li>
       {% endif %}
+      {% endif %}
+      <li><a href="{% url 'methodology' %}" class="nav-link {% block nav_methodology %}{% endblock %}">Methodology</a></li>
       <li><a href="/api/docs/" class="nav-link" target="_blank" rel="noopener">API Docs</a></li>
     </ul>
-    {% endif %}
 
     <div class="nav-right">
       {% if user.is_authenticated %}

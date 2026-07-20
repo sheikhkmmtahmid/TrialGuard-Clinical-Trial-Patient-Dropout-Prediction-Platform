@@ -1,0 +1,403 @@
+
+
+========== music ==========
+
+----- D:\Trial Guard\data\music\LICENSE.txt -----
+shape: (416, 1)
+  ## ODC Open Database License (ODbL): 415 unique text values, e.g. ['### Preamble', 'The Open Database License (ODbL) is a license agreement intended to', 'allow users to freely share, modify, and use this Database while', 'maintaining this same freedom for others. Many databases are covered by', 'copyright, and therefore this document licenses these rights. Some']
+
+----- D:\Trial Guard\data\music\RECORDS -----
+Holter_ECG/P0001
+Holter_ECG/P0002
+Holter_ECG/P0003
+Holter_ECG/P0004
+Holter_ECG/P0005
+Holter_ECG/P0006
+Holter_ECG/P0007
+Holter_ECG/P0008
+Holter_ECG/P0009
+Holter_ECG/P0010
+Holter_ECG/P0011
+Holter_ECG/P0012
+Holter_ECG/P0013
+Holter_ECG/P0014
+Holter_ECG/P0015
+Holter_ECG/P0016
+Holter_ECG/P0017
+Holter_ECG/P0018
+Holter_ECG/P0019
+Holter_ECG/P0020
+Holter_ECG/P0021
+Holter_ECG/P0022
+Holter_ECG/P0023
+Holter_ECG/P0024
+Holter_ECG/P0025
+Holter_ECG/P0026
+Holter_ECG/P0027
+Holter_ECG/P0028
+Holter_ECG/P0029
+Holter_ECG/P0030
+Holter_ECG/P0031
+Holter_ECG/P0032
+Holter_ECG/P0033
+Holter_ECG/P0034
+Holter_ECG/P0035
+Holter_ECG/P0036
+Holter_ECG/P0037
+Holter_ECG/P0038
+Holter_ECG/P0039
+Holter_ECG/P0040
+Holter_ECG/P0041
+Holter_ECG/P0042
+Holter_ECG/P0043
+Holter_ECG/P0044
+Holter_ECG/P0045
+Holter_ECG/P0046
+Holter_ECG/P0047
+Holter_ECG/P0048
+Holter_ECG/P0049
+Holter_ECG/P0050
+Holter_ECG/P0051
+Holter_ECG/P0052
+Holter_ECG/P0053
+Holter_ECG/P0054
+Holter_ECG/P0055
+Holter_ECG/P0056
+Holter_ECG/P0057
+Holter_ECG/P0058
+Holter_ECG/P0059
+Holter_ECG/P0060
+Holter_ECG/P0061
+Holter_ECG/P0062
+Holter_ECG/P0063
+Holter_ECG/P0064
+Holter_ECG/P0065
+Holter_ECG/P0066
+Holter_ECG/P0067
+Holter_ECG/P0068
+Holter_ECG/P0069
+Holter_ECG/P0070
+Holter_ECG/P0071
+Holter_ECG/P0072
+Holter_ECG/P0073
+Holter_ECG/P0074
+Holter_ECG/P0075
+Holter_ECG/P0076
+Holter_ECG/P0077
+Holter_ECG/P0078
+Holter_ECG/P0079
+Holter_ECG/P0080
+Holter_ECG/P0081
+Holter_ECG/P0082
+Holter_ECG/P0083
+Holter_ECG/P0084
+Holter_ECG/P0085
+Holter_ECG/P0086
+Holter_ECG/P0087
+Holter_ECG/P0088
+Holter_ECG/P0089
+Holter_ECG/P0090
+Holter_ECG/P0091
+Holter_ECG/P0092
+Holter_ECG/P0093
+Holter_ECG/P0094
+Holter_ECG/P0095
+Holter_ECG/P0096
+Holter_ECG/P0097
+Holter_ECG/P0098
+Holter_ECG/P0099
+Holter_ECG/P0100
+Holter_ECG/P0101
+Holter_ECG/P0102
+Holter_ECG/P0103
+Holter_ECG/P0104
+Holter_ECG/P0105
+Holter_ECG/P0106
+Holter_ECG/P0107
+Holter_ECG/P0108
+Holter_ECG/P0110
+Holter_ECG/P0111
+Holter_ECG/P0112
+Holter_ECG/P0113
+Holter_ECG/P0114
+Holter_ECG/P0115
+Holter_ECG/P0116
+Holter_ECG/P0118
+Holter_ECG/P0119
+Holter_ECG/P0120
+Holter_ECG/P0121
+Holter_ECG/P0122
+Holter_ECG/P0124
+Holter_ECG/P0125
+Holter_ECG/P0126
+Holter_ECG/P0127
+Holter_ECG/P0128
+Holter_ECG/P0129
+Holter_ECG/P0130
+Holter_ECG/P0131
+Holter_ECG/P0132
+Holter_ECG/P0133
+Holter_ECG/P0134
+Holter_ECG/P0135
+Holter_ECG/P0136
+Holter_ECG/P0137
+Holter_ECG/P0138
+Holter_ECG/P0139
+Holter_ECG/P0140
+Holter_ECG/P0141
+Holter_ECG/P0142
+Holter_ECG/P0143
+Holter_ECG/P0145
+Holter_ECG/P0146
+Holter_ECG/P0147
+Holter_ECG/P0148
+Holter_ECG/P0149
+Holter_ECG/P0150
+Holter_ECG/P0151
+Holter_ECG/P0152
+Holter_ECG/P0153
+Holter_ECG/P0154
+Holter_ECG/P0155
+Holter_ECG/P0156
+Holter_ECG/P0157
+Holter_ECG/P0158
+Holter_ECG/P0159
+Holter_ECG/P0160
+Holter_ECG/P0161
+Holter_ECG/P0162
+Holter_ECG/P0163
+Holter_ECG/P0164
+Holter_ECG/P0165
+Holter_ECG/P0166
+Holter_ECG/P0167
+Holter_ECG/P0168
+Holter_ECG/P0169
+Holter_ECG/P0170
+Holter_ECG/P0171
+Holter_ECG/P0172
+Holter_ECG/P0173
+Holter_ECG/P0174
+Holter_ECG/P0175
+Holter_ECG/P0176
+Holter_ECG/P0177
+Holter_ECG/P0178
+Holter_ECG/P0179
+Holter_ECG/P0181
+Holter_E
+
+----- D:\Trial Guard\data\music\subject-info.csv -----
+ERROR opening: Error tokenizing data. C error: Expected 14 fields in line 3, saw 15
+
+
+----- D:\Trial Guard\data\music\subject-info_codes.csv -----
+ERROR opening: 'utf-8' codec can't decode byte 0xf3 in position 2177: invalid continuation byte
+
+----- D:\Trial Guard\data\music\subject-info_definitions.csv -----
+shape: (15, 1)
+  Variable ;Column;Definition: {'NYHA class;K;New York Heart Association classs': 1, 'ALT o GPT (IU/L);AB;Alanine Aminotransferase or Glutamic Pyruvic Transaminase': 1, 'AST o GOT (IU/L);AC;Aspartate Aminotransferase or Glutamyl oxaloacetic transaminase': 1, 'HDL (mmol/L);AJ;High-density lipoprotein cholesterol': 1, 'LDL (mmol/L);AL;Low Density Lipoprotein Cholesterol': 1, 'Pro-BNP (ng/L);AN;pro b-type natriuretic peptide': 1, 'T3 (pg/dL);AP;Triiodothyronine': 1, 'T4 (ng/L);AQ;Thyroxine': 1, 'TSH (mIU/L);AS;Thyroid Stimulating Hormone': 1, 'LVEF (%);AZ;Left Ventricular Ejection Fraction ': 1, 'SDNN (ms);CI;Standard deviation of NN intervals': 1, 'SDANN (ms);CJ;Standard deviation of the average NN intervals for each 5?min segment of a 24?h HRV recording': 1, 'RMSSD (ms);CK;Root mean square of successive RR interval differences': 1, 'pNN50 (%);CL;Percentage of successive RR intervals that differ by more than 50?ms': 1, 'ACE inhibitor;CX;Angiotensin-converting enzyme inhibitors': 1}
+
+
+========== heart_failure ==========
+
+----- D:\Trial Guard\data\heart_failure\heart_failure.zip -----
+ZIP archive, listing contents:
+['heart_failure_clinical_records_dataset.csv']
+
+----- D:\Trial Guard\data\heart_failure\heart_failure_clinical_records_dataset.csv -----
+shape: (299, 13)
+  age: numeric, min=40.0, max=95.0, mean=60.83, nulls=0
+  anaemia: {0: 170, 1: 129}
+  creatinine_phosphokinase: numeric, min=23, max=7861, mean=581.84, nulls=0
+  diabetes: {0: 174, 1: 125}
+  ejection_fraction: {35: 49, 38: 40, 40: 37, 25: 36, 30: 34, 60: 31, 50: 21, 45: 20, 20: 18, 55: 3, 15: 2, 62: 2, 17: 2, 65: 1, 14: 1, 80: 1, 70: 1}
+  high_blood_pressure: {0: 194, 1: 105}
+  platelets: numeric, min=25100.0, max=850000.0, mean=263358.03, nulls=0
+  serum_creatinine: numeric, min=0.5, max=9.4, mean=1.39, nulls=0
+  serum_sodium: numeric, min=113, max=148, mean=136.63, nulls=0
+  sex: {1: 194, 0: 105}
+  smoking: {0: 203, 1: 96}
+  time: numeric, min=4, max=285, mean=130.26, nulls=0
+  DEATH_EVENT: {0: 203, 1: 96}
+
+
+========== aact ==========
+
+----- D:\Trial Guard\data\aact\calculated_values.txt -----
+shape: (50000, 19)
+  id: numeric, min=239018312, max=239568391, mean=239373044.98, nulls=0
+  nct_id: 50000 unique text values, e.g. ['NCT00463931', 'NCT03538548', 'NCT01234285', 'NCT00560274', 'NCT05812716']
+  number_of_facilities: numeric, min=0, max=1459, mean=5.58, nulls=0
+  number_of_nsae_subjects: numeric, min=0.0, max=55864.0, mean=450.88, nulls=45354
+  number_of_sae_subjects: numeric, min=0.0, max=8897.0, mean=93.14, nulls=46369
+  registered_in_calendar_year: numeric, min=1999, max=2026, mean=2017.01, nulls=0
+  nlm_download_date: all null
+  actual_duration: numeric, min=0.0, max=732.0, mean=26.92, nulls=18476
+  were_results_reported: {'f': 43202, 't': 6798}
+  months_to_report_results: numeric, min=-58.0, max=287.0, mean=26.09, nulls=43205
+  has_us_facility: {'f': 28975, 't': 15840, nan: 5185}
+  has_single_facility: {'t': 33143, 'f': 11672, nan: 5185}
+  minimum_age_num: numeric, min=0.0, max=730.0, mean=20.12, nulls=3254
+  maximum_age_num: numeric, min=1.0, max=6569.0, mean=59.66, nulls=23273
+  minimum_age_unit: {'year': 45426, nan: 3254, 'month': 750, 'day': 292, 'week': 181, 'hour': 53, 'minute': 44}
+  maximum_age_unit: {'year': 25904, nan: 23273, 'month': 420, 'day': 173, 'week': 161, 'hour': 50, 'minute': 19}
+  number_of_primary_outcomes_to_measure: numeric, min=1.0, max=111.0, mean=1.98, nulls=1528
+  number_of_secondary_outcomes_to_measure: numeric, min=1.0, max=262.0, mean=5.26, nulls=13735
+  number_of_other_outcomes_to_measure: numeric, min=1.0, max=85.0, mean=3.93, nulls=45701
+
+----- D:\Trial Guard\data\aact\conditions.txt -----
+shape: (50000, 4)
+  id: numeric, min=380983890, max=381935776, mean=381608312.07, nulls=0
+  nct_id: 27934 unique text values, e.g. ['NCT00498472', 'NCT01866371', 'NCT03779373', 'NCT01441882', 'NCT02673632']
+  name: 18911 unique text values, e.g. ['Acute Heart Failure', 'Stargardts', 'Retinitis Pigmentosa', 'Age-related Macular Degeneration', 'Choroideremia']
+  downcase_name: 18722 unique text values, e.g. ['acute heart failure', 'stargardts', 'retinitis pigmentosa', 'age-related macular degeneration', 'choroideremia']
+
+----- D:\Trial Guard\data\aact\design_groups.txt -----
+shape: (50000, 5)
+  id: numeric, min=403439402, max=404334957, mean=403720302.72, nulls=0
+  nct_id: 23737 unique text values, e.g. ['NCT05088694', 'NCT05627726', 'NCT01030354', 'NCT05793554', 'NCT05709145']
+  group_type: {'EXPERIMENTAL': 24271, 'ACTIVE_COMPARATOR': 9173, nan: 7619, 'PLACEBO_COMPARATOR': 3772, 'NO_INTERVENTION': 2694, 'OTHER': 1916, 'SHAM_COMPARATOR': 555}
+  title: 38170 unique text values, e.g. ['Intervention', 'No intervention', 'PelviSense-assisted pelvic floor muscle training group', 'Dietary Intervention and Higher protein meal replacement', 'Pelvic floor muscle training (PFMT) alone group']
+  description: 42249 unique text values, e.g. ['Classrooms assigned to the intervention group will receive the Peaceful Coexistence (middle school) or Anti-extremism (high school) curricula.', 'Classrooms assigned to the No intervention group will receive general information during their sessions.', 'Women allocated to the PelviSense-assisted pelvic floor muscle training (PFMT) group will perform PFMT to contract their urethras while the wearable sensors are positioned close to the vagina (to measure pubococcygeus muscle activation). Exercises will be performed in antigravity (supine or side-lying) positions and will progress to against-gravity positions (sitting/ standing).', 'A higher protein meal replacement diet based on 1 gram of protein per pound of lean body mass', 'Pelvic floor muscle training (PFMT) alone group: Women allocated to the PFMT alone group will perform unassisted PFMT. Exercise parameters, technique, and progression will be similar to those for the PelviSense-assisted PFMT group, but exercises will be performed without the PelviSense.']
+
+----- D:\Trial Guard\data\aact\designs.txt -----
+shape: (50000, 14)
+  id: numeric, min=213846920, max=214327059, mean=214103972.68, nulls=0
+  nct_id: 50000 unique text values, e.g. ['NCT06252545', 'NCT05733858', 'NCT00430105', 'NCT05456737', 'NCT02688244']
+  allocation: {'RANDOMIZED': 25199, nan: 20676, 'NON_RANDOMIZED': 4125}
+  intervention_model: {'PARALLEL': 22805, nan: 11991, 'SINGLE_GROUP': 10495, 'CROSSOVER': 3083, 'SEQUENTIAL': 1101, 'FACTORIAL': 525}
+  observational_model: {nan: 38848, 'COHORT': 6650, 'CASE_CONTROL': 1576, 'CASE_ONLY': 1459, 'OTHER': 1113, 'CASE_CROSSOVER': 127, 'ECOLOGIC_OR_COMMUNITY': 124, 'DEFINED_POPULATION': 54, 'FAMILY_BASED': 41, 'NATURAL_HISTORY': 8}
+  primary_purpose: {'TREATMENT': 24582, nan: 11996, 'PREVENTION': 4005, 'OTHER': 2268, 'SUPPORTIVE_CARE': 2158, 'BASIC_SCIENCE': 1812, 'DIAGNOSTIC': 1700, 'HEALTH_SERVICES_RESEARCH': 975, 'SCREENING': 360, 'DEVICE_FEASIBILITY': 129, 'ECT': 15}
+  time_perspective: {nan: 38594, 'PROSPECTIVE': 7464, 'RETROSPECTIVE': 1798, 'CROSS_SECTIONAL': 1605, 'OTHER': 539}
+  masking: {'NONE': 21189, nan: 11905, 'SINGLE': 5756, 'DOUBLE': 5137, 'QUADRUPLE': 3464, 'TRIPLE': 2549}
+  masking_description: 3500 unique text values, e.g. ["A randomization list will be centrally generated by an independent methodologist for each center and integrated into the electronic case report form. The physiotherapist will disclose the allocation to the participant during the inclusion visit, following clear, transparent, and appropriate information, and obtaining the participant's consent to participate in the study. This disclosure occurs after all measurements have been completed. The inclusion visit is scheduled 30 days ± 8 before the surgery.", "The children blood sampling will be videotaped. The principal investigator videos the blood sampling, and then external observer assesses the child's anxiety (mYPAS=Modifield Yale preoperative anxiety scale) on video. The video camera is pre-installed in the blood sampling room and positioned so that it does not attract attention.", 'This study is a randomized, controlled, double-blind, study of healthy term formula fed (FF) infants.', 'A masked evaluating investigator will be responsible for all aspects of the study except the injections and the safety assessment following the injections. An unmasked treating investigator was to perform the injections and assess patient safety following the injections.', 'The statistician was blinded to analyze the data.']
+  intervention_model_description: 7066 unique text values, e.g. ['There will be 2 groups: 20 subjects with pancreas carcinoma for phone interviews and 6 for user testing the first version of the application..', 'The study will use a single-arm with participants to be enrolled in three groups of 15 each (n=45) into the Green Wellness Program: Plants-2-Plate', 'Multi-centric randomized controlled trial', 'Randomization of the children participating in the study will be carried out using the Stratified Block Randomization-on method, which allows randomization in two groups, according to age, as follows: group 1 (5-6 years old) and group 2 (7-9 years old). This is to ensure that the intervention and control groups have the same number of children of the same age and do not differ in their starting level. The randomization lists are made by a statistician.', 'Formula feed infants will be randomized to receive either a new infant formula formulated for healthy term infants (Formula A) or a commercially available infant formula for healthy term infants (Formula B). Infants will consume the formula for a total of 52-weeks.']
+  subject_masked: {nan: 33680, 't': 12140, 'f': 4180}
+  caregiver_masked: {nan: 33680, 'f': 10839, 't': 5481}
+  investigator_masked: {nan: 33680, 't': 9298, 'f': 7022}
+  outcomes_assessor_masked: {nan: 33680, 't': 9543, 'f': 6777}
+
+----- D:\Trial Guard\data\aact\drop_withdrawals.txt -----
+shape: (50000, 10)
+  id: numeric, min=214310133, max=214907924, mean=214565734.76, nulls=0
+  nct_id: 3885 unique text values, e.g. ['NCT00664326', 'NCT00758589', 'NCT03722485', 'NCT02191605', 'NCT00031460']
+  result_group_id: numeric, min=776762257, max=778956198, mean=777704294.00, nulls=0
+  ctgov_group_code: 32 unique text values, e.g. ['FG000', 'FG001', 'FG002', 'FG003', 'FG004']
+  period: 1155 unique text values, e.g. ['Overall Study', 'Stage 1: 24 Months', 'Stage 2: 8 Months', 'Stage 2: Booster Phase (6 Months)', 'Placebo-controlled Period: Week 0 - 24']
+  reason: 3666 unique text values, e.g. ['Adverse Event', 'Noncompliance with study medication', 'Withdrawal by Subject', 'Physician Decision', 'Other Reasons']
+  count: numeric, min=0, max=15725, mean=9.06, nulls=0
+  drop_withdraw_comment: all null
+  reason_comment: all null
+  count_units: all null
+
+----- D:\Trial Guard\data\aact\milestones.txt -----
+shape: (50000, 10)
+  id: numeric, min=315443573, max=316174797, mean=315767928.14, nulls=0
+  nct_id: 4350 unique text values, e.g. ['NCT05718466', 'NCT03829501', 'NCT01789476', 'NCT00270205', 'NCT04070157']
+  result_group_id: numeric, min=776847300, max=778653229, mean=777644387.81, nulls=0
+  ctgov_group_code: 31 unique text values, e.g. ['FG000', 'FG001', 'FG002', 'FG003', 'FG004']
+  title: 1055 unique text values, e.g. ['STARTED', 'COMPLETED', 'NOT COMPLETED', 'Treated', 'Patients Who Received Study Medication']
+  period: 1314 unique text values, e.g. ['Overall Study', 'Pre-treatment Period', 'Treatment Period', 'Original Protocol', 'Amended Protocol']
+  description: all null
+  count: numeric, min=0.0, max=603770.0, mean=195.94, nulls=4
+  milestone_description: 536 unique text values, e.g. ['Randomized', 'Treated', 'Participants who completed Stage 1 were assessed for eligibility in Stage 2. At the Stage 2 Entry Visit, all eligible participants were randomized 2:1 to either continue daily setmelanotide or receive matching placebo.', 'All participants who were enrolled in Stage 2 and received at least one dose of trial medication in Stage 2. Three participants in the placebo group were rescued with setmelanotide open-label during Stage 2. They were classified to setmelanotide group.', 'All 24 sites started as control sites. Sites were randomized to training in groups of 6 clinics every 9 months.']
+  count_units: 118 unique text values, e.g. ['0', '24', '6', '18', '12']
+
+----- D:\Trial Guard\data\aact\participant_flows.txt -----
+shape: (50000, 5)
+  id: numeric, min=28593114, max=28672490, mean=28629275.62, nulls=0
+  nct_id: 50000 unique text values, e.g. ['NCT02920528', 'NCT00516893', 'NCT04812028', 'NCT05924165', 'NCT05195359']
+  recruitment_details: 20206 unique text values, e.g. ['Participants enrolled from 5-19-2023 to 12-26-2024', 'This was a single centre, non-randomised, open label, two-part study. Part 1 of the study was a 4-period sequential dose study in healthy male subjects. The estimated duration from screening to discharge from the study was approximately 10 weeks. Part 2 of the study was a 2-period sequential dose study in healthy males. The estimated duration from screening to discharge from the study was approximately 7 weeks.', 'Recruitment was conducted by the following means: Subjects were referred by local physicians and recruited from databases of previous studies of Co-investigators. Flyers were disseminated locally.', 'Patients undergoing IVF were be recruited to participate in the study. Those agreeing to participate consented to have their embryos incubated in the new Embryoscope+ as opposed to the current one being used as standard of care.', 'The recruitment process was from 09/01/11 to 04/30/12. After the participants were identified they were sent a letter asking them to participate. After that screening began. The participating sites were Cleveland, Durham, West Haven, Albany, Providence.']
+  pre_assignment_details: 19009 unique text values, e.g. ["A total of 754 individuals entered prescreening and/or expressed interest ('signed up'). After eligibility screening and completion of baseline, 637 participants were randomized and started: 318 to the app and 319 to waitlist. The difference (754 to 637) reflects screening processes and incomplete baseline assessments prior to randomization.", 'Of n= 66 who started Observation Period, 7 discontinued from study. Primary reasons were deviation of the inclusion/ exclusion criteria (n=5), untoward event before study treatment (n=1) \\& other (n=1). Of 59 participants, 58 were included in full analysis set (FAS). 1 participant (E2080 group) was excluded due to inappropriate diagnosis of disease.', "18 subjects will undergo IVF. Participant's oocytes at retrieval will be randomly assigned to both groups for comparison: Standard EmbryoScope system versus EmbryoScope+. The best quality embryos are selected for embryo transfer and the pregnancy outcome is evaluated. Best grade embryos will be transferred regardless of EmbryoScope use.", 'Screening qualifications of baseline assessment. The participants had initial contact for interest, consent obtained, and determine electrical environment. If participant passed screening they were enrolled and had to complete training on the device.', 'A total of 29 participants were enrolled and randomized in the study.']
+  units_analyzed: 446 unique text values, e.g. ['Oocytes', 'BCC Lesions', 'Clusters', 'Additional Transplant', 'Eyes']
+
+----- D:\Trial Guard\data\aact\result_groups.txt -----
+shape: (50000, 7)
+  id: numeric, min=776991800, max=778773648, mean=777732920.39, nulls=0
+  nct_id: 2134 unique text values, e.g. ['NCT04527185', 'NCT04617795', 'NCT01440920', 'NCT00199901', 'NCT02192931']
+  ctgov_group_code: 145 unique text values, e.g. ['OG000', 'OG001', 'OG002', 'OG003', 'OG004']
+  result_type: {'Outcome': 35950, 'Baseline': 5470, 'Reported Event': 4377, 'Participant Flow': 4203}
+  title: 6990 unique text values, e.g. ['Endotoxin', 'Basal-Bolus (Group A)', 'Placebo', 'Cohort 1', 'NY-ESO-1 ISCOMATRIX® Vaccine']
+  description: 8696 unique text values, e.g. ['Endotoxin (0.4ng/kg i.v.) will be administered one time during the laboratory session.', '* 2 weeks standard therapy - using multiple daily injections (MDI) and Dexcom G6 Continuous Glucose Monitor (CGM), followed by:~* 4 weeks Omnipod 5 system use in Automated Mode with optional bolus, followed by:~* 4 weeks Omnipod 5 system use in Automated Mode with simplified bolus~* 6-month optional extension using Automated Mode~Omnipod 5 Automated Insulin Delivery System: The Omnipod 5 is a single hormone insulin delivery system intended for the management of diabetes in persons requiring insulin. Continuous subcutaneous insulin infusion may be delivered by user-defined settings (manual mode) or automatically adjusted in response to feedback from a continuous glucose monitor (CGM).~The Omnipod 5 can automatically increase insulin delivery based on sensor glucose values from the continuous glucose monitor (CGM) and can decrease or suspend delivery of insulin when the glucose value falls below or is predicted to fall below predefined threshold values.~The Omnipod 5 is designed to assist patients with diabetes in achieving glycemic targets set by their health care providers.', 'Administered one time during the laboratory session.', 'subcutaneously administered once a week, 4 times at the dose of 0.3 mg', '100 μg of NY-ESO-1 protein formulated with 120 μg of ISCOMATRIX® adjuvant.~Each patient received four intramuscular injections of NY-ESO-1 ISCOMATRIX® vaccine. The first three doses were given at four-week intervals, days 1, 29, and 57, (± 3 days of scheduled date). The fourth injection was given at month 6 (day 183 ± 3 days).']
+  outcome_id: numeric, min=239909199.0, max=240444441.0, mean=240133851.70, nulls=14050
+
+----- D:\Trial Guard\data\aact\sponsors.txt -----
+shape: (50000, 5)
+  id: numeric, min=352171171, max=353002838, mean=352620603.44, nulls=0
+  nct_id: 31351 unique text values, e.g. ['NCT01437345', 'NCT06210269', 'NCT01407575', 'NCT03867227', 'NCT04036227']
+  agency_class: {'OTHER': 32441, 'INDUSTRY': 9577, 'NIH': 2608, 'UNKNOWN': 2555, 'OTHER_GOV': 1677, 'FED': 613, 'NETWORK': 384, nan: 95, 'INDIV': 38, 'AMBIG': 12}
+  lead_or_collaborator: {'lead': 30785, 'collaborator': 19215}
+  name: 14752 unique text values, e.g. ['FSH Society, Inc.', 'FSHD Global Research Foundation', 'Muscular Dystrophy Canada', 'aTyr Pharma, Inc.', 'Tampere University Hospital']
+
+----- D:\Trial Guard\data\aact\studies.txt -----
+shape: (50000, 71)
+  nct_id: 50000 unique text values, e.g. ['NCT04211675', 'NCT06513338', 'NCT05774782', 'NCT00873262', 'NCT03243097']
+  nlm_download_date_description: all null
+  study_first_submitted_date: 7280 unique text values, e.g. ['2019-10-14', '2024-07-16', '2023-03-06', '2009-03-30', '2017-06-07']
+  results_first_submitted_date: 3492 unique text values, e.g. ['2022-07-25', '2021-05-06', '2012-05-10', '2025-07-25', '2019-11-07']
+  disposition_first_submitted_date: 711 unique text values, e.g. ['2013-11-26', '2021-09-16', '2014-01-30', '2014-01-21', '2021-09-20']
+  last_update_submitted_date: 5902 unique text values, e.g. ['2025-05-08', '2025-11-28', '2026-01-22', '2010-06-15', '2023-04-25']
+  study_first_submitted_qc_date: 7062 unique text values, e.g. ['2019-12-23', '2024-07-16', '2023-03-16', '2009-03-31', '2017-08-07']
+  study_first_posted_date: 5538 unique text values, e.g. ['2019-12-26', '2024-07-22', '2023-03-20', '2009-04-01', '2017-08-08']
+  study_first_posted_date_type: {'ACTUAL': 29320, 'ESTIMATED': 20680}
+  results_first_submitted_qc_date: 3345 unique text values, e.g. ['2023-07-21', '2021-06-22', '2012-05-10', '2025-09-25', '2019-11-07']
+  results_first_posted_date: 2866 unique text values, e.g. ['2023-08-14', '2021-06-23', '2012-06-14', '2025-10-16', '2019-11-26']
+  results_first_posted_date_type: {nan: 43151, 'ACTUAL': 4735, 'ESTIMATED': 2114}
+  disposition_first_submitted_qc_date: 602 unique text values, e.g. ['2013-11-26', '2022-02-11', '2014-01-30', '2016-02-19', '2021-09-20']
+  disposition_first_posted_date: 687 unique text values, e.g. ['2013-12-20', '2022-03-09', '2014-03-04', '2016-03-21', '2021-09-24']
+  disposition_first_posted_date_type: {nan: 49166, 'ESTIMATED': 463, 'ACTUAL': 371}
+  last_update_submitted_qc_date: 5902 unique text values, e.g. ['2025-05-08', '2025-11-28', '2026-01-22', '2010-06-15', '2023-04-25']
+  last_update_posted_date: 4341 unique text values, e.g. ['2025-05-13', '2025-12-05', '2026-01-26', '2010-06-16', '2023-04-27']
+  last_update_posted_date_type: {'ACTUAL': 38703, 'ESTIMATED': 11297}
+  start_month_year: 5613 unique text values, e.g. ['2022-09-01', '2024-03-01', '2023-03-27', '2009-04', '2017-08-24']
+  start_date_type: {'ACTUAL': 28804, nan: 16341, 'ESTIMATED': 4855}
+  start_date: 5427 unique text values, e.g. ['2022-09-01', '2024-03-01', '2023-03-27', '2009-04-30', '2017-08-24']
+  verification_month_year: 521 unique text values, e.g. ['2025-05', '2025-11', '2026-01', '2010-02', '2023-04']
+  verification_date: 521 unique text values, e.g. ['2025-05-31', '2025-11-30', '2026-01-31', '2010-02-28', '2023-04-30']
+  completion_month_year: 5630 unique text values, e.g. ['2027-12', '2025-11-03', '2024-08-30', '2010-11', '2021-03-26']
+  completion_date_type: {'ACTUAL': 30090, 'ESTIMATED': 17905, nan: 2005}
+  completion_date: 5336 unique text values, e.g. ['2027-12-31', '2025-11-03', '2024-08-30', '2010-11-30', '2021-03-26']
+  primary_completion_month_year: 5463 unique text values, e.g. ['2026-12', '2025-11-03', '2024-06-23', '2010-05', '2021-03-12']
+  primary_completion_date_type: {'ACTUAL': 31270, 'ESTIMATED': 16923, nan: 1807}
+  primary_completion_date: 5178 unique text values, e.g. ['2026-12-31', '2025-11-03', '2024-06-23', '2010-05-31', '2021-03-12']
+  target_duration: 96 unique text values, e.g. ['1 Day', '30 Days', '3 Months', '90 Days', '10 Years']
+  study_type: {'INTERVENTIONAL': 38193, 'OBSERVATIONAL': 11640, 'EXPANDED_ACCESS': 108, nan: 59}
+  acronym: 13288 unique text values, e.g. ['STING', 'CROS', 'PEPNI', 'FRONT', 'BGFM']
+  baseline_population: 2076 unique text values, e.g. ['Safety analysis set (SAF): SAF included all randomised patients who received at least one dose of study drug.', 'The intent-to-treat (ITT) analysis population included all the randomized participants who received at least one dose of study treatment.', 'Full Analysis Set (FAS) included all participants who received at least one dose of any component of the study treatment (i.e. at least one dose of sabatolimab or at least one dose of azacitidine).', 'Randomized Set (RS): This patient set included all randomized patients.', 'Three participants did not receive study treatment but are included in the baseline population.']
+  brief_title: 49929 unique text values, e.g. ['NK Cells Infusions With Irinotecan, Temozolomide, and Dinutuximab', 'Complement C5 mAb in the Treatment of Anti-GBM Disease', 'Parent Artery Reconstruction for Cerebral Aneurysms Using a Novel Flow Diverter With Surface Modification', 'Evaluation of Safety/Efficacy of Diagnostic Skin Test Panel and Desensitization Hormone Kit for Treatment of Premenstrual Syndrome (PMS)', 'CROS Application in CI']
+  official_title: 48991 unique text values, e.g. ['A Phase I/II Safety Lead in Study of Ex-Vivo Expanded Allogeneic Universal Donor TGFβi NK Cell Infusions in Combination With Irinotecan, Temozolomide, and Dinutuximab in Patients With Relapsed or Refractory Neuroblastoma: The Allo - STING Trial', 'A Single Center, Open-label, Single Arm Phase II Trial of the Efficacy and Safety of Complement C5 Monoclonal Antibody in the Treatment of Anti-glomerular Basement Membrane Disease', 'A Prospective, Multi-center, Single Arm Clinical Study to Evaluate the Safety and Effectiveness of the Flow Diverter Stent System in the Treatment of Cerebral Aneurysms', 'A Phase II Randomized, Two-arms, Single-blind, Cross Controlled Study for Evaluation the Safety and Efficacy of Diagnosis and Treatment of Premenstrual Syndrome by Detecting Skin Reactions Followed by Desensitization to Sex Hormones', 'Contralateral Routing of Signal in Unilateral Cochlear Implant Users']
+  overall_status: {'COMPLETED': 27812, 'UNKNOWN': 8375, 'RECRUITING': 4859, 'TERMINATED': 2987, 'NOT_YET_RECRUITING': 2212, 'ACTIVE_NOT_RECRUITING': 1611, 'WITHDRAWN': 1449, 'ENROLLING_BY_INVITATION': 395, 'SUSPENDED': 133, 'WITHHELD': 59, 'NO_LONGER_AVAILABLE': 47, 'APPROVED_FOR_MARKETING': 32, 'AVAILABLE': 27, 'TEMPORARILY_NOT_AVAILABLE': 2}
+  last_known_status: {nan: 41625, 'RECRUITING': 4808, 'NOT_YET_RECRUITING': 2000, 'ACTIVE_NOT_RECRUITING': 1235, 'ENROLLING_BY_INVITATION': 332}
+  phase: {nan: 31317, 'PHASE2': 5478, 'PHASE1': 4148, 'PHASE3': 3504, 'PHASE4': 2974, 'PHASE1/PHASE2': 1414, 'PHASE2/PHASE3': 618, 'EARLY_PHASE1': 547}
+  enrollment: numeric, min=0.0, max=99999999.0, mean=9454.60, nulls=622
+  enrollment_type: {'ACTUAL': 31656, 'ESTIMATED': 16873, nan: 1471}
+  source: 9548 unique text values, e.g. ["Nationwide Children's Hospital", 'Peking University First Hospital', 'Sinomed Neurovita Technology Inc.', 'EVE Medical Systems Ltd.', 'University of Miami']
+  limitations_and_caveats: 1443 unique text values, e.g. ['The study period partly overlapped with COVID-19 pandemic. RSV LRTI findings might not reflect a standard RSV season due to low virus circulation, social distancing, travel restriction and other actions to control COVID-19 spreading. GAIA classification is not used as care standard in participating sites. Some sites might face challenges into classify the outcomes of interest. Background rates for less frequent events were difficult to estimate due to the relatively limited size.', 'Due to the trial design, a large proportion of patients had received escape medication or non-randomized spesolimab by Week 4, based on worsening, insufficient response, or non-response. This should be taken into account for the interpretation of the results at Week 4. A large proportion of patients in both arms had been treated as non-responders at Week 4, and the true efficacy outcomes for the randomized treatment at this time-point were never observed for the analysis.', 'A major limitation is the uncontrolled nature of this study.', 'Target sample size (statistical power) was not achieved. Catheter reduction and fistula first policies limited recruitment. Additionally, study patients were not blind to exposure and this knowledge may have had an impact on QoL measurement.', 'The study was stopped prematurely for administrative reasons; not all planned endpoints were analyzed.']
+  number_of_arms: numeric, min=1.0, max=48.0, mean=2.16, nulls=13866
+  number_of_groups: {nan: 42363, 1.0: 3486, 2.0: 2864, 3.0: 750, 4.0: 342, 5.0: 94, 6.0: 50, 7.0: 17, 8.0: 12, 9.0: 6, 10.0: 4, 11.0: 4, 12.0: 2, 17.0: 2, 13.0: 2, 19.0: 1, 18.0: 1}
+  why_stopped: 3451 unique text values, e.g. ['The French medicines agency did not allow the continuation of the study (no patient enrolled in this study)', 'Not enough obese subjects could be recruited.', 'Terminated due to sponsor desicioun', 'Study was stopped following a strategic decision from the Sponsor. It was not based on any safety findings or safety concerns with sabatolimab.', 'Poorly recruiting']
+  has_expanded_access: {'f': 49322, nan: 606, 't': 72}
+  expanded_access_type_individual: {nan: 49975, 't': 25}
+  expanded_access_type_intermediate: {nan: 49974, 't': 26}
+  expanded_access_type_treatment: {nan: 49973, 't': 27}
+  has_dmc: {'f': 26771, 't': 14332, nan: 8897}
+  is_fda_regulated_drug: {'f': 26000, nan: 19595, 't': 4405}
+  is_fda_regulated_device: {'f': 28731, nan: 19606, 't': 1663}
+  is_unapproved_device: {nan: 49592, 't': 408}
+  is_ppsd: {nan: 49999, 't': 1}
+  is_us_export: {nan: 44215, 'f': 4484, 't': 1301}
+  biospec_retention: {nan: 47652, 'SAMPLES_WITH_DNA': 1440, 'SAMPLES_WITHOUT_DNA': 839, 'NONE_RETAINED': 69}
+  biospec_description: 2039 unique text values, e.g. ['Finger-prick-blood for dried blood spots will be performed for oral glucose tolerance tests (insuline/c-peptide response profile) and determining protein and lipid metabolism as well as HbA1c.~Finger-prick-blood for measurement of glucose and cholesterol using do-it-yourself devices.~Saliva and fecal samples for determining gut and oral microbiota (bacteria) by DNA sequencing of bacterial marker genes present in fecal and saliva samples.~Hair sample for determining cortisol concentrations over time.', 'Venous blood was obtained to measure total serum immunoglobulin E, radioallergosorbent test for environmental aeroallergens, and for peripheral blood mononuclear cells isolation', "Samples with DNA, proteins, miRNA or other biochemical substances Serum, plasma, salvia, excrement, cerebrospinal fluid, peripheral nerves or muscle tissue if it's available", 'blood', 'FFPE tissue section']
+  ipd_time_frame: 1870 unique text values, e.g. ['No later than 3 years after the final 90-day assessment or 2 years after the primary paper has been published, whichever comes first.', 'Data will be made available 6 months after publication of the main study findings and will be available in perpetuity.', 'within 1 year following publication', 'Within 2 years of project end', 'Data are currently available. They will be available for 10 years (until 01/07/2031)']
+  ipd_access_criteria: 1710 unique text values, e.g. ['Anyone can access NICHD DASH, which is a public website with free access to the scientific research community. All users may browse and view information about studies and data archived in NICHD DASH. Users who are interested in submitting or requesting study data must register for a free account.', 'IPD will be publicly available via the following url', 'the criteria will be assessed by the publication of the trial in an international journals.', 'Those wishing to see protocol and ICF will need to contact study PI', 'Apply directly to p.yup@qmul.ac.uk and c.uff@qmul.ac.uk']
+  ipd_url: 332 unique text values, e.g. ['http://www.clinicalstudydatarequest.com', 'https://dataverse.tdl.org/dataset.xhtml?persistentId=doi:10.18738/T8/GDSFSQ', 'http://engagezone.msd.com/ds_documentation.php', 'https://astrazenecagroup-dt.pharmacm.com/DT/Home', 'https://www.amgen.com/datasharing']
+  plan_to_share_ipd: {nan: 24304, 'NO': 17002, 'UNDECIDED': 4383, 'YES': 4311}
+  plan_to_share_ipd_description: 5373 unique text values, e.g. ['Anonymized data sets Patient-level data for this study will be made available through www.clinicalstudydatarequest.com following the timelines and process described on this site.', 'Data will be available upon reasonable request. This will require review and approval by the trial scientific board and the data responsible parties. Terms of collaboration will be reached together with a signed collaboration agreement and data processor agreement.', 'Per NIH policy, the SHIPSS investigators will provide a de-identified dataset and all the data-related documentation necessary to utilize the study data (dictionary, calculated variables, and standard operating procedures) to the NIH no later than 3 years after the final 90-day assessment or 2 years after the primary paper has been published, whichever comes first. The investigators will submit this dataset to the NICHD data repository, Data and Specimen Hub (DASH). In addition, final datasets and statistical analyses will be archived.', 'Clinical studies sponsored by Boehringer Ingelheim, phases I to IV, interventional and non-interventional, are in scope for sharing of the raw clinical study data and clinical study documents. Exceptions might apply, e.g. studies in products where Boehringer Ingelheim is not the license holder; studies regarding pharmaceutical formulations and associated analytical methods, and studies pertinent to pharmacokinetics using human biomaterials; studies conducted in a single center or targeting rare diseases (in case of low number of patients and therefore limitations with anonymization).~For more details refer to: https://www.mystudywindow.com/msw/datatransparency', 'As per ethical outline, data will not be stored in a shared repository. All data will be stored in an anonymised format on site. Data access requests should be made to the principle investigator in writing which will be discussed in the data monitoring committee meetings.']
+  created_at: 114 unique text values, e.g. ['2026-07-08 07:11:16.97593', '2026-07-09 17:07:11.256362', '2026-07-08 18:42:06.297872', '2026-07-08 08:15:48.14307', '2026-07-09 06:36:14.411988']
+  updated_at: 114 unique text values, e.g. ['2026-07-08 07:11:16.97593', '2026-07-09 17:07:11.256362', '2026-07-08 18:42:06.297872', '2026-07-08 08:15:48.14307', '2026-07-09 06:36:14.411988']
+  source_class: {'OTHER': 35648, 'INDUSTRY': 11043, 'OTHER_GOV': 1316, 'NIH': 1030, 'FED': 437, 'NETWORK': 382, nan: 59, 'UNKNOWN': 44, 'INDIV': 41}
+  delayed_posting: {nan: 49941, 't': 59}
+  expanded_access_nctid: 43 unique text values, e.g. ['NCT03559686', 'NCT03843892', 'NCT04395508', 'NCT03763604', 'NCT03559660']
+  expanded_access_status_for_nctid: {nan: 49942, 'APPROVED_FOR_MARKETING': 24, 'NO_LONGER_AVAILABLE': 16, 'AVAILABLE': 16, 'TEMPORARILY_NOT_AVAILABLE': 2}
+  fdaaa801_violation: {nan: 49998, 't': 2}
+  baseline_type_units_analyzed: 38 unique text values, e.g. ['eyes', 'Attepmts at target lesions', 'third molar teeth', 'Eyes', 'C2H Counties']
+  patient_registry: {nan: 40517, 'f': 8056, 't': 1427}

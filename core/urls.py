@@ -10,6 +10,7 @@ router.register(r'trials', views.TrialViewSet, basename='trial')
 urlpatterns = [
     # Public
     path('', views.index, name='index'),
+    path('methodology/', views.methodology, name='methodology'),
     path('login/', views.login_view, name='login'),
     path('logout/', auth_views.LogoutView.as_view(next_page='/'), name='logout'),
 

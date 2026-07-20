@@ -1,0 +1,81 @@
+{
+  "label": "synthetic",
+  "n_total": 12435,
+  "n_events_total": 523,
+  "n_pool": 12435,
+  "n_train": 9326,
+  "n_test_random": 3109,
+  "n_events_test_random": 131,
+  "cox_penalizer": 0.01,
+  "cox_l1_ratio": 0.0,
+  "cox_cv_concordance": 0.7046,
+  "cox_train_concordance": 0.7088,
+  "cox_concordance_random_test": 0.7342,
+  "xgb_best_params": {
+    "n_estimators": 560,
+    "max_depth": 3,
+    "learning_rate": 0.08628444120093076,
+    "subsample": 0.7927907228930019,
+    "colsample_bytree": 0.854159133460114,
+    "min_child_weight": 3,
+    "gamma": 0.15658478890450822,
+    "reg_alpha": 0.008342888600974874,
+    "reg_lambda": 0.5297172867957327,
+    "scale_pos_weight": 2.5496025546576346,
+    "random_state": 42,
+    "eval_metric": "auc",
+    "tree_method": "hist"
+  },
+  "xgb_optuna_cv_auc": 0.7301,
+  "xgb_roc_auc_random_test": 0.7318,
+  "xgb_roc_auc_random_test_ci95": [
+    0.6851,
+    0.7794
+  ],
+  "xgb_f1_random_test": 0.0,
+  "xgb_precision_random_test": 0.0,
+  "xgb_recall_random_test": 0.0,
+  "xgb_brier_random_test": 0.0424,
+  "xgb_threshold_sweep_random_test": [
+    {
+      "threshold": 0.2,
+      "recall": 0.2748,
+      "precision": 0.1593,
+      "fraction_flagged": 0.0727
+    },
+    {
+      "threshold": 0.3,
+      "recall": 0.0916,
+      "precision": 0.3077,
+      "fraction_flagged": 0.0125
+    },
+    {
+      "threshold": 0.4,
+      "recall": 0.0229,
+      "precision": 0.6,
+      "fraction_flagged": 0.0016
+    },
+    {
+      "threshold": 0.5,
+      "recall": 0.0,
+      "precision": 0.0,
+      "fraction_flagged": 0.0
+    },
+    {
+      "threshold": 0.6,
+      "recall": 0.0,
+      "precision": 0.0,
+      "fraction_flagged": 0.0
+    },
+    {
+      "threshold": 0.7,
+      "recall": 0.0,
+      "precision": 0.0,
+      "fraction_flagged": 0.0
+    }
+  ],
+  "shap_stability_score": 0.0044,
+  "shap_robustness_score": 0.9752,
+  "shap_eval_set": "random_test",
+  "elapsed_seconds": 670.7
+}

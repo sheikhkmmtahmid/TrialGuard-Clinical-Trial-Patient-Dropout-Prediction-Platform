@@ -25,7 +25,7 @@ logger = logging.getLogger('core')
 XGB_MODEL_PATH = Path(__file__).resolve().parents[2] / 'ml_models' / 'xgb_model.pkl'
 EVAL_RESULTS_PATH = Path(__file__).resolve().parents[2] / 'evaluation_results.json'
 
-from core.utils.data_pipeline import FEATURE_COLUMNS
+from core.utils.data_pipeline import MODEL_FEATURE_COLUMNS
 
 
 def _objective(trial, X_train, X_val, y_train, y_val):
@@ -52,21 +52,26 @@ def _objective(trial, X_train, X_val, y_train, y_val):
     return roc_auc_score(y_val, preds)
 
 
-def train_xgboost_model(df: pd.DataFrame, n_optuna_trials: int = 50):
+def train_xgboost_model(X: np.ndarray, y: np.ndarray, n_optuna_trials: int = 50):
     """
     Fit XGBoost dropout classifier with Optuna tuning.
     Saves model + evaluation metrics.
     Returns (model, metrics_dict).
+
+    X must already be in the exact representation the model will see at
+    prediction time: scaled feature columns (via the fitted StandardScaler)
+    with the hazard_ratio column appended last. This used to instead take a
+    raw, unscaled DataFrame and pull FEATURE_COLUMNS straight from it,
+    which trained the model on raw values while every real prediction
+    (dashboard, patient pages, batch inference) fed it scaled values. The
+    model was never actually being asked about the kind of input it was
+    trained to expect. Training and serving must use the same
+    representation, this is a basic, non-negotiable rule, not a style
+    preference.
     """
     import xgboost as xgb
     import optuna
     optuna.logging.set_verbosity(optuna.logging.WARNING)
-
-    X = df[FEATURE_COLUMNS].values
-    y = df['dropout_status'].values
-
-    if 'hazard_ratio' in df.columns:
-        X = np.hstack([X, df[['hazard_ratio']].values])
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
     X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.15, random_state=42, stratify=y_train)
@@ -119,11 +124,41 @@ def train_xgboost_model(df: pd.DataFrame, n_optuna_trials: int = 50):
         metrics['xgb_precision'], metrics['xgb_recall'],
     )
 
+    metrics['threshold_sweep'] = evaluate_at_thresholds(y_test, y_prob)
+
     dump(
-        {'model': final_model, 'feature_columns': FEATURE_COLUMNS, 'metrics': metrics},
+        {'model': final_model, 'feature_columns': MODEL_FEATURE_COLUMNS, 'metrics': metrics},
         XGB_MODEL_PATH
     )
     return final_model, metrics
+
+
+def evaluate_at_thresholds(y_true: np.ndarray, y_prob: np.ndarray, thresholds=None) -> list:
+    """
+    Recall, precision, and how many patients get flagged, at a range of
+    decision thresholds, on the same held-out test set used for the
+    headline metrics. This exists because "recall" alone only describes
+    one specific cutoff (0.5 by default), which is a reporting convention,
+    not a clinical decision. The right cutoff for a retention tool depends
+    on the real cost of a missed dropout versus the real cost of a
+    coordinator following up on a false alarm, that is a decision for the
+    people running the trial to make deliberately, not something a model
+    should decide by default.
+    """
+    if thresholds is None:
+        thresholds = [0.2, 0.3, 0.4, 0.5, 0.6, 0.7]
+
+    rows = []
+    for t in thresholds:
+        y_pred = (y_prob >= t).astype(int)
+        flagged = float(y_pred.mean())
+        rows.append({
+            'threshold': t,
+            'recall': round(float(recall_score(y_true, y_pred, zero_division=0)), 4),
+            'precision': round(float(precision_score(y_true, y_pred, zero_division=0)), 4),
+            'fraction_flagged': round(flagged, 4),
+        })
+    return rows
 
 
 def load_xgb_model():

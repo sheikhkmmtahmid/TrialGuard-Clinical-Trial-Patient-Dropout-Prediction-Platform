@@ -95,9 +95,29 @@ class Command(BaseCommand):
             if created:
                 self.stdout.write(f'    + {trial.name}')
 
-        # ── Generate patient feature matrix ───────────────────────────────
+        # ── Generate patient feature matrix, one batch per trial ───────────
+        # Each trial gets its own dropout rate, calibrated against real AACT
+        # data for its phase and therapeutic area, instead of every trial
+        # sharing one flat rate. Patient count per trial is split
+        # proportionally to each trial's target enrollment. Each batch uses
+        # a different random seed so trials don't end up with identical
+        # patients, see generate_synthetic_patients for why that matters.
         self.stdout.write(f'\n  Generating {n_patients:,} synthetic patient records...')
-        patient_df = generate_synthetic_patients(n_patients)
+        total_target = sum(seed['target_enrollment'] for seed in TRIAL_SEEDS)
+        patient_dfs = []
+        for i, (trial, seed) in enumerate(zip(trials, TRIAL_SEEDS)):
+            trial_n = max(1, round(n_patients * seed['target_enrollment'] / total_target))
+            trial_df = generate_synthetic_patients(
+                trial_n, phase=seed['phase'], therapeutic_area=seed['therapeutic_area'],
+                seed=1000 + i,
+            )
+            trial_df['trial_seed_index'] = i
+            patient_dfs.append(trial_df)
+            self.stdout.write(
+                f'    {trial.name}: {trial_n:,} patients, '
+                f'dropout rate {trial_df["dropout_status"].mean():.1%}'
+            )
+        patient_df = pd.concat(patient_dfs, ignore_index=True)
         visit_df = generate_synthetic_visits(patient_df, visits_per_patient=8)
 
         # ── Persist patients ──────────────────────────────────────────────
@@ -119,7 +139,7 @@ class Command(BaseCommand):
         patient_index_map = {}  # df_index -> Patient pk (set after bulk_create)
 
         for idx, row in patient_df.iterrows():
-            trial = random.choice(trials)
+            trial = trials[int(row['trial_seed_index'])]
             enrollment_days_ago = random.randint(30, 730)
             enrollment_date = today - timedelta(days=enrollment_days_ago)
 
